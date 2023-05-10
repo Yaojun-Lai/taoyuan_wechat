@@ -43,8 +43,9 @@
   <view class="modal" hidden="{{!showModal}}">
     <view class="modal-container"> <!-- Add this wrapper -->
   <view class="modal-header">
-    <text class="modal-title"></text>
-    <button class="close-btn" bindtap="hideModal">×</button>
+    <!-- <text class="modal-title"></text> -->
+    <button class="clear-btn" bindtap="clearOrder">清空</button> 
+    <button class="close-btn" bindtap="hideModal">返回</button>
   </view>
   <view class="modal-content">
     <block wx:for="{{cartFoods}}" wx:key="name">

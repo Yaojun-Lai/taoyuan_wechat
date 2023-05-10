@@ -307,6 +307,31 @@ Page({
   },
   
   
+  resetQuantity: function(foodArray) {
+    for (let i = 0; i < foodArray.length; i++) {
+      foodArray[i].quantity = 0;
+    }
+    return foodArray;
+  },
+  
+  clearOrder: function() {
+    let foods = this.data.allFoods;
+    let currentFoods = this.data.currentFoods;
+    let cartFoods = this.data.cartFoods;
+  
+    // Reset the quantity of all foods, currentFoods, and cartFoods
+    foods = this.resetQuantity(foods);
+    currentFoods = this.resetQuantity(currentFoods);
+    cartFoods = this.resetQuantity(cartFoods);
+  
+    this.setData({
+      allFoods: foods,
+      currentFoods: currentFoods,
+      cartFoods: cartFoods,
+      totalPrice: 0
+    });
+  },
+  
   
 
 

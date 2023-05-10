@@ -2,7 +2,6 @@
   padding: 5rpx;
   display: flex;
   flex-direction: row;
-  height: 100vh;
   height: calc(100vh - 100px);
 }
 
@@ -91,10 +90,7 @@
 }
 
 
-.food-item .controls .plus,
-.food-item .controls .minus {
-  color: pink;
-}
+
 
 .info-row {
   display: flex;
@@ -157,8 +153,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%; 
+  height: 100%;
   z-index: 1000; /* Add this line */
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -177,6 +173,8 @@
 }
 
 
+
+
 .cart-item {
   display: flex;
   flex-direction: row;
@@ -192,6 +190,32 @@
   margin-right: 10px;
 }
 
+.modal-header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.clear-btn,
+.close-btn {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+.clear-btn {
+  background-color: #E82C0C; /* Slightly darker red */
+}
+
+.close-btn {
+  background-color: #0056b3; /* Slightly darker blue */
+}
+
+
 .cart-item .info {
   flex-grow: 1;
 }
@@ -204,10 +228,15 @@
 }
 
 .cart-item .controls .minus,
-.cart-item .controls .plus {
+.cart-item .controls .plus,
+.food-item .controls .minus,
+.food-item .controls .plus {
   color: pink;
   margin: 0 5px;
+  font-size: 30px; 
+  padding: 10px; /* Add padding */
 }
+
 
 .price-per-person {
   display: flex;
@@ -220,12 +249,7 @@ input.input-price {
   flex: 1; /* Add this line */
   margin-left: 10px; /* Add this line */
 }
-.cart-item .controls .minus,
-.cart-item .controls .plus {
-  color: pink;
-  margin: 0 5px;
-  font-size: 30px; /* Increase the font size */
-}
+
 
 
 
