@@ -50,23 +50,29 @@
     <block wx:for="{{cartFoods}}" wx:key="name">
       <view class="cart-item">
         <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
-        <view class="info">
+        <view class="info info-row">
           <text>{{item.name}}</text>
-          <view class="controls">
-            <text class="plus" bindtap="increaseOrder" data-name="{{item.name}}">+</text>
-            <text>{{item.quantity}}</text>
+          <view class="controls controls-row">
             <text class="minus" bindtap="decreaseOrder" data-name="{{item.name}}">-</text>
-            
+            <text>{{item.quantity}}</text>
+            <text class="plus" bindtap="increaseOrder" data-name="{{item.name}}">+</text>
           </view>
         </view>
       </view>
     </block>
-    <view class="total-price">总成本：{{totalPrice}}</view>
+
+
+    <view class="total-price2">总成本：{{totalPrice}}
+    <view class="total-price2-text-margin">
+        <text>倍数：{{pricePerPerson}} </text>
+    </view>
+   </view>
+
     <view class="price-per-person">
-      <text> 订单价:</text>
+      <text>订单价：</text>
       <input class="input-price" type="number" bindinput="handlePriceInput" placeholder="输入数字" />
       
-      <text> 倍数：{{pricePerPerson}}</text>
+      
     </view>
   </view>
 </view>
