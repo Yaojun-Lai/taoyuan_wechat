@@ -1,6 +1,6 @@
 Page({
   data: {
-    selectedFoodType: null,
+    selectedFoodType: '',
     foodTypes: ['农作物', '肉类', '制糖', '饼坊', '石磨', '豆坊', '豆腐加工', '玩具', '木工', '糕坊', '编织', '腌制', '陶瓷', '文具', '晾堂', '绣坊', '土料', '纺织', '开采'],
 
     allFoods: [
@@ -8,7 +8,7 @@ Page({
     {'type': '农作物', 'name': '大豆', 'price': 2, 'avatar': '', 'quantity': 0} ,
     {'type': '农作物', 'name': '甘蔗', 'price': 3, 'avatar': '', 'quantity': 0} ,
     {'type': '农作物', 'name': '水稻', 'price': 4, 'avatar': '', 'quantity': 0} ,
-    {'type': '农作物', 'name': '白菜', 'price': 5, 'avatar': '', 'quantity': 0} ,
+    {'type': '农作物', 'name': '白菜', 'price': 5, 'avatar': '/pages/images/白菜.jpeg', 'quantity': 0} ,
     {'type': '农作物', 'name': '辣椒', 'price': 6, 'avatar': '', 'quantity': 0} ,
     {'type': '农作物', 'name': '土豆', 'price': 7, 'avatar': '', 'quantity': 0} ,
     {'type': '农作物', 'name': '苎麻', 'price': 9, 'avatar': '', 'quantity': 0} ,
@@ -94,9 +94,13 @@ Page({
     
   },
     
-  onLoad: function(options) {
-    // load your initial data here
-    this.loadFoods(this.data.selectedType);
+  onLoad: function() {
+    const defaultFoodType = this.data.foodTypes[0];
+    const defaultFoods = this.data.allFoods.filter(food => food.type === defaultFoodType);
+    this.setData({
+      selectedFoodType: defaultFoodType,
+      currentFoods: defaultFoods
+    });
   },
   
   loadFoods: function(type) {
@@ -327,7 +331,7 @@ Page({
     this.setData({
       allFoods: foods,
       currentFoods: currentFoods,
-      cartFoods: cartFoods,
+      cartFoods: [],
       totalPrice: 0
     });
   },
