@@ -1,0 +1,74 @@
+<view class="container">
+  <scroll-view class="sidebar" scroll-y="true">
+  <block wx:for="{{foodTypes}}" wx:key="*this">
+    <view 
+      bindtap="changeType" 
+      data-type="{{item}}" 
+      class="foodType {{selectedFoodType == item ? 'foodType-selected' : ''}}"
+    >
+      {{item}}
+    </view>
+  </block>
+</scroll-view>
+
+  <scroll-view class="foods" scroll-y="true">
+        <block wx:for="{{currentFoods}}" wx:key="name"> <!-- change key to a unique property -->
+          <view class="food-item">
+            <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
+            <view class="info">
+              <text>{{item.name}}</text>
+              <text>{{item.price}}</text>
+            </view>
+    <!-- ...existing code... -->
+    <view class="controls">
+      <text bindtap="decreaseOrder" data-name="{{item.name}}" class="minus" wx:if="{{item.quantity > 0}}">-</text>
+      <text class="quantity" wx:if="{{item.quantity > 0}}">{{item.quantity}}</text>
+      <text bindtap="increaseOrder" data-name="{{item.name}}" class="plus" wx:if="{{item.quantity > 0}}">+</text>
+      <text bindtap="increaseOrder" data-name="{{item.name}}" class="plus" wx:else>+</text>
+    </view>
+
+
+
+          </view>
+        </block>
+  </scroll-view>
+
+  <!-- Add the footer bar -->
+  <view class="footer">
+    <view class="total-price">总成本：{{totalPrice}}</view>
+    <button class="total-btn" bindtap="showModal">计算</button>
+  </view>
+
+  <!-- Add the modal window -->
+  <view class="modal" hidden="{{!showModal}}">
+    <view class="modal-container"> <!-- Add this wrapper -->
+  <view class="modal-header">
+    <text class="modal-title"></text>
+    <button class="close-btn" bindtap="hideModal">×</button>
+  </view>
+  <view class="modal-content">
+    <block wx:for="{{cartFoods}}" wx:key="name">
+      <view class="cart-item">
+        <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
+        <view class="info">
+          <text>{{item.name}}</text>
+          <view class="controls">
+            <text class="plus" bindtap="increaseOrder" data-name="{{item.name}}">+</text>
+            <text>{{item.quantity}}</text>
+            <text class="minus" bindtap="decreaseOrder" data-name="{{item.name}}">-</text>
+            
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="total-price">总成本：{{totalPrice}}</view>
+    <view class="price-per-person">
+      <text> 订单价:</text>
+      <input class="input-price" type="number" bindinput="handlePriceInput" placeholder="输入数字" />
+      
+      <text> 倍数：{{pricePerPerson}}</text>
+    </view>
+  </view>
+</view>
+</view>
+</view>
