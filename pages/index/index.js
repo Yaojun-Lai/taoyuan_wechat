@@ -267,7 +267,7 @@ Page({
     const totalPrice = parseFloat(this.data.totalPrice);
     if (!isNaN(people) && people !== 0 && !isNaN(totalPrice)) {
       
-      const pricePerPerson = (totalPrice / people).toFixed(2);
+      const pricePerPerson = (people / totalPrice).toFixed(2);
       this.setData({ pricePerPerson });
     }
     else{
