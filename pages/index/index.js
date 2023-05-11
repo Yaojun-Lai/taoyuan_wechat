@@ -161,7 +161,7 @@ Page({
       "type": "饼坊",
       "name": "土豆饼",
       "price": 72,
-      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/7700fee03402f76f5ed3f01a4f440fa7a1457d1b/%E5%92%B8%E9%B8%A1%E8%9B%8B.JPG",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%9C%9F%E8%B1%86%E9%A5%BC.JPG",
       "quantity": 0,
       "index": "food19"
     },
@@ -1157,7 +1157,8 @@ Page({
       allFoods: foods,
       currentFoods: currentFoods,
       cartFoods: [],
-      totalPrice: 0
+      totalPrice: 0,
+      pricePerPerson: 0
     });
   },
   
