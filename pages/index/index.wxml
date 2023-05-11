@@ -11,7 +11,7 @@
   </block>
 </scroll-view>
 
-  <scroll-view class="foods" scroll-y="true">
+  <scroll-view class="foods" scroll-y="true" lazy-load='true'>
         <block wx:for="{{currentFoods}}" wx:key="name"> <!-- change key to a unique property -->
           <view class="food-item">
             <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
