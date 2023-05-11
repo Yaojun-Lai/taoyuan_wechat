@@ -1,5 +1,6 @@
 Page({
   data: {
+    searchInput: '',
     selectedFoodType: '',
     foodTypes: ['农作物', '肉类', '制糖', '饼坊', '石磨', '豆坊', '豆腐加工', '玩具', '木工', '糕坊', '编织', '腌制', '陶瓷', '文具', '晾堂', '绣坊', '土料', '纺织', '开采', '菜谱'],
 
@@ -900,6 +901,7 @@ Page({
       "index": "food111"
     }],
    
+    
 
     pricePerPerson: '',
     totalPrice: 0, // initialize total price to zero
@@ -919,6 +921,7 @@ Page({
   });
 },
   
+
   loadFoods: function(type) {
     // Filter the foods of the selected type
     const foods = this.data.allFoods.filter(food => food.type === type);
@@ -1157,6 +1160,30 @@ Page({
     });
   },
   
+  onSearchInput: function(e) {
+    this.setData({
+      searchInput: e.detail.value,
+    });
+  },
+  
+  onSearchButton: function() {
+    const foodToSearch = this.data.allFoods.find(food => food.name === this.data.searchInput);
+    if (foodToSearch) {
+      this.setData({
+        scrollToFood: foodToSearch.index,
+      });
+    } else {
+      // Find the first food where food.name includes the search input
+      const foodToScroll = this.data.allFoods.find(food => food.name.includes(this.data.searchInput));
+      if (foodToScroll) {
+        this.setData({
+          scrollToFood: foodToScroll.index,
+        });
+      } else {
+        console.log("No food found with this name");
+      }
+    }
+  },
   
 
 

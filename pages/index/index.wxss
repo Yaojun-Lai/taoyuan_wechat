@@ -1,9 +1,59 @@
 .container {
+  /* left: 0;
+  right: 0; */
+  position: fixed;
+  top: 60px;
+  /* bottom: 110px; */
+  left: 0;
+  right: 0;
   padding: 5rpx;
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 160px);
+  
 }
+
+/* .content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden; 
+} */
+
+
+.search-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #000;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  flex-shrink: 0;
+  width: 25%;
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 .sidebar {
   flex: 1;
