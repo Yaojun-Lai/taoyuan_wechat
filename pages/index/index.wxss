@@ -2,14 +2,14 @@
   /* left: 0;
   right: 0; */
   position: fixed;
-  top: 60px;
+  top: 90px;
   /* bottom: 110px; */
   left: 0;
   right: 0;
   padding: 5rpx;
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 185px);
   
 }
 
@@ -26,7 +26,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,7 +37,8 @@
 
 .search-bar input {
   flex: 1;
-  padding: 5px;
+  height: 20px;
+  padding: 10px;
   border: 1px solid #000;
   border-radius: 5px;
 }
@@ -45,6 +46,7 @@
 .search-bar button {
   flex-shrink: 0;
   width: 25%;
+  height: 40px;
   margin-left: 5px;
   padding: 5px 10px;
   border: none;
