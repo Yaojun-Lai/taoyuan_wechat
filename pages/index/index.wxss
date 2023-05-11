@@ -218,7 +218,7 @@
   border-radius: 10px;
   max-height: 90vh; /* Maximum height is 90% of the viewport height */
   overflow-y: auto; /* Enable vertical scrolling */
-  width: 85%; /* Set the width to 80% of the viewport width */
+  width: 90%; /* Set the width to 80% of the viewport width */
   max-width: 500px;
 }
 

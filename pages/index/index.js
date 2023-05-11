@@ -112,7 +112,7 @@ Page({
       "type": "制糖",
       "name": "糖",
       "price": 12,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%B3%96.jpeg",
       "quantity": 0,
       "index": "food13"
     },
@@ -352,7 +352,7 @@ Page({
       "type": "糕坊",
       "name": "南瓜糕",
       "price": 84,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%97%E7%93%9C%E7%B3%95.jpeg",
       "quantity": 0,
       "index": "food43"
     },
@@ -592,7 +592,7 @@ Page({
       "type": "开采",
       "name": "木材",
       "price": 10,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%A8%E6%9D%90.jpeg",
       "quantity": 0,
       "index": "food73"
     },
@@ -608,7 +608,7 @@ Page({
       "type": "菜谱",
       "name": "蛋炒饭",
       "price": 8,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9B%8B%E7%82%92%E9%A5%AD.png",
       "quantity": 0,
       "index": "food75"
     },
@@ -616,7 +616,7 @@ Page({
       "type": "菜谱",
       "name": "清汤白菜",
       "price": 15,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%B8%85%E6%B1%A4%E7%99%BD%E8%8F%9C.png",
       "quantity": 0,
       "index": "food76"
     },
@@ -624,7 +624,7 @@ Page({
       "type": "菜谱",
       "name": "麻花",
       "price": 15,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BA%BB%E8%8A%B1.png",
       "quantity": 0,
       "index": "food77"
     },
@@ -632,7 +632,7 @@ Page({
       "type": "菜谱",
       "name": "蛋黄酥",
       "price": 14,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9B%8B%E9%BB%84%E9%85%A5.png",
       "quantity": 0,
       "index": "food78"
     },
@@ -640,7 +640,7 @@ Page({
       "type": "菜谱",
       "name": "麻婆豆腐",
       "price": 14,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90.png",
       "quantity": 0,
       "index": "food79"
     },
@@ -648,7 +648,7 @@ Page({
       "type": "菜谱",
       "name": "酸菜豆腐",
       "price": 21,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E8%B1%86%E8%85%90.png",
       "quantity": 0,
       "index": "food80"
     },
@@ -656,7 +656,7 @@ Page({
       "type": "菜谱",
       "name": "鸡蛋面",
       "price": 10,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A1%E8%9B%8B%E9%9D%A2.png",
       "quantity": 0,
       "index": "food81"
     },
@@ -664,7 +664,7 @@ Page({
       "type": "菜谱",
       "name": "辣子鸡丁",
       "price": 17,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%BE%A3%E5%AD%90%E9%B8%A1%E4%B8%81.png",
       "quantity": 0,
       "index": "food82"
     },
@@ -672,7 +672,7 @@ Page({
       "type": "菜谱",
       "name": "鸡肉豆腐",
       "price": 15,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A1%E8%82%89%E8%B1%86%E8%85%90.png",
       "quantity": 0,
       "index": "food83"
     },
@@ -680,7 +680,7 @@ Page({
       "type": "菜谱",
       "name": "鲫鱼豆腐汤",
       "price": 12,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B2%AB%E9%B1%BC%E8%B1%86%E8%85%90%E6%B1%A4.png",
       "quantity": 0,
       "index": "food84"
     },
@@ -688,7 +688,7 @@ Page({
       "type": "菜谱",
       "name": "虎皮肉",
       "price": 17,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%99%8E%E7%9A%AE%E8%82%89.png",
       "quantity": 0,
       "index": "food85"
     },
@@ -696,7 +696,7 @@ Page({
       "type": "菜谱",
       "name": "酸菜鱼",
       "price": 29,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E9%B1%BC.jpeg",
       "quantity": 0,
       "index": "food86"
     },
@@ -704,7 +704,7 @@ Page({
       "type": "菜谱",
       "name": "酸菜汆白肉",
       "price": 24,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E6%B1%86%E7%99%BD%E8%82%89.png",
       "quantity": 0,
       "index": "food87"
     },
@@ -712,7 +712,7 @@ Page({
       "type": "菜谱",
       "name": "酸辣土豆丝",
       "price": 20,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E5%9C%9F%E8%B1%86%E4%B8%9D.png",
       "quantity": 0,
       "index": "food88"
     },
@@ -720,7 +720,7 @@ Page({
       "type": "菜谱",
       "name": "剁椒鱼头",
       "price": 17,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%89%81%E6%A4%92%E9%B1%BC%E5%A4%B4.png",
       "quantity": 0,
       "index": "food89"
     },
@@ -728,7 +728,7 @@ Page({
       "type": "菜谱",
       "name": "苦瓜炒蛋",
       "price": 16,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8B%A6%E7%93%9C%E7%82%92%E8%9B%8B.png",
       "quantity": 0,
       "index": "food90"
     },
@@ -736,7 +736,7 @@ Page({
       "type": "菜谱",
       "name": "荠菜肉包",
       "price": 25,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8D%A0%E8%8F%9C%E8%82%89%E5%8C%85.png",
       "quantity": 0,
       "index": "food91"
     },
@@ -744,7 +744,7 @@ Page({
       "type": "菜谱",
       "name": "苦瓜猪肉汤",
       "price": 21,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8B%A6%E7%93%9C%E7%8C%AA%E8%82%89%E6%B1%A4.png",
       "quantity": 0,
       "index": "food92"
     },
@@ -752,7 +752,7 @@ Page({
       "type": "菜谱",
       "name": "肉末烧饼",
       "price": 17,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%82%89%E6%9C%AB%E7%83%A7%E9%A5%BC.png",
       "quantity": 0,
       "index": "food93"
     },
@@ -760,7 +760,7 @@ Page({
       "type": "菜谱",
       "name": "红烧鸭",
       "price": 20,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E7%83%A7%E9%B8%AD.png",
       "quantity": 0,
       "index": "food94"
     },
@@ -768,7 +768,7 @@ Page({
       "type": "菜谱",
       "name": "荠菜馄炖",
       "price": 25,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8D%A0%E8%8F%9C%E9%A6%84%E7%82%96.png",
       "quantity": 0,
       "index": "food95"
     },
@@ -776,7 +776,7 @@ Page({
       "type": "菜谱",
       "name": "苦瓜拌面",
       "price": 20,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8B%A6%E7%93%9C%E6%8B%8C%E9%9D%A2.png",
       "quantity": 0,
       "index": "food96"
     },
@@ -784,7 +784,7 @@ Page({
       "type": "菜谱",
       "name": "黄焖鸡",
       "price": 27,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BB%84%E7%84%96%E9%B8%A1.png",
       "quantity": 0,
       "index": "food97"
     },
@@ -792,7 +792,7 @@ Page({
       "type": "菜谱",
       "name": "香椿拌豆腐",
       "price": 18,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%A6%99%E6%A4%BF%E6%8B%8C%E8%B1%86%E8%85%90.png",
       "quantity": 0,
       "index": "food98"
     },
@@ -800,7 +800,7 @@ Page({
       "type": "菜谱",
       "name": "松鼠鳜鱼",
       "price": 14,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9D%BE%E9%BC%A0%E9%B3%9C%E9%B1%BC.png",
       "quantity": 0,
       "index": "food99"
     },
@@ -808,7 +808,7 @@ Page({
       "type": "菜谱",
       "name": "香辣羊肉面",
       "price": 24,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%A6%99%E8%BE%A3%E7%BE%8A%E8%82%89%E9%9D%A2.png",
       "quantity": 0,
       "index": "food100"
     },
@@ -816,7 +816,7 @@ Page({
       "type": "菜谱",
       "name": "酸菜羊肉",
       "price": 24,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E7%BE%8A%E8%82%89.png",
       "quantity": 0,
       "index": "food101"
     },
@@ -824,7 +824,7 @@ Page({
       "type": "菜谱",
       "name": "银鱼南瓜羹",
       "price": 26,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%93%B6%E9%B1%BC%E5%8D%97%E7%93%9C%E7%BE%B9.png",
       "quantity": 0,
       "index": "food102"
     },
@@ -840,7 +840,7 @@ Page({
       "type": "菜谱",
       "name": "鱼香肉丝",
       "price": 25,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%B3%96%E9%86%8B%E9%87%8C%E8%84%8A.png",
       "quantity": 0,
       "index": "food104"
     },
@@ -848,7 +848,7 @@ Page({
       "type": "菜谱",
       "name": "木须肉",
       "price": 27,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%A8%E9%A1%BB%E8%82%89.png",
       "quantity": 0,
       "index": "food105"
     },
@@ -856,7 +856,7 @@ Page({
       "type": "菜谱",
       "name": "赛螃蟹",
       "price": 9,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%B5%9B%E8%9E%83%E8%9F%B9.png",
       "quantity": 0,
       "index": "food106"
     },
@@ -864,7 +864,7 @@ Page({
       "type": "菜谱",
       "name": "狮子头",
       "price": 30,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%8B%AE%E5%AD%90%E5%A4%B4.png",
       "quantity": 0,
       "index": "food107"
     },
@@ -872,7 +872,7 @@ Page({
       "type": "菜谱",
       "name": "蚂蚁上树",
       "price": 52,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9A%82%E8%9A%81%E4%B8%8A%E6%A0%91.png",
       "quantity": 0,
       "index": "food108"
     },
@@ -880,7 +880,7 @@ Page({
       "type": "菜谱",
       "name": "粉丝蒸白菜",
       "price": 38,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%B2%89%E4%B8%9D%E8%92%B8%E7%99%BD%E8%8F%9C.png",
       "quantity": 0,
       "index": "food109"
     },
@@ -888,7 +888,7 @@ Page({
       "type": "菜谱",
       "name": "羊肉泡馍",
       "price": 48,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BE%8A%E8%82%89%E6%B3%A1%E9%A6%8D.png",
       "quantity": 0,
       "index": "food110"
     },
@@ -896,7 +896,7 @@ Page({
       "type": "菜谱",
       "name": "南瓜馒头",
       "price": 31,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%97%E7%93%9C%E9%A6%92%E5%A4%B4.png",
       "quantity": 0,
       "index": "food111"
     }],
