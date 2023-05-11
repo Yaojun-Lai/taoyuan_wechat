@@ -1093,7 +1093,7 @@ Page({
   handlePriceInput: function(event) {
     const people = parseInt(event.detail.value, 10);
     const totalPrice = parseFloat(this.data.totalPrice);
-    if (!isNaN(people) && people !== 0 && !isNaN(totalPrice)) {
+    if (!isNaN(people) && people !== 0 && !isNaN(totalPrice) && totalPrice !== 0) {
       
       const pricePerPerson = (people / totalPrice).toFixed(2);
       this.setData({ pricePerPerson });
