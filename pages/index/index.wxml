@@ -85,14 +85,14 @@
 
     <view class="price-per-person">
       <text>订单价：</text>
-      <input class="input-price" type="number" bindinput="handlePriceInput" placeholder="0" value="{{bookPrice}}"/>
+      <input class="input-price" type="number" bindinput="handlePriceInput" placeholder="0" value="{{displayBookPrice}}"/>
       <view class="total-price-margin2">
         <text>总额：{{totalBookPrice}} </text>
       </view>
     </view>
     <view class="price-per-person">
       <text>加成：</text>
-      <input class="input-price" type="number" bindinput="addBookPrice" value="{{extraPrice}}"/>
+      <input class="input-price" type="number" bindinput="addBookPrice" placeholder="0" value="{{displayPrice}}"/>
     </view>
 
   </view>

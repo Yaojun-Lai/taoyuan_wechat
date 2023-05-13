@@ -901,10 +901,12 @@ Page({
       "quantity": 0,
       "index": "food111"
     }],
-   
-    
+    displayBookPrice: "",
+    displayPrice: "",
     totalBookPrice: 0,
     extraPrice: 0,
+    extraPricePlaceholder: '',
+    bookPricePlaceholder: '',
     bookPrice: 0,
     pricePerPerson: 0,
     totalPrice: 0, // initialize total price to zero
@@ -1105,18 +1107,19 @@ Page({
       });
     }
   },
-  totalBookPrice: 0,
-  extraPrice: 0,
-  bookPrice: 0,
-  pricePerPerson: 0,
+
   addBookPrice: function(event){
     const add = parseInt(event.detail.value, 10);
+
     if (isNaN(add)){
       this.setData({ extraPrice: 0 });
     }
     else{
       this.setData({ extraPrice: add });
     }
+    this.setData({
+      displayPrice: add === 0 ? "" : add
+    });
     const extraPrice = parseFloat(this.data.extraPrice);
     const bookPrice = parseFloat(this.data.bookPrice);
     this.setData({ totalBookPrice: extraPrice +  bookPrice});
@@ -1138,6 +1141,9 @@ Page({
     else{
       this.setData({ bookPrice: newBookPrice });
     }
+    this.setData({
+      displayBookPrice: newBookPrice === 0 ? "" : newBookPrice
+    });
     const extraPrice = parseFloat(this.data.extraPrice);
     const bookPrice = parseFloat(this.data.bookPrice);
     this.setData({ totalBookPrice: extraPrice +  bookPrice});
@@ -1210,8 +1216,12 @@ Page({
       totalBookPrice: 0,
       extraPrice: 0,
       bookPrice: 0,
-      pricePerPerson: 0
+      pricePerPerson: 0,
+      displayBookPrice: "",
+      displayPrice: ""
     });
+    // const event = {detail: {value: 'katherine'}};
+    // this.addBookPrice(event);
   },
   
   onSearchInput: function(e) {
