@@ -25,7 +25,7 @@
             <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
             <view class="info">
               <text>{{item.name}}</text>
-              <text>{{item.price}}</text>
+              <text>¥{{item.price}}</text>
             </view>
     <!-- ...existing code... -->
     <view class="controls">
@@ -43,7 +43,9 @@
 </view>
   <!-- Add the footer bar -->
   <view class="footer">
-    <view class="total-price">总成本：{{totalPrice}}</view>
+    <view class="total-price">总成本：¥{{totalPrice}}</view>
+    <button class="clear-btn2" bindtap="clearOrder">清空</button>
+    <view class="empty-space"></view>
     <button class="total-btn" bindtap="showModal">计算</button>
   </view>
 
@@ -70,19 +72,29 @@
       </view>
     </block>
 
-
-    <view class="total-price2">总成本：{{totalPrice}}
+  <view class="price-per-person">
+  <view class="total-price2">
+  <view class="input-price">
+  总成本：{{totalPrice}}
+  </view>
     <view class="total-price2-text-margin">
         <text>倍数：{{pricePerPerson}} </text>
     </view>
    </view>
+  </view>
 
     <view class="price-per-person">
       <text>订单价：</text>
-      <input class="input-price" type="number" bindinput="handlePriceInput" placeholder="输入数字" />
-      
-      
+      <input class="input-price" type="number" bindinput="handlePriceInput" placeholder="0" value="{{bookPrice}}"/>
+      <view class="total-price-margin2">
+        <text>总额：{{totalBookPrice}} </text>
+      </view>
     </view>
+    <view class="price-per-person">
+      <text>加成：</text>
+      <input class="input-price" type="number" bindinput="addBookPrice" value="{{extraPrice}}"/>
+    </view>
+
   </view>
 </view>
 </view>

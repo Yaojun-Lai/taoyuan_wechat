@@ -903,18 +903,20 @@ Page({
     }],
    
     
-
-    pricePerPerson: '',
+    totalBookPrice: 0,
+    extraPrice: 0,
+    bookPrice: 0,
+    pricePerPerson: 0,
     totalPrice: 0, // initialize total price to zero
     showModal: false, // flag to show/hide the modal window
     cartFoods: [], // initialize cart foods to an empty array
     selectedTable: null, // initialize selected table to null
     currentFoods: [], // This will store only the foods of the selected type
-
     selectedType: 'Chinese', // default selected type
     
   },
-    
+  
+
   onLoad: function() {
   this.setData({
     selectedFoodType: this.data.foodTypes[0],
@@ -989,6 +991,18 @@ Page({
     this.setData({
       totalPrice: totalPrice.toFixed(2)
     });
+    const totalBookPrice = parseFloat(this.data.totalBookPrice);
+    const totalPrice2 = parseFloat(this.data.totalPrice);
+
+    if (!isNaN(totalPrice) && totalPrice2 !== 0){
+      this.setData({
+        pricePerPerson: (totalBookPrice / totalPrice2).toFixed(2)
+      })
+    }else{
+      this.setData({
+        pricePerPerson: 0
+      })
+    }
   },
 
   // Add a food item to the cart
@@ -1091,19 +1105,54 @@ Page({
       });
     }
   },
-  handlePriceInput: function(event) {
-    const people = parseInt(event.detail.value, 10);
+  totalBookPrice: 0,
+  extraPrice: 0,
+  bookPrice: 0,
+  pricePerPerson: 0,
+  addBookPrice: function(event){
+    const add = parseInt(event.detail.value, 10);
+    if (isNaN(add)){
+      this.setData({ extraPrice: 0 });
+    }
+    else{
+      this.setData({ extraPrice: add });
+    }
+    const extraPrice = parseFloat(this.data.extraPrice);
+    const bookPrice = parseFloat(this.data.bookPrice);
+    this.setData({ totalBookPrice: extraPrice +  bookPrice});
     const totalPrice = parseFloat(this.data.totalPrice);
-    if (!isNaN(people) && people !== 0 && !isNaN(totalPrice) && totalPrice !== 0) {
-      
-      const pricePerPerson = (people / totalPrice).toFixed(2);
+    const totalBookPrice =  parseFloat(this.data.totalBookPrice);
+    if (!isNaN(totalPrice) && totalPrice !== 0) {
+      const pricePerPerson = (totalBookPrice / totalPrice).toFixed(2);
       this.setData({ pricePerPerson });
     }
     else{
-      const pricePerPerson = 0;
-      this.setData({ pricePerPerson });
+      this.setData({ pricePerPerson: 0 });
     }
   },
+  handlePriceInput: function(event) {
+    const newBookPrice = parseInt(event.detail.value, 10);
+    if (isNaN(newBookPrice)){
+      this.setData({ bookPrice: 0 });
+    }
+    else{
+      this.setData({ bookPrice: newBookPrice });
+    }
+    const extraPrice = parseFloat(this.data.extraPrice);
+    const bookPrice = parseFloat(this.data.bookPrice);
+    this.setData({ totalBookPrice: extraPrice +  bookPrice});
+    const totalPrice = parseFloat(this.data.totalPrice);
+    const totalBookPrice =  parseFloat(this.data.totalBookPrice);
+    if (!isNaN(totalPrice) && totalPrice !== 0) {
+      const pricePerPerson = (totalBookPrice / totalPrice).toFixed(2);
+      this.setData({ pricePerPerson });
+    }
+    else{
+      this.setData({ pricePerPerson: 0 });
+    }
+  },
+
+
 
   // selectFoodType: function(e) {
   //   this.setData({
@@ -1158,6 +1207,9 @@ Page({
       currentFoods: currentFoods,
       cartFoods: [],
       totalPrice: 0,
+      totalBookPrice: 0,
+      extraPrice: 0,
+      bookPrice: 0,
       pricePerPerson: 0
     });
   },
