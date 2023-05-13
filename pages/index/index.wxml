@@ -43,7 +43,7 @@
 </view>
   <!-- Add the footer bar -->
   <view class="footer">
-    <view class="total-price">总成本：¥{{totalPrice}}</view>
+    <view class="total-price">总成本: ¥{{totalPrice}}</view>
     <button class="clear-btn2" bindtap="clearOrder">清空</button>
     <view class="empty-space"></view>
     <button class="total-btn" bindtap="showModal">计算</button>
@@ -74,8 +74,9 @@
 
   <view class="price-per-person">
   <view class="total-price2">
-  <view class="input-price">
-  总成本：{{totalPrice}}
+    <text>总成本: ¥ </text>
+  <view class="input-price-2">
+  {{totalPrice}}
   </view>
     <view class="total-price2-text-margin">
         <text>倍数：{{pricePerPerson}} </text>
@@ -84,14 +85,14 @@
   </view>
 
     <view class="price-per-person">
-      <text>订单价：</text>
+      <text>订单价: ¥ </text>
       <input class="input-price" type="number" bindinput="handlePriceInput" placeholder="0" value="{{displayBookPrice}}"/>
       <view class="total-price-margin2">
-        <text>总额：{{totalBookPrice}} </text>
+        <text>总额: ¥{{totalBookPrice}} </text>
       </view>
     </view>
     <view class="price-per-person">
-      <text>加成：</text>
+      <text>加成: ¥ </text>
       <input class="input-price" type="number" bindinput="addBookPrice" placeholder="0" value="{{displayPrice}}"/>
     </view>
 

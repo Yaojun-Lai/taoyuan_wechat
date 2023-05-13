@@ -185,9 +185,9 @@
   align-items: center;
 }
 .total-price {
-  flex: 2;
+  flex: 2.3;
   align-items: center;
-  font-size: 24px;
+  font-size: 27px;
   margin-right: 5px;
 }
 .total-price-margin2{
@@ -217,7 +217,7 @@
   flex: 0.1;
 }
 .total-btn {
-  flex: 1.5;
+  flex: 1.3;
   background-color: #0056b3;
   color: #fff;
   font-size: 24px;
@@ -328,7 +328,13 @@
 }
 input.input-price {
   /* flex: 1; */
-  width: 100px;
+  width: 85px;
+
+  /* margin-left: 10px;  */
+}
+.input-price-2 {
+  /* flex: 1; */
+  width: 65px;
 
   /* margin-left: 10px;  */
 }

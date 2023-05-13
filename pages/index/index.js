@@ -991,7 +991,7 @@ Page({
       totalPrice += food.price * food.quantity;
     }
     this.setData({
-      totalPrice: totalPrice.toFixed(2)
+      totalPrice: totalPrice.toFixed(0)
     });
     const totalBookPrice = parseFloat(this.data.totalBookPrice);
     const totalPrice2 = parseFloat(this.data.totalPrice);
