@@ -1109,8 +1109,9 @@ Page({
   },
 
   addBookPrice: function(event){
+    // console.log(event.detail);
     const add = parseInt(event.detail.value, 10);
-
+    
     if (isNaN(add)){
       this.setData({ extraPrice: 0 });
     }
@@ -1218,7 +1219,9 @@ Page({
       bookPrice: 0,
       pricePerPerson: 0,
       displayBookPrice: "",
-      displayPrice: ""
+      displayPrice: "",
+      searchInput: ''
+ 
     });
     // const event = {detail: {value: 'katherine'}};
     // this.addBookPrice(event);
@@ -1231,6 +1234,16 @@ Page({
   },
   
   onSearchButton: function() {
+    if (this.data.searchInput == 'katherine'){
+      this.setData({
+        pricePerPerson: "Anson's babe",
+        bookPricePlaceholder: 520,
+        extraPricePlaceholder: 1314,
+        totalBookPrice: 'Love Ya',
+        totalPrice: '∞'
+      })
+      this.showModal();
+    }
     const foodToSearch = this.data.allFoods.find(food => food.name === this.data.searchInput);
     if (foodToSearch) {
       this.setData({
@@ -1265,7 +1278,7 @@ Page({
         // Get the type of the first visible food
         
         const visibleFoodType = this.data.indexType[firstVisibleFood.id]
-        console.log(firstVisibleFood.id, visibleFoodType);
+        // console.log(firstVisibleFood.id, visibleFoodType);
         if (visibleFoodType !== this.data.selectedFoodType) {
           // If the type has changed, update it
           this.setData({
