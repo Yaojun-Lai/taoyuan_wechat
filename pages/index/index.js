@@ -1244,6 +1244,14 @@ Page({
       })
       this.showModal();
     }
+    if (this.data.searchInput == 'mom'){
+      this.setData({
+        pricePerPerson: "亲爱的妈咪",
+        totalBookPrice: '母亲节快乐😘',
+        totalPrice: '520'
+      })
+      this.showModal();
+    }
     const foodToSearch = this.data.allFoods.find(food => food.name === this.data.searchInput);
     if (foodToSearch) {
       this.setData({
