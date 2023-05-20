@@ -1,3 +1,4 @@
+
 <view class="search-bar">
     <input type="text" placeholder="输入材料" bindinput="onSearchInput"/>
     <button bindtap="onSearchButton">搜索</button>
@@ -70,6 +71,8 @@
           </view>
         </view>
       </view>
+
+      
     </block>
 
   <view class="price-per-person">
@@ -98,5 +101,8 @@
 
   </view>
 </view>
+<!-- <ad unit-id="adunit-0f098ebe2f7a075d"></ad> -->
+
+
 </view>
 
