@@ -1,7 +1,8 @@
 
 <view class="search-bar">
-    <input type="text" placeholder="输入材料" bindinput="onSearchInput"/>
-    <button bindtap="onSearchButton">搜索</button>
+    <input type="text" placeholder="搜索材料" bindinput="onSearchInput" bindconfirm="onSearchButton" 
+           confirm-type="search"/>
+    <!-- <button bindtap="onSearchButton">搜索</button> -->
 </view>
 <view class="container">
 
@@ -31,7 +32,7 @@
     <!-- ...existing code... -->
     <view class="controls">
       <text bindtap="decreaseOrder" data-name="{{item.name}}" class="minus" wx:if="{{item.quantity > 0}}">-</text>
-      <input bindinput="inputOrder" data-name="{{item.name}}" type="number" class="quantity" min="0" wx:if="{{item.quantity > 0}}" value="{{item.quantity}}" />
+      <input class="fixed-width-input" bindinput="inputOrder" data-name="{{item.name}}" class="quantity" min="0" wx:if="{{item.quantity > 0}}" value="{{item.quantity}}" />
       <text bindtap="increaseOrder" data-name="{{item.name}}" class="plus" wx:if="{{item.quantity > 0}}">+</text>
       <text bindtap="increaseOrder" data-name="{{item.name}}" class="plus" wx:else>+</text>
     </view>

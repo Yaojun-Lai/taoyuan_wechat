@@ -106,8 +106,8 @@
 }
 
 .food-item .avatar {
-  width: 60px;
-  height: 60px;
+  flex: 0 0 60px; /* Don't grow, don't shrink, stay fixed at 60px */
+  min-width: 60px; /* Add this line */
 }
 
 /*...existing styles...*/
@@ -296,6 +296,11 @@
 .close-btn {
   background-color: #0056b3; /* Slightly darker blue */
 }
+.fixed-width-input {
+  width: 3px; /* Or however wide you want the input to be */
+  text-align: center;
+  background-color: red;
+}
 
 
 .cart-item .info {
@@ -308,15 +313,26 @@
   align-items: center;
   font-size: 20px;
 }
-
 .cart-item .controls .minus,
+.food-item .controls .minus{
+  color: pink;
+  margin-left: 5px;
+  margin-right: 10px;
+  font-size: 30px; 
+  padding: 3.5px; /* Add padding */
+  /* background-color: #0056b3; */
+  
+}
+
 .cart-item .controls .plus,
-.food-item .controls .minus,
+
 .food-item .controls .plus {
   color: pink;
   margin: 0 5px;
   font-size: 30px; 
-  padding: 10px; /* Add padding */
+  padding: 3.5px; /* Add padding */
+  /* background-color: #0056b3; */
+  
 }
 
 
