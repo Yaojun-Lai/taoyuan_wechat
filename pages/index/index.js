@@ -990,7 +990,53 @@ Page({
       this.computeTotalPrice(); // Recompute the total price
     }
   },
-
+  inputOrder: function(e) {
+    const name = e.currentTarget.dataset.name;
+    const foods = this.data.allFoods;
+    const index = foods.findIndex(food => food.name === name);
+    let quantity = parseInt(e.detail.value, 10); // Convert the input to a number
+  
+    // If the input is invalid (not a number, negative, or empty), set quantity to 0
+    if (isNaN(quantity) || quantity < 0) {
+      quantity = 0;
+    }
+  
+    if (index !== -1) {
+      foods[index].quantity = quantity; // Set the new quantity
+      const cartFoods = this.data.cartFoods;
+      const cartIndex = cartFoods.findIndex(item => item.name === name);
+      
+      if (foods[index].quantity === 0) {
+        delete foods[index].quantity;
+        if (cartIndex !== -1) {
+          cartFoods.splice(cartIndex, 1);
+        }
+      } else {
+        if (cartIndex !== -1) {
+          cartFoods[cartIndex].quantity = quantity;
+        } else {
+          cartFoods.push({
+            type: foods[index].type,
+            name: foods[index].name,
+            price: foods[index].price,
+            avatar: foods[index].avatar,
+            quantity: quantity
+          });
+        }
+      }
+  
+      this.setData({
+        allFoods: foods,
+        cartFoods: cartFoods
+      });
+  
+      this.computeTotalPrice(); // Recompute the total price
+    }
+  },
+  
+  
+  
+  
   // Compute the total price based on the items in the cart
   computeTotalPrice: function() {
     const cartFoods = this.data.cartFoods;

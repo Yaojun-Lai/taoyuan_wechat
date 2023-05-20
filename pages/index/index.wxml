@@ -31,10 +31,11 @@
     <!-- ...existing code... -->
     <view class="controls">
       <text bindtap="decreaseOrder" data-name="{{item.name}}" class="minus" wx:if="{{item.quantity > 0}}">-</text>
-      <text class="quantity" wx:if="{{item.quantity > 0}}">{{item.quantity}}</text>
+      <input bindinput="inputOrder" data-name="{{item.name}}" type="number" class="quantity" min="0" wx:if="{{item.quantity > 0}}" value="{{item.quantity}}" />
       <text bindtap="increaseOrder" data-name="{{item.name}}" class="plus" wx:if="{{item.quantity > 0}}">+</text>
       <text bindtap="increaseOrder" data-name="{{item.name}}" class="plus" wx:else>+</text>
     </view>
+
 
 
 
