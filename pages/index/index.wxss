@@ -98,7 +98,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid #000; */
   margin-bottom: 5px;
   
   padding: 10px;
@@ -106,44 +105,52 @@
 }
 
 .food-item .avatar {
-  flex: 0 0 60px; /* Don't grow, don't shrink, stay fixed at 60px */
-  min-width: 60px; /* Add this line */
+  flex: 0 0 60px;
+  min-width: 60px;
 }
-
-/*...existing styles...*/
 
 .food-item .info {
-  flex-grow: 1;
+  flex: 1; /* Adjust this to give it a fixed proportion of the space */
   margin-left: 10px;
-  display: flex; /* Add this line */
-  flex-direction: column; /* Add this line */
-  justify-content: center; /* Add this line */
-}
-
-.food-item .info text:first-child {
-  white-space: nowrap; /* Keeps text on a single line */
-  overflow: hidden; /* Hide text that overflows */
-  text-overflow: ellipsis; /* Add ellipsis (...) when text overflows */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .food-item .controls {
   display: flex;
-  flex-direction: row;
+  flex: 0.8; /* Adjust this to leave space for the plus button */
+  justify-content: space-between;
   align-items: center;
-  font-size: 24px; /* Increase the font size */
-  
+  font-size: 24px; 
+}
+.cart-item .controls .minus,
+.food-item .controls .minus {
+  color: #CD5C5C;
+  font-size: 30px; 
+  padding: 3.5px;
+  margin-right: 15px; /* Adjust this to give more space between minus and input */
 }
 
-.food-item .controls text {
-  margin: 0 10px; /* Add some space around the text */
+.food-item .controls .fixed-width-input {
+  text-align: center;
+  width: 70px; 
+  height: 30px;
+  padding: 0 10px; /* Adjust this to give more padding inside input field */
 }
 
-.food-item .info text:first-child {
-  white-space: nowrap; /* Keeps text on a single line */
-  overflow: hidden; /* Hide text that overflows */
-  text-overflow: ellipsis; /* Add ellipsis (...) when text overflows */
+.cart-item .controls .plus,
+.food-item .plus {
+  flex: 0.2; 
+  text-align: right;
+  color: #CD5C5C;
+  font-size: 30px; 
+  padding: 3.5px; 
+  margin-left: 15px; /* Adjust this to give more space between plus and input */
 }
-
 
 
 
@@ -312,27 +319,6 @@
   flex-direction: row;
   align-items: center;
   font-size: 20px;
-}
-.cart-item .controls .minus,
-.food-item .controls .minus{
-  color: pink;
-  margin-left: 5px;
-  margin-right: 10px;
-  font-size: 30px; 
-  padding: 3.5px; /* Add padding */
-  /* background-color: #0056b3; */
-  
-}
-
-.cart-item .controls .plus,
-
-.food-item .controls .plus {
-  color: pink;
-  margin: 0 5px;
-  font-size: 30px; 
-  padding: 3.5px; /* Add padding */
-  /* background-color: #0056b3; */
-  
 }
 
 
