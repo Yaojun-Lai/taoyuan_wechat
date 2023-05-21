@@ -1,0 +1,15 @@
+<input type="text" placeholder="搜索食物" bindinput="onSearchInput" bindconfirm="onSearchButton" confirm-type="search"/> 
+<button bindtap="onSearchButton">搜索</button>
+
+<scroll-view class="food-list" scroll-y="true" scroll-into-view="{{scrollToFood}}">
+  <block wx:for="{{allFoods}}" wx:key="index">
+    <view id="{{item.index}}" class="food-item">
+      <image src="{{item.avatar}}" class="food-avatar"></image>
+      <view class="food-info">
+        <text class="food-name">{{item.name}}</text>
+        <text class="food-desc1">{{item.description1}}</text>
+        <text class="food-desc2">{{item.description2}}</text>
+      </view>
+    </view>
+  </block>
+</scroll-view>

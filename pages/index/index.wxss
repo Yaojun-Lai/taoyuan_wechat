@@ -132,12 +132,12 @@
   color: #CD5C5C;
   font-size: 30px; 
   padding: 3.5px;
-  margin-right: 15px; /* Adjust this to give more space between minus and input */
+  margin-right: 5px; /* Adjust this to give more space between minus and input */
 }
 
 .food-item .controls .fixed-width-input {
   text-align: center;
-  width: 70px; 
+  width: 100px; 
   height: 30px;
   padding: 0 10px; /* Adjust this to give more padding inside input field */
 }

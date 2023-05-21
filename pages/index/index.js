@@ -1034,7 +1034,11 @@ Page({
     }
   },
   
-  
+  JumpToManual: function(){
+    wx.navigateTo({
+      url: '/pages/manual/manual',
+    })
+  },
   
   
   // Compute the total price based on the items in the cart
