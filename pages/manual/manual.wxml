@@ -1,15 +1,31 @@
-<input type="text" placeholder="搜索食物" bindinput="onSearchInput" bindconfirm="onSearchButton" confirm-type="search"/> 
-<button bindtap="onSearchButton">搜索</button>
 
-<scroll-view class="food-list" scroll-y="true" scroll-into-view="{{scrollToFood}}">
-  <block wx:for="{{allFoods}}" wx:key="index">
-    <view id="{{item.index}}" class="food-item">
-      <image src="{{item.avatar}}" class="food-avatar"></image>
+<view class="search-bar">
+    <input type="text" placeholder="搜索材料" bindinput="onSearchInput" bindconfirm="onSearchButton" 
+           confirm-type="search"/>
+    
+</view>
+<view class="container">
+
+  
+
+  
+
+<scroll-view class="foods" scroll-y="true" lazy-load='true' scroll-into-view="{{scrollToFood}}">
+    <block wx:for="{{currentFoods}}" wx:key="name"> <!-- change key to a unique property -->
+  <view class="food-item" id="{{item.index}}">
+    <image src="{{item.avatar}}" class="food-avatar"></image>
       <view class="food-info">
         <text class="food-name">{{item.name}}</text>
-        <text class="food-desc1">{{item.description1}}</text>
-        <text class="food-desc2">{{item.description2}}</text>
+        <text class="food-desc1">属性：{{item.taste}}</text>
+        <text class="food-desc2">食谱：{{item.recipe}}</text>
       </view>
-    </view>
-  </block>
-</scroll-view>
+
+    
+  </view>
+</block>
+
+  </scroll-view>
+</view>
+
+
+

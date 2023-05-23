@@ -1315,9 +1315,12 @@ Page({
     }
     const foodToSearch = this.data.allFoods.find(food => food.name === this.data.searchInput);
     if (foodToSearch) {
+      console.log(this.data.scrollToFood)
       this.setData({
         scrollToFood: foodToSearch.index,
       });
+      console.log(this.data.scrollToFood)
+      console.log(typeof(this.data.scrollToFood))
     } else {
       // Find the first food where food.name includes the search input
       const foodToScroll = this.data.allFoods.find(food => food.name.includes(this.data.searchInput));
