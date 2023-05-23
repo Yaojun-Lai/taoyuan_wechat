@@ -95,9 +95,9 @@
       <text>加成: ¥ </text>
       <input class="input-price" type="number" bindinput="addBookPrice" placeholder="0" value="{{displayPrice}}"/>
     </view>
-
+    <ad unit-id="adunit-0f098ebe2f7a075d"></ad>
   </view>
-  <ad unit-id="adunit-0f098ebe2f7a075d"></ad>
+  
 </view>
 
 
