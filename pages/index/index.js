@@ -910,6 +910,7 @@ Page({
       "index": "food111"
     }
     ],
+    adLoaded: false,
     displayBookPrice: "",
     displayPrice: "",
     totalBookPrice: 0,
@@ -1065,7 +1066,18 @@ Page({
       })
     }
   },
-
+  handleAdLoad: function() {
+    this.setData({ adLoaded: false });
+  },
+  handleAdError: function() {
+    // console.log('yes')
+    // this.setData({ adLoaded: true });
+  },
+  handleAdClose: function() {
+    this.setData({ adLoaded: true });
+  },
+  
+  
   // Add a food item to the cart
   addToCart: function(food) {
     const cartFoods = this.data.cartFoods;

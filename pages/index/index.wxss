@@ -290,13 +290,13 @@
 
 .scrollable-content {
   overflow-y: auto;
-  max-height: 35vh; /* Adjust this value as needed */
+  max-height: 40vh; /* Adjust this value as needed */
 }
 
 .scrollable-container {
   flex-grow: 1;
   overflow-y: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   height: 50%; /* Or whatever percentage works best for you. */
 }
 
@@ -342,7 +342,7 @@
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 22px;
 }
 input.input-price {

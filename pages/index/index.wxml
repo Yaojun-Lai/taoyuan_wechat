@@ -98,9 +98,10 @@
       <input class="input-price" type="number" bindinput="addBookPrice" placeholder="0" value="{{displayPrice}}"/>
     </view>
 
-    <view class='ad1' style='padding-top: 15rpx;'>
-      <ad unit-id="adunit-0f098ebe2f7a075d"></ad>
+    <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 15rpx;'>
+      <ad unit-id="adunit-0f098ebe2f7a075d" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
     </view>
+
   </view>
   
 </view>
