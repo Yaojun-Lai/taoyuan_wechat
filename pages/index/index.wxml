@@ -47,42 +47,43 @@
     <button class="total-btn" bindtap="showModal">计算</button>
   </view>
 
-  <!-- Add the modal window -->
+  
+ 
+
   <view class="modal" hidden="{{!showModal}}">
-    <view class="modal-container"> <!-- Add this wrapper -->
-  <view class="modal-header">
-    <!-- <text class="modal-title"></text> -->
-    <button class="clear-btn" bindtap="clearOrder">清空</button> 
-    <button class="close-btn" bindtap="hideModal">返回</button>
-  </view>
-  <view class="modal-content">
-    <block wx:for="{{cartFoods}}" wx:key="name">
-      <view class="cart-item">
-        <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
-        <view class="info info-row">
-          <text>{{item.name}}</text>
-          <view class="controls controls-row">
-            <text class="minus" bindtap="decreaseOrder" data-name="{{item.name}}">-</text>
-            <text>{{item.quantity}}</text>
-            <text class="plus" bindtap="increaseOrder" data-name="{{item.name}}">+</text>
+  <view class="modal-container">
+    <view class="modal-header">
+      <button class="clear-btn" bindtap="clearOrder">清空</button> 
+      <button class="close-btn" bindtap="hideModal">返回</button>
+    </view>
+    <view class="scrollable-content">
+    <view class="scrollable-container">
+      <block wx:for="{{cartFoods}}" wx:key="name">
+        <view class="cart-item">
+          <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
+          <view class="info info-row">
+            <text>{{item.name}}</text>
+            <view class="controls controls-row">
+              <text class="minus" bindtap="decreaseOrder" data-name="{{item.name}}">-</text>
+              <text>{{item.quantity}}</text>
+              <text class="plus" bindtap="increaseOrder" data-name="{{item.name}}">+</text>
+            </view>
           </view>
         </view>
-      </view>
-
-      
-    </block>
-
-  <view class="price-per-person">
-  <view class="total-price2">
-    <text>总成本: ¥ </text>
-  <view class="input-price-2">
-  {{totalPrice}}
-  </view>
-    <view class="total-price2-text-margin">
-        <text>倍数：{{pricePerPerson}} </text>
+      </block>
     </view>
-   </view>
   </view>
+    <view class="price-per-person">
+      <view class="total-price2">
+        <text>总成本: ¥ </text>
+        <view class="input-price-2">
+          {{totalPrice}}
+        </view>
+        <view class="total-price2-text-margin">
+          <text>倍数：{{pricePerPerson}} </text>
+        </view>
+      </view>
+    </view>
 
     <view class="price-per-person">
       <text>订单价: ¥ </text>
@@ -91,16 +92,17 @@
         <text>总额: ¥{{totalBookPrice}} </text>
       </view>
     </view>
+
     <view class="price-per-person">
       <text>加成: ¥ </text>
       <input class="input-price" type="number" bindinput="addBookPrice" placeholder="0" value="{{displayPrice}}"/>
     </view>
+
     <ad unit-id="adunit-0f098ebe2f7a075d"></ad>
   </view>
   
 </view>
 
+    
 
-
-</view>
-
+ 
