@@ -88,7 +88,7 @@ Page({
           'name': '鸡肉豆腐',
           'taste': '甘',
           'recipe': '1鸡肉＋1豆腐',
-          'avatar': ''
+          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A1%E8%82%89%E8%B1%86%E8%85%90.png'
       },
       {
           'index': 'food12',
@@ -120,10 +120,10 @@ Page({
       },
       {
           'index': 'food16',
-          'name': '荠菜馄炖',
+          'name': '荠菜馄饨',
           'taste': '咸',
           'recipe': '1面粉＋1猪肉＋1茅菜',
-          'avatar': ''
+          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8D%A0%E8%8F%9C%E9%A6%84%E7%82%96.png'
       },
       {
           'index': 'food17',
@@ -193,7 +193,7 @@ Page({
           'name': '羊肉泡馍',
           'taste': '辛',
           'recipe': '1羊肉＋2辣椒＋1面粉＋1粉丝',
-          'avatar': ''
+          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BE%8A%E8%82%89%E6%B3%A1%E9%A6%8D.png'
       },
       {
           'index': 'food27',

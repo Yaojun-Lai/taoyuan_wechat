@@ -776,7 +776,7 @@ Page({
     },
     {
       "type": "菜谱",
-      "name": "荠菜馄炖",
+      "name": "荠菜馄饨",
       "price": 25,
       "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8D%A0%E8%8F%9C%E9%A6%84%E7%82%96.png",
       "quantity": 0,
