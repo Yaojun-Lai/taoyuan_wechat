@@ -146,7 +146,9 @@ Page({
     foods: [],
     selectedPerson: '朱敬儒'
   },
-  
+  onShareAppMessage: function(){
+
+  },
   onSearchInput: function (e) {
     const searchTerm = e.detail.value;
     console.log(searchTerm)
@@ -184,9 +186,9 @@ Page({
       interstitialAd = wx.createInterstitialAd({
         adUnitId: 'adunit-391ca01b8c931956'
       })
-      interstitialAd.onLoad(() => {})
-      interstitialAd.onError((err) => {})
-      interstitialAd.onClose(() => {})
+      // interstitialAd.onLoad(() => {})
+      // interstitialAd.onError((err) => {})
+      // interstitialAd.onClose(() => {})
       
       // Show the ad immediately after creation
       // if (interstitialAd) {

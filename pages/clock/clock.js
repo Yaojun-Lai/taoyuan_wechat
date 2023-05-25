@@ -43,6 +43,9 @@ Page({
       this.setData({ countdownId: null, value: [0, 0, 0] });
     }
   },
+  onShareAppMessage: function(){
+
+  },
   stopCountdown() {
     if (this.data.countdownId) {
       clearInterval(this.data.countdownId);

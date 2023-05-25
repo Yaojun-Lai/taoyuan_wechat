@@ -1,6 +1,6 @@
 
 <view class="search-bar">
-    <!-- <button bindtap="JumpToManual">食谱</button> -->
+    <!-- <button bindtap="JumpToMain">主页</button> -->
     <input type="text" placeholder="搜索材料" bindinput="onSearchInput" bindconfirm="onSearchButton" 
            confirm-type="search"/>
     
@@ -98,7 +98,7 @@
       <input class="input-price" type="number" bindinput="addBookPrice" placeholder="0" value="{{displayPrice}}"/>
     </view>
 
-    <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 15rpx;'>
+    <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
       <ad unit-id="adunit-0f098ebe2f7a075d" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
     </view>
 

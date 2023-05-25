@@ -1051,9 +1051,9 @@ Page({
     }
   },
   
-  JumpToManual: function(){
+  JumpToMain: function(){
     wx.navigateTo({
-      url: '/pages/manual/manual',
+      url: '/pages/mainIndex/mainIndex',
     })
   },
   

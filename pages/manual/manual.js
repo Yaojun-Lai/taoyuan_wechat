@@ -229,7 +229,9 @@ Page({
   
     currentFoods: []
   },
-  
+  onShareAppMessage: function(){
+
+  },
 
   onLoad: function() {
     if (wx.createInterstitialAd) {
