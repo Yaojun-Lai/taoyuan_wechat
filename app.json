@@ -1,8 +1,11 @@
 {
   "pages":[
+    "pages/mainIndex/mainIndex",
     "pages/index/index",
     "pages/manual/manual",
-    "pages/logs/logs"
+    "pages/prefer/prefer",
+    "pages/logs/logs",
+    "pages/clock/clock"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -3,7 +3,7 @@
   /* left: 0;
   right: 0; */
   position: fixed;
-  top: 90px;
+  top: 72px;
   /* bottom: 110px; */
   left: 0;
   right: 0;
@@ -33,7 +33,7 @@
   justify-content: space-between;
   padding: 5px;
   margin-bottom: 5px;
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
 }
 
 .search-bar input {
@@ -188,7 +188,7 @@
 
 
 .total-price2 {
-  font-size: 22px;
+  font-size: 21px;
   display: flex;
   align-items: center;
 }
@@ -273,9 +273,9 @@
 
 .modal-container {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
-  width: 90%; 
+  width: 100%; 
   max-width: 500px;
   display: flex;
   flex-direction: column;
@@ -290,21 +290,21 @@
 
 .scrollable-content {
   overflow-y: auto;
-  max-height: 40vh; /* Adjust this value as needed */
+  max-height: 48vh; /* Adjust this value as needed */
 }
 
 .scrollable-container {
   flex-grow: 1;
   overflow-y: auto;
   margin-bottom: 0px;
-  height: 50%; /* Or whatever percentage works best for you. */
+  /* height: 50%; */
 }
 
 
 .clear-btn,
 .close-btn {
   color: white;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -342,8 +342,9 @@
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
-  margin-top: 10px;
-  font-size: 22px;
+  margin-top: 5px;
+  font-size: 21px;
+  padding:0px 10px;
 }
 input.input-price {
   /* flex: 1; */

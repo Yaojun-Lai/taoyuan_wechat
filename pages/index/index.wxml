@@ -1,6 +1,6 @@
 
 <view class="search-bar">
-    <button bindtap="JumpToManual">食谱</button>
+    <!-- <button bindtap="JumpToManual">食谱</button> -->
     <input type="text" placeholder="搜索材料" bindinput="onSearchInput" bindconfirm="onSearchButton" 
            confirm-type="search"/>
     
@@ -105,7 +105,8 @@
   </view>
   
 </view>
-
+<!-- </view>
+  </view> -->
     
 
  

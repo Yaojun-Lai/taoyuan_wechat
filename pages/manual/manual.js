@@ -1,3 +1,4 @@
+let interstitialAd = null;
 Page({
   data: {
     
@@ -231,6 +232,21 @@ Page({
   
 
   onLoad: function() {
+    if (wx.createInterstitialAd) {
+      interstitialAd = wx.createInterstitialAd({
+        adUnitId: 'adunit-a7162b9c1b433a4b'
+      })
+      interstitialAd.onLoad(() => {})
+      interstitialAd.onError((err) => {})
+      interstitialAd.onClose(() => {})
+      
+      // Show the ad immediately after creation
+      // if (interstitialAd) {
+        interstitialAd.show().catch((err) => {
+          console.error(err)
+        })
+      // }
+    }
   this.setData({
     currentFoods: this.data.allFoods
   });

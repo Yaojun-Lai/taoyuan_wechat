@@ -1,6 +1,6 @@
 
 <view class="search-bar">
-    <input type="text" placeholder="搜索材料" bindinput="onSearchInput" bindconfirm="onSearchButton" 
+    <input type="text" placeholder="搜索菜谱" bindinput="onSearchInput" bindconfirm="onSearchButton" 
            confirm-type="search"/>
     
 </view>

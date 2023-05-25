@@ -1,0 +1,92 @@
+.search-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  /* margin-bottom: 5px; */
+  /* border-bottom: 1px solid #000; */
+}
+
+.search-bar input {
+  flex-grow: 1;
+  height: 50rpx;
+  padding: 10rpx;
+  border: 1px solid #000;
+  border-radius: 10rpx;
+}
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  background-color:blue;
+  height: calc(100vh - 90px); /* Adjusted this line */
+}
+
+.sidebar {
+  
+  flex: 1;
+  padding: 5rpx;
+  overflow-y: auto;
+  height: calc(100vh - 55px);
+  background-color: #f0f0f0;
+}
+
+.sidebar .person-item {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-color: #f0f0f0;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    
+    padding: 10px;
+    height: 40px;
+  
+}
+
+.sidebar .person-item.selected {
+  background-color: #d0d0d0;
+}
+
+.foods {
+  background-color:white;
+  flex: 2;
+  padding: 5rpx;
+  overflow-y: auto;
+  height: calc(100vh - 55px);
+}
+
+.food-item {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  
+  padding: 10px;
+  height: 70px;
+}
+
+.food-item .avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+
+}
+
+.food-item .name {
+  flex-grow: 1;
+  font-size: 32rpx;
+  font-weight: bold;
+}

@@ -1,3 +1,4 @@
+let interstitialAd = null;
 Page({
   data: {
     indexType: {'food0': '农作物', 'food1': '农作物', 'food2': '农作物', 'food3': '农作物', 'food4': '农作物', 'food5': '农作物', 'food6': '农作物', 'food7': '农作物', 'food8': '农作物', 'food9': '肉类', 'food10': '肉类', 'food11': '肉类', 'food12': '肉类', 'food13': '制糖', 'food14': '制糖', 'food15': '制糖', 'food16': '饼坊', 'food17': '饼坊', 'food18': '饼坊', 'food19': '饼坊', 'food20': '饼坊', 'food21': '石磨', 'food22': '石磨', 'food23': '石磨', 'food24': '豆坊', 'food25': '豆坊', 'food26': '豆坊', 'food27': '豆腐加工', 'food28': '豆腐加工', 'food29': '豆腐加工', 'food30': '豆腐加工', 'food31': '豆腐加工', 'food32': '豆腐加工', 'food33': '玩具', 'food34': '玩具', 'food35': '玩具', 'food36': '玩具', 'food37': '木工', 'food38': '木工', 'food39': '木工', 'food40': '糕坊', 'food41': '糕坊', 'food42': '糕坊', 'food43': '糕坊', 'food44': '编织', 'food45': '编织', 'food46': '编织', 'food47': '编织', 'food48': '腌制', 'food49': '腌制', 'food50': '腌制', 'food51': '腌制', 'food52': '腌制', 'food53': '陶瓷', 'food54': '陶瓷', 'food55': '陶瓷', 'food56': '文具', 'food57': '文具', 'food58': '文具', 'food59': '晾堂', 'food60': '晾堂', 'food61': '晾堂', 'food62': '绣坊', 'food63': '绣坊', 'food64': '绣坊', 'food65': '土料', 'food66': '土料', 'food67': '土料', 'food68': '纺织', 'food69': '纺织', 'food70': '纺织', 'food71': '开采', 'food72': '开采', 'food73': '开采', 'food74': '开采', 'food75': '菜谱', 'food76': '菜谱', 'food77': '菜谱', 'food78': '菜谱', 'food79': '菜谱', 'food80': '菜谱', 'food81': '菜谱', 'food82': '菜谱', 'food83': '菜谱', 'food84': '菜谱', 'food85': '菜谱', 'food86': '菜谱', 'food87': '菜谱', 'food88': '菜谱', 'food89': '菜谱', 'food90': '菜谱', 'food91': '菜谱', 'food92': '菜谱', 'food93': '菜谱', 'food94': '菜谱', 'food95': '菜谱', 'food96': '菜谱', 'food97': '菜谱', 'food98': '菜谱', 'food99': '菜谱', 'food100': '菜谱', 'food101': '菜谱', 'food102': '菜谱', 'food103': '菜谱', 'food104': '菜谱', 'food105': '菜谱', 'food106': '菜谱', 'food107': '菜谱', 'food108': '菜谱', 'food109': '菜谱', 'food110': '菜谱', 'food111': '菜谱', 'food112': '绣坊'},
@@ -841,7 +842,7 @@ Page({
       "type": "菜谱",
       "name": "糖醋里脊",
       "price": 17,
-      "avatar": "",
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%B3%96%E9%86%8B%E9%87%8C%E8%84%8A.png",
       "quantity": 0,
       "index": "food103"
     },
@@ -930,6 +931,21 @@ Page({
   
 
   onLoad: function() {
+    if (wx.createInterstitialAd) {
+      interstitialAd = wx.createInterstitialAd({
+        adUnitId: 'adunit-5a1e88d8c2f8b9ce'
+      })
+      interstitialAd.onLoad(() => {})
+      interstitialAd.onError((err) => {})
+      interstitialAd.onClose(() => {})
+      
+      // Show the ad immediately after creation
+      // if (interstitialAd) {
+        interstitialAd.show().catch((err) => {
+          console.error(err)
+        })
+      // }
+    }
   this.setData({
     selectedFoodType: this.data.foodTypes[0],
     currentFoods: this.data.allFoods
