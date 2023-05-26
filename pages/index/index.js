@@ -1315,9 +1315,27 @@ Page({
   },
   
   onSearchInput: function(e) {
+    const searchTerm = e.detail.value;
     this.setData({
       searchInput: e.detail.value,
     });
+    const foodToSearch = this.data.allFoods.find(food => food.name === searchTerm);
+    if (foodToSearch) {
+      // console.log(this.data.scrollToFood)
+      this.setData({
+        scrollToFood: foodToSearch.index,
+      });
+      // console.log(this.data.scrollToFood)
+      // console.log(typeof(this.data.scrollToFood))
+    } else {
+      // Find the first food where food.name includes the search input
+      const foodToScroll = this.data.allFoods.find(food => food.name.includes(searchTerm));
+      if (foodToScroll) {
+        this.setData({
+          scrollToFood: foodToScroll.index,
+        });
+      }
+    }
   },
   onShareAppMessage: function(){
 

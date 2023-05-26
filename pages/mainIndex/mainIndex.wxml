@@ -23,4 +23,8 @@
       <button class='btn btn-clock'>蒲公英计时(未上线)</button>
     <!-- </navigator> -->
   </view>
+
+  <view class='contact-button-container'>
+    <button open-type='contact' bindcontact='handleContact' class='btn btn-contact'>联系作者</button>
+  </view>
 </view>

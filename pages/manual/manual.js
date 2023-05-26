@@ -206,7 +206,7 @@ Page({
           'index': 'food28',
           'name': '蚂蚁上树',
           'taste': '辛',
-          'recipe': '1糖＋2辣椒＋1粉丝1猪肉',
+          'recipe': '1糖＋2辣椒＋1粉丝＋1猪肉',
           'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9A%82%E8%9A%81%E4%B8%8A%E6%A0%91.png'
       },
       {
@@ -606,32 +606,33 @@ Page({
   },
   
   onSearchInput: function(e) {
+    const searchTerm = e.detail.value;
     this.setData({
       searchInput: e.detail.value,
     });
+    const foodToSearch = this.data.allFoods.find(food => food.name === searchTerm);
+    if (foodToSearch) {
+      // console.log(this.data.scrollToFood)
+      this.setData({
+        scrollToFood: foodToSearch.index,
+      });
+    
+    } else {
+      // Find the first food where food.name includes the search input
+      const foodToScroll = this.data.allFoods.find(food => food.name.includes(searchTerm));
+      if (foodToScroll) {
+        this.setData({
+          scrollToFood: foodToScroll.index,
+        });
+      } 
+    }
+
   },
   onShareAppMessage: function(){
 
   },
   onSearchButton: function() {
-    if (this.data.searchInput == 'katherine'){
-      this.setData({
-        pricePerPerson: "Anson's babe",
-        bookPricePlaceholder: 520,
-        extraPricePlaceholder: 1314,
-        totalBookPrice: 'Love Ya',
-        totalPrice: '∞'
-      })
-      this.showModal();
-    }
-    if (this.data.searchInput == 'mom'){
-      this.setData({
-        pricePerPerson: "亲爱的妈咪",
-        totalBookPrice: '母亲节快乐😘',
-        totalPrice: '520'
-      })
-      this.showModal();
-    }
+    
     const foodToSearch = this.data.allFoods.find(food => food.name === this.data.searchInput);
     if (foodToSearch) {
       console.log(this.data.scrollToFood)
