@@ -70,7 +70,7 @@
 }
 
 .search-bar input {
-  flex: 1;
+  flex: 2.5;
   height: 20px;
   padding: 10px;
   border: 1px solid #000;
@@ -78,7 +78,7 @@
 }
 
 .search-bar button {
-  flex-shrink: 0;
+  flex:1;
   width: 25%;
   height: 40px;
   margin-left: 5px;
@@ -87,7 +87,7 @@
   border-radius: 5px;
   /* background-color: #000; */
   /* background-color: #dd7973; */
-  background-color: #E82C0C;
+  background-color: #3e88d6;
   color: #fff;
   cursor: pointer;
 }
@@ -134,7 +134,7 @@
   margin-bottom: 5px;
   
   padding: 10px;
-  height: 75px;
+  height: 70px;
 }
 
 .food-item .avatar {
@@ -298,7 +298,15 @@
   height: 50px;
   margin-right: 10px;
 }
-
+.modal-container {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%; 
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
 .modal-header {
   display: flex;
   justify-content: center;
@@ -321,7 +329,7 @@
 }
 
 .close-btn {
-  background-color: #0056b3; /* Slightly darker blue */
+  background-color: #ec634b; /* Slightly darker blue */
 }
 .fixed-width-input {
   width: 3px; /* Or however wide you want the input to be */
@@ -360,4 +368,27 @@ input.input-price {
   width: 65px;
 
   /* margin-left: 10px;  */
+}
+
+/* Add this to your existing CSS */
+.item-title {
+  font-size: 20px; /* Adjust as needed */
+  font-weight: bold; /* This will make the text bold */
+}
+
+.item-detail {
+  font-size: 18px; /* Adjust as needed */
+  margin-bottom: 10px; /* This will add some space between each list item */
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  max-height: 60vh; /* Adjust this value as needed */
+}
+
+.scrollable-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 0px;
+  /* height: 50%; */
 }

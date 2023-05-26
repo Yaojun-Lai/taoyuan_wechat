@@ -1,0 +1,100 @@
+
+<view class="search-bar">
+  
+    <input type="text" placeholder="搜索花名" bindinput="onSearchInput" bindconfirm="onSearchButton" 
+           confirm-type="search"/>
+           <button class="total-btn" bindtap="showModal">详情</button>
+</view>
+<view class="container">
+
+  
+
+  
+
+<scroll-view class="foods" scroll-y="true" lazy-load='true' scroll-into-view="{{scrollToFood}}">
+    <block wx:for="{{currentFoods}}" wx:key="name"> <!-- change key to a unique property -->
+  <view class="food-item" id="{{item.index}}">
+    <image src="{{item.avatar}}" class="food-avatar"></image>
+      <view class="food-info">
+        <text class="food-name">{{item.name}}</text>
+        <!-- <text class="food-desc1">属性：{{item.taste}}</text> -->
+        <text class="food-desc2">{{item.recipe}}</text>
+      </view>
+
+    
+  </view>
+</block>
+
+  </scroll-view>
+</view>
+
+
+<view class="modal" hidden="{{!showModal}}">
+  <view class="modal-container">
+    <view class="modal-header"> 
+      <button class="close-btn" bindtap="hideModal">关闭</button>
+    </view>
+    <view class="scrollable-content">
+      <view class="scrollable-container">
+        <view class="item">
+          <view class="item-title">
+            <text>一串</text>
+          </view>
+          <view class="item-detail">
+            <text>种植时间：3小时
+              种植经验：5点</text>
+           
+          </view>
+        </view>
+        <view class="item">
+          <view class="item-title">
+            <text>绣球</text>
+          </view>
+          <view class="item-detail">
+            <text>种植时间：9小时
+              种植经验：10点
+              香丸：宁神香 (提高生产速度，持续时间15分钟)</text>
+          </view>
+        </view>
+        <view class="item">
+          <view class="item-title">
+            <text>鸢尾</text>
+          </view>
+          <view class="item-detail">
+            <text>种植时间：9小时
+              种植经验：10点</text>
+          </view>
+        </view>
+        <view class="item">
+          <view class="item-title">
+            <text>百合</text>
+          </view>
+          <view class="item-detail">
+            <text>种植时间：20小时
+              种植经验：15点
+              香丸：舒心香 (提高生产速度，持续时间30分钟)</text>
+          </view>
+        </view>
+        <view class="item">
+          <view class="item-title">
+            <text>花菱草</text>
+          </view>
+          <view class="item-detail">
+            <text>种植时间：1天20小时(44小时)
+              种植经验：20点
+              香丸：活气香 (提高生产速度，持续时间60分钟)</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  
+
+
+   
+    <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
+      <ad unit-id="adunit-525ace28734cfc40" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
+    </view>
+
+  </view>
+  
+</view>

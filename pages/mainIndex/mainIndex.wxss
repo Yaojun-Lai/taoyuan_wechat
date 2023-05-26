@@ -36,6 +36,10 @@
   background-color: rgba(76, 175, 80, 0.5); /* #4CAF50 at 50% opacity */
 }
 
+.btn-flower {
+  background-color: rgba(243, 108, 203, 0.5); /* #4CAF50 at 50% opacity */
+}
+
 .btn-manual {
   background-color: rgb(172, 216, 240); /* #2196F3 at 50% opacity */
 }

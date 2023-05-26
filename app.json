@@ -5,7 +5,8 @@
     "pages/manual/manual",
     "pages/prefer/prefer",
     "pages/logs/logs",
-    "pages/clock/clock"
+    "pages/clock/clock",
+    "pages/flower/flower"
   ],
   "window":{
     "backgroundTextStyle":"light",
