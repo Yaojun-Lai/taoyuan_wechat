@@ -49,6 +49,10 @@
 }
 
 
+.btn-build {
+  background-color: rgba(101, 109, 31, 0.26); /* #FF9800 at 50% opacity */
+}
+
 .btn-clock {
   background-color: RGBA(128, 128, 128, 0.5);
 }
@@ -58,8 +62,8 @@
 
 .contact-button-container {
   position: fixed;
-  bottom: 20px;
-  right: 10px;
+  bottom: 15px;
+  right: 5px;
 }
 
 .btn-contact {

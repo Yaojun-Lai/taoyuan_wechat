@@ -21,7 +21,8 @@
 .food-item {
   display: flex;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
+  
 }
 
 .food-avatar {
@@ -33,9 +34,12 @@
 .food-info {
   flex-grow: 1;
   margin-left: 10px;
+  /* margin-top:20px; */
+  /* word-wrap: break-word; */
 }
 
-.food-name, .food-desc1, .food-desc2 {
+.food-name, .food-desc1, .food-desc2, .food-desc3 {
+
   display: block;
   margin-bottom: 5px;
 }
@@ -44,8 +48,8 @@
   font-weight: bold;
 }
 
-.food-desc1, .food-desc2 {
-  color: rgb(54, 53, 53);
+.food-desc1, .food-desc2, .food-desc3 {
+  color: rgba(0, 0, 0, 0.788);
 }
 
 /* .content {
@@ -66,35 +70,29 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px;
+  background-color: rgb(236, 232, 232, 0.1); 
 
 }
 
 .search-bar input {
-  flex: 2.5;
+  flex: 1;
   height: 20px;
   padding: 10px;
   border: 1px solid #000;
   border-radius: 5px;
-  /* margin-right: 5rpx; */
 }
-.background-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+
 .search-bar button {
-  flex:1;
+  flex-shrink: 0;
   width: 25%;
   height: 40px;
   margin-left: 5px;
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
-  font-size: 20px; 
   /* background-color: #000; */
   /* background-color: #dd7973; */
-  background-color: #3e88d6;
+  background-color: #E82C0C;
   color: #fff;
   cursor: pointer;
 }
@@ -129,20 +127,31 @@
   flex: 3;
   padding: 10px;
   overflow-y: auto; /* Enable vertical scrolling */
-  background-color: rgb(236, 232, 232, 0.2); 
+  background-color: rgb(236, 232, 232,0.1); 
   height: 100%; /* Set height to 100% */
 }
 
 .food-item {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
-  
+  /* margin-bottom: 20px; */
   padding: 10px;
-  height: 70px;
+  /* height: 75px; */
+  /* background-color: pink; */
+  border-bottom: 1px solid rgba(41, 40, 40, 0.2);
+  
 }
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 
 .food-item .avatar {
   flex: 0 0 60px;
@@ -305,15 +314,7 @@
   height: 50px;
   margin-right: 10px;
 }
-.modal-container {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  width: 100%; 
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-}
+
 .modal-header {
   display: flex;
   justify-content: center;
@@ -325,7 +326,7 @@
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -336,7 +337,7 @@
 }
 
 .close-btn {
-  background-color: #ec634b; /* Slightly darker blue */
+  background-color: #0056b3; /* Slightly darker blue */
 }
 .fixed-width-input {
   width: 3px; /* Or however wide you want the input to be */
@@ -375,34 +376,4 @@ input.input-price {
   width: 65px;
 
   /* margin-left: 10px;  */
-}
-
-.item{
-  padding: 5px;
-  border-top: 1px solid #ddd;
-  
-}
-/* Add this to your existing CSS */
-.item-title {
-  font-size: 20px; /* Adjust as needed */
-  font-weight: bold; /* This will make the text bold */
-  /* border-top: 1px solid #ddd; */
-}
-
-.item-detail {
-  font-size: 18px; /* Adjust as needed */
-  margin-bottom: 10px; /* This will add some space between each list item */
-  
-}
-
-.scrollable-content {
-  overflow-y: auto;
-  max-height: 60vh; /* Adjust this value as needed */
-}
-
-.scrollable-container {
-  flex-grow: 1;
-  overflow-y: auto;
-  margin-bottom: 0px;
-  /* height: 50%; */
 }
