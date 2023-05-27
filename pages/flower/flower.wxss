@@ -75,6 +75,7 @@
   padding: 10px;
   border: 1px solid #000;
   border-radius: 5px;
+  /* margin-right: 5rpx; */
 }
 
 .search-bar button {
@@ -85,6 +86,7 @@
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
+  font-size: 20px; 
   /* background-color: #000; */
   /* background-color: #dd7973; */
   background-color: #3e88d6;
@@ -318,7 +320,7 @@
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -370,15 +372,22 @@ input.input-price {
   /* margin-left: 10px;  */
 }
 
+.item{
+  padding: 5px;
+  border-top: 1px solid #ddd;
+  
+}
 /* Add this to your existing CSS */
 .item-title {
   font-size: 20px; /* Adjust as needed */
   font-weight: bold; /* This will make the text bold */
+  /* border-top: 1px solid #ddd; */
 }
 
 .item-detail {
   font-size: 18px; /* Adjust as needed */
   margin-bottom: 10px; /* This will add some space between each list item */
+  
 }
 
 .scrollable-content {
