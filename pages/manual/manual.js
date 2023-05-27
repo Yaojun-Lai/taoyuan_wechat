@@ -10,7 +10,7 @@ Page({
           'index': 'food0',
           'name': '蛋炒饭',
           'taste': '咸',
-          'recipe': '2水稻＋2鸡蛋',
+          'recipe': '2水稻＋鸡蛋',
           'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9B%8B%E7%82%92%E9%A5%AD.png'
       },
       {
@@ -52,7 +52,7 @@ Page({
           'index': 'food6',
           'name': '鸡蛋面',
           'taste': '咸',
-          'recipe': '1鸡蛋＋1面粉',
+          'recipe': '2鸡蛋＋2面粉',
           'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A1%E8%9B%8B%E9%9D%A2.png'
       },
       {
@@ -98,6 +98,37 @@ Page({
           'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B2%AB%E9%B1%BC%E8%B1%86%E8%85%90%E6%B1%A4.png'
       },
       {
+        'index': 'food31',
+        'name': '剁椒鱼头',
+        'taste': '辛',
+        'recipe': '1胖头鱼＋3辣椒',
+        'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%89%81%E6%A4%92%E9%B1%BC%E5%A4%B4.png'
+    },
+    {
+      'index': 'food32',
+      'name': '酸辣土豆丝',
+      'taste': '辛',
+      'recipe': '2土豆＋3辣椒',
+      'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E5%9C%9F%E8%B1%86%E4%B8%9D.png'
+  },
+  {
+    'index': 'food33',
+    'name': '荠菜肉包',
+    'taste': '咸',
+    'recipe': '1面粉＋1猪肉＋2荠菜',
+    'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8D%A0%E8%8F%9C%E8%82%89%E5%8C%85.png'
+},
+{
+  'index': 'food34',
+  'name': '苦瓜炒蛋',
+  'taste': '苦',
+  'recipe': '2苦瓜＋3鸡蛋',
+  'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8B%A6%E7%93%9C%E7%82%92%E8%9B%8B.png'
+},
+
+
+
+      {
           'index': 'food13',
           'name': '苦瓜猪肉汤',
           'taste': '苦',
@@ -122,7 +153,7 @@ Page({
           'index': 'food16',
           'name': '荠菜馄饨',
           'taste': '咸',
-          'recipe': '1面粉＋1猪肉＋1茅菜',
+          'recipe': '1面粉＋1猪肉＋2荠菜',
           'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8D%A0%E8%8F%9C%E9%A6%84%E7%82%96.png'
       },
       {
@@ -182,6 +213,20 @@ Page({
           'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%A8%E9%A1%BB%E8%82%89.png'
       },
       {
+        'index': 'food35',
+        'name': '糖醋里脊',
+        'taste': '甘',
+        'recipe': '1猪肉＋1糖',
+        'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%B3%96%E9%86%8B%E9%87%8C%E8%84%8A.png'
+    },
+    {
+      'index': 'food36',
+      'name': '鱼香肉丝',
+      'taste': '辛',
+      'recipe': '1辣椒＋1猪肉＋2木耳',
+      'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B1%BC%E9%A6%99%E8%82%89%E4%B8%9D.png'
+  },
+      {
           'index': 'food25',
           'name': '南瓜馒头',
           'taste': '甘',
@@ -199,7 +244,7 @@ Page({
           'index': 'food27',
           'name': '粉丝蒸白菜',
           'taste': '咸',
-          'recipe': '1粉丝＋1白菜',
+          'recipe': '1粉丝＋3白菜',
           'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%B2%89%E4%B8%9D%E8%92%B8%E7%99%BD%E8%8F%9C.png'
       },
       {
