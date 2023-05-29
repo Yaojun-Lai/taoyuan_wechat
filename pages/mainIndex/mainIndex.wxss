@@ -50,7 +50,7 @@
 
 
 .btn-build {
-  background-color: rgba(101, 109, 31, 0.26); /* #FF9800 at 50% opacity */
+  background-color: rgba(11, 152, 170, 0.26); /* #FF9800 at 50% opacity */
 }
 
 .btn-clock {

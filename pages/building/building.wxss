@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  background-color: rgb(236, 232, 232, 0.1); 
+  background-color: rgb(236, 232, 232, 0.5); 
 
 }
 
@@ -82,20 +82,7 @@
   border-radius: 5px;
 }
 
-.search-bar button {
-  flex-shrink: 0;
-  width: 25%;
-  height: 40px;
-  margin-left: 5px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  /* background-color: #000; */
-  /* background-color: #dd7973; */
-  background-color: #E82C0C;
-  color: #fff;
-  cursor: pointer;
-}
+
 
 
 .sidebar {
@@ -127,7 +114,7 @@
   flex: 3;
   padding: 10px;
   overflow-y: auto; /* Enable vertical scrolling */
-  background-color: rgb(236, 232, 232,0.1); 
+  background-color: rgb(236, 232, 232,0.5); 
   height: 100%; /* Set height to 100% */
 }
 

@@ -27,7 +27,7 @@
 
   <view class='btn-container'>
     <navigator url="/pages/building/building" hover-class="none">
-      <button class='btn btn-build'>竣工建筑材料</button>
+      <button class='btn btn-build'>萝萝心愿建筑</button>
     </navigator>
   </view>
 

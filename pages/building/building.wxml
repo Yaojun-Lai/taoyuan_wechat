@@ -1,7 +1,7 @@
 <view class='fulpage'>
   <image src="../../images/build-background.jpeg" class="background-image" />
 <view class="search-bar">
-    <input type="text" placeholder="搜索萝萝建筑" bindinput="onSearchInput" bindconfirm="onSearchButton" 
+    <input type="text" placeholder="搜索建筑名称/萝萝名称" bindinput="onSearchInput" bindconfirm="onSearchButton" 
            confirm-type="search"/>
     
 </view>

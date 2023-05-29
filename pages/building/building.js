@@ -705,7 +705,7 @@ Page({
     this.setData({
       searchInput: e.detail.value,
     });
-    const foodToSearch = this.data.allFoods.find(food => food.name === searchTerm);
+    const foodToSearch = this.data.allFoods.find(food => food.name === searchTerm  || food.character === searchTerm);
     if (foodToSearch) {
       // console.log(this.data.scrollToFood)
       this.setData({
@@ -714,7 +714,7 @@ Page({
     
     } else {
       // Find the first food where food.name includes the search input
-      const foodToScroll = this.data.allFoods.find(food => food.name.includes(searchTerm));
+      const foodToScroll = this.data.allFoods.find(food => food.name.includes(searchTerm)  || food.character.includes(searchTerm));
       if (foodToScroll) {
         this.setData({
           scrollToFood: foodToScroll.index,
