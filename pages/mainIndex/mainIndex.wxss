@@ -57,6 +57,10 @@
   background-color: RGBA(128, 128, 128, 0.5);
 }
 
+.btn-fish{
+  background-color: rgba(69, 20, 247, 0.4); /* #FF9800 at 50% opacity */
+}
+
 
 
 
@@ -70,7 +74,7 @@
   width: 10%;
   color: white;
   background-color: rgb(224, 97, 97,0.65);
-  padding: 10px 5px; 
+  padding: 5px 5px; 
   display: flex;
   align-items: center;
   justify-content: center;

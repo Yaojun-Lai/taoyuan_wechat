@@ -1,257 +1,33 @@
 let interstitialAd = null;
 Page({
   data: {
-    
+    showModal: false,
     searchInput: '',
     
   
-    allFoods: [{'index': 'build16',
-    'name': '风吹萝动',
-    'character': '萝哐哐',
-    'comfort': 240,
-    'material': '29楠木＋32铁＋31桐油',
-    'avatar': ''},
-   {'index': 'build17',
-    'name': '鹅有点累',
-    'character': '萝叮叮',
-    'comfort': 235,
-    'material': '35楠木＋35铁＋33桐油',
-    'avatar': ''},
-   {'index': 'build18',
-    'name': '捻香花浴',
-    'character': '萝香五',
-    'comfort': 230,
-    'material': '34楠木＋32铁＋34桐油',
-    'avatar': ''},
-   {'index': 'build19',
-    'name': '一跃登天',
-    'character': '萝小杵',
-    'comfort': 225,
-    'material': '31楠木＋33铁＋33桐油',
-    'avatar': ''},
-   {'index': 'build20',
-    'name': '荷香闲垂',
-    'character': '萝一味',
-    'comfort': 220,
-    'material': '32楠木＋31铁＋29桐油',
-    'avatar': ''},
-   {'index': 'build21',
-    'name': '紫藤心事',
-    'character': '萝小花',
-    'comfort': 215,
-    'material': '30楠木＋28铁＋31桐油',
-    'avatar': ''},
-   {'index': 'build22',
-    'name': '弦柱萝音',
-    'character': '萝霜霜',
-    'comfort': 210,
-    'material': '27楠木＋30铁＋29桐油',
-    'avatar': ''},
-   {'index': 'build23',
-    'name': '柿柿如意',
-    'character': '萝小晾',
-    'comfort': 205,
-    'material': '28楠木＋28铁＋26桐油',
-    'avatar': ''},
-   {'index': 'build24',
-    'name': '铁环滚滚',
-    'character': '萝咩咩',
-    'comfort': 200,
-    'material': '27楠木＋25铁＋27桐油',
-    'avatar': ''},
-   {'index': 'build25',
-    'name': '枫月萝韵',
-    'character': '萝小臼',
-    'comfort': 195,
-    'material': '24楠木＋26铁＋26桐油',
-    'avatar': ''},
-   {'index': 'build26',
-    'name': '小萝飞镖',
-    'character': '萝小毫',
-    'comfort': 190,
-    'material': '25楠木＋24铁＋22桐油',
-    'avatar': ''},
-   {'index': 'build27',
-    'name': '沧海萝珠',
-    'character': '萝鱼干',
-    'comfort': 185,
-    'material': '23楠木＋21铁＋24桐油',
-    'avatar': ''},
-   {'index': 'build28',
-    'name': '萝趣风车',
-    'character': '萝小糕',
-    'comfort': 180,
-    'material': '20楠木＋23铁＋22桐油',
-    'avatar': ''},
-   {'index': 'build29',
-    'name': '萝舞鱼龙',
-    'character': '萝红贝',
-    'comfort': 175,
-    'material': '22楠木＋21铁＋19桐油',
-    'avatar': ''},
-   {'index': 'build30',
-    'name': '八卦趣谈',
-    'character': '萝红土',
-    'comfort': 170,
-    'material': '20楠木＋18铁＋20桐油',
-    'avatar': ''},
-   {'index': 'build31',
-    'name': '萝萝套圈',
-    'character': '萝小虎',
-    'comfort': 165,
-    'material': '16楠木＋19铁＋18桐油',
-    'avatar': ''},
-   {'index': 'build32',
-    'name': '布偶戏台',
-    'character': '萝小竹',
-    'comfort': 160,
-    'material': '18楠木＋17铁＋15桐油',
-    'avatar': ''},
-   {'index': 'build33',
-    'name': '萝鼓达人',
-    'character': '萝大巧',
-    'comfort': 155,
-    'material': '17楠木＋15铁＋17桐油',
-    'avatar': ''},
-   {'index': 'build34',
-    'name': '萝骑竹马',
-    'character': '萝黄土',
-    'comfort': 150,
-    'material': '14楠木＋17铁＋16桐油',
-    'avatar': ''},
-   {'index': 'build35',
-    'name': '弹弓冲击',
-    'character': '萝小陶',
-    'comfort': 145,
-    'material': '17楠木＋16铁＋14桐油',
-    'avatar': ''},
-   {'index': 'build36',
-    'name': '跷跷板萝',
-    'character': '萝小腐',
-    'comfort': 140,
-    'material': '15楠木＋13铁＋16桐油',
-    'avatar': ''},
-   {'index': 'build37',
-    'name': '萝萝斗鸡',
-    'character': '萝黑土',
-    'comfort': 135,
-    'material': '12楠木＋15铁＋14桐油',
-    'avatar': ''},
-   {'index': 'build38',
-    'name': '蛟萝入水',
-    'character': '萝不土',
-    'comfort': 130,
-    'material': '13楠木＋13铁＋11桐油',
-    'avatar': ''},
-   {'index': 'build6',
-    'name': '腕力比拼',
-    'character': '萝大腐',
-    'comfort': 125,
-    'material': '11楠木＋9铁＋12桐油',
-    'avatar': ''},
-   {'index': 'build1',
-    'name': '盆栽小桌',
-    'character': '萝大林',
-    'comfort': 120,
-    'material': '9楠木＋11铁＋11桐油',
-    'avatar': ''},
-   {'index': 'build3',
-    'name': '泥萝筑城',
-    'character': '萝小缸',
-    'comfort': 115,
-    'material': '9楠木＋9铁＋7桐油',
-    'avatar': ''},
-   {'index': 'build4',
-    'name': '头绳舞台',
-    'character': '萝如意',
-    'comfort': 110,
-    'material': '7楠木＋5铁＋7桐油',
-    'avatar': ''},
-   {'index': 'build2',
-    'name': '悠悠吊床',
-    'character': '萝小巧',
-    'comfort': 105,
-    'material': '3楠木＋6铁＋5桐油',
-    'avatar': ''},
-   {'index': 'build7',
-    'name': '小萝相扑',
-    'character': '萝小木',
-    'comfort': 100,
-    'material': '5楠木＋4铁＋2桐油',
-    'avatar': ''},
-   {'index': 'build9',
-    'name': '坐井观萝',
-    'character': '萝小馒',
-    'comfort': 95,
-    'material': '4楠木＋2铁＋4桐油',
-    'avatar': ''},
-   {'index': 'build10',
-    'name': '葫芦藤架',
-    'character': '萝吉祥',
-    'comfort': 90,
-    'material': '1楠木＋4铁＋3桐油',
-    'avatar': ''},
-   {'index': 'build0',
-    'name': '武林高萝',
-    'character': '萝小糖',
-    'comfort': 85,
-    'material': '2楠木＋1铁＋2桐油',
-    'avatar': ''},
-   {'index': 'build15',
-    'name': '萝卜墩墩',
-    'character': '萝小旦',
-    'comfort': 80,
-    'material': '2楠木＋2铁＋1桐油',
-    'avatar': ''},
-   {'index': 'build11',
-    'name': '萝萝走秀',
-    'character': '萝木七',
-    'comfort': 75,
-    'material': '1楠木＋1铁＋2桐油',
-    'avatar': ''},
-   {'index': 'build13',
-    'name': '光阴日晷',
-    'character': '萝小满',
-    'comfort': 70,
-    'material': '1楠木＋2铁＋1桐油',
-    'avatar': ''},
-   {'index': 'build14',
-    'name': '喵财进宝',
-    'character': '萝万三',
-    'comfort': 65,
-    'material': '2楠木＋1铁＋1桐油',
-    'avatar': ''},
-   {'index': 'build12',
-    'name': '萝切水果',
-    'character': '萝小刀',
-    'comfort': 60,
-    'material': '1楠木＋2铁',
-    'avatar': ''},
-   {'index': 'build5',
-    'name': '吱呀秋千',
-    'character': '萝小磨',
-    'comfort': 55,
-    'material': '1楠木＋1铁',
-    'avatar': ''},
-   {'index': 'build8',
-    'name': '掷箭投壶',
-    'character': '萝小豆',
-    'comfort': 50,
-    'material': '1楠木',
-    'avatar': ''}]
+    allFoods: [{'index': 'fish0', 'name': '兔鱼', 'weather': '雨天', 'time': '子时一刻、子时四刻、子时八刻', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%85%94%E9%B1%BC.png'}, {'index': 'fish1', 'name': '锦鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、辰时五刻', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%94%A6%E9%B1%BC.png'}, {'index': 'fish2', 'name': '胭脂鱼', 'weather': '晴天', 'time': '午时一刻、申时一刻、戌时三刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%83%AD%E8%84%82%E9%B1%BC.png'}, {'index': 'fish3', 'name': '花瓣鱼', 'weather': '晴天', 'time': '辰时一刻、巳时三刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E7%93%A3%E9%B1%BC.png'}, {'index': 'fish4', 'name': '虎虎鱼', 'weather': '晴天', 'time': '辰时一刻、午时一刻、午时二刻、申时一刻、戌时一刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%99%8E%E8%99%8E%E9%B1%BC.png'}, {'index': 'fish5', 'name': '猫猫鱼', 'weather': '晴天', 'time': '午时二刻、未时一刻、亥时二刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%8C%AB%E7%8C%AB%E9%B1%BC.png'}, {'index': 'fish6', 'name': '月鲤', 'weather': '晴天', 'time': '午时一刻、未时一刻、戌时六刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%88%E9%B2%A4.png'}, {'index': 'fish7', 'name': '长者鱼', 'weather': '晴天', 'time': '辰时一刻、午时二刻、未时二刻、申时四刻、申时六刻、亥时一刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%95%BF%E8%80%85%E9%B1%BC.png'}, {'index': 'fish8', 'name': '六鳃鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、未时七刻、酉时四刻、戌时二刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%85%AD%E9%B3%83%E9%B1%BC.png'}, {'index': 'fish9', 'name': '枯叶鱼', 'weather': '晴天', 'time': '辰时一刻、辰时四刻、巳时二刻、亥时八刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9E%AF%E5%8F%B6%E9%B1%BC.png'}, {'index': 'fish10', 'name': '大耳鱼', 'weather': '雨天、晴天', 'time': '辰时八刻、巳时一刻、亥时一刻', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%A4%A7%E8%80%B3%E9%B1%BC.png'}, {'index': 'fish11', 'name': '金龙鱼', 'weather': '雨天、晴天', 'time': '巳时三刻、未时三刻、申时一刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%87%91%E9%BE%99%E9%B1%BC.png'}, {'index': 'fish12', 'name': '半月斗鱼', 'weather': '雨天、晴天', 'time': '辰时七刻、申时五刻、酉时四刻、亥时一刻、子时八刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%8A%E6%9C%88%E6%96%97%E9%B1%BC.png'}, {'index': 'fish13', 'name': '奇鱼', 'weather': '晴天', 'time': '辰时一刻、辰时四刻、辰时六刻、巳时五刻、子时五刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%A5%87%E9%B1%BC.png'}, {'index': 'fish14', 'name': '孔雀鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、辰时五刻、辰时八刻、巳时一刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%AD%94%E9%9B%80%E9%B1%BC.png'}, {'index': 'fish15', 'name': '叉尾斗鱼', 'weather': '雨天、晴天', 'time': '辰时二刻、午时一刻、午时四刻', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8F%89%E5%B0%BE%E6%96%97%E9%B1%BC.png'}, {'index': 'fish16', 'name': '萝卜鱼', 'weather': '雨天、晴天', 'time': '未时一刻、子时八刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%90%9D%E5%8D%9C%E9%B1%BC.png'}, {'index': 'fish17', 'name': '蝴蝶鲤', 'weather': '雨天、晴天', 'time': '未时一刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9D%B4%E8%9D%B6%E9%B2%A4.png'}, {'index': 'fish18', 'name': '珍珠鱼', 'weather': '雨天、晴天', 'time': '未时三刻、酉时四刻、亥时三刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%8F%8D%E7%8F%A0%E9%B1%BC.png'}, {'index': 'fish19', 'name': '仙女鱼', 'weather': '雨天、晴天', 'time': '亥时一刻、亥时八刻、子时八刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E4%BB%99%E5%A5%B3%E9%B1%BC.png'}, {'index': 'fish20', 'name': '龙须鱼', 'weather': '晴天', 'time': '戌时四刻、子时八刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BE%99%E9%A1%BB%E9%B1%BC.png'}, {'index': 'fish21', 'name': '绿孔雀鱼', 'weather': '雨天、晴天', 'time': '辰时六刻、巳时一刻、午时五刻、未时五刻、戌时二刻、申时七刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BB%BF%E5%AD%94%E9%9B%80%E9%B1%BC.png'}, {'index': 'fish22', 'name': '红白琉金鱼', 'weather': '雨天、晴天', 'time': '辰时五刻、巳时五刻、未时八刻、申时二刻、戌时三刻、子时六刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E7%99%BD%E7%90%89%E9%87%91%E9%B1%BC.png'}, {'index': 'fish23', 'name': '唐鱼', 'weather': '晴天', 'time': '子时五刻、申时二刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%94%90%E9%B1%BC.png'}, {'index': 'fish24', 'name': '黑龙睛鱼', 'weather': '晴天', 'time': '亥时三刻、亥时五刻', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BB%91%E9%BE%99%E6%99%B4.png'}, {'index': 'fish25', 'name': '兰寿鱼', 'weather': '晴天', 'time': '子时七刻、酉时二刻', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%85%B0%E5%AF%BF%E9%B1%BC.png'}, {'index': 'fish26', 'name': '墨燕鱼', 'weather': '晴天', 'time': '子时三刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%A2%A8%E7%87%95%E9%B1%BC.png'}, {'index': 'fish27', 'name': '彩圆儿', 'weather': '雨天、晴天', 'time': '巳时二刻、亥时四刻、子时八刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%BD%A9%E5%9C%86%E5%84%BF.png'}, {'index': 'fish28', 'name': '宽鳍鱼', 'weather': '晴天', 'time': '巳时七刻、亥时一刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%AE%BD%E9%B3%8D%E9%B1%BC.png'}, {'index': 'fish29', 'name': '短鲷', 'weather': '晴天', 'time': '巳时七刻、戌时五刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%9F%AD%E9%B2%B7.png'}, {'index': 'fish30', 'name': '鹦鹉鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、巳时七刻、戌时四刻、亥时四刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B9%A6%E9%B9%89%E9%B1%BC.png'}, {'index': 'fish31', 'name': '金燕鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、辰时五刻、巳时八刻、亥时七刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%87%91%E7%87%95%E9%B1%BC.png'}, {'index': 'fish32', 'name': '华鲤', 'weather': '雨天', 'time': '戌时五刻、亥时七刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%8E%E9%B2%A4.png'}, {'index': 'fish33', 'name': '吸鳅', 'weather': '雨天', 'time': '戌时五刻、申时三刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%90%B8%E9%B3%85.png'}, {'index': 'fish34', 'name': '五花草金鱼', 'weather': '雨天', 'time': '申时一刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E4%BA%94%E8%8A%B1%E8%8D%89%E9%87%91%E9%B1%BC.png'},{'index': 'fish38', 'name': '朱砂水泡', 'weather': '晴天', 'time': '未时八刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%B1%E7%A0%82%E6%B0%B4%E6%B3%A1.png'}, {'index': 'fish35', 'name': '红文金鱼', 'weather': '未知', 'time': '未知', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E6%96%87%E9%87%91%E9%B1%BC.png'}, {'index': 'fish36', 'name': '稻田鱼', 'weather': '未知', 'time': '未知', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%A8%BB%E7%94%B0%E9%B1%BC.png'}, {'index': 'fish37', 'name': '红帽金鱼', 'weather': '未知', 'time': '未知', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E5%B8%BD%E9%87%91%E9%B1%BC.png'}]
   
   ,
-  
+    adLoaded: false,
     currentFoods: []
   },
   onShareAppMessage: function(){
 
   },
-
+  handleAdLoad: function() {
+    this.setData({ adLoaded: false });
+  },
+  handleAdError: function() {
+    // console.log('yes')
+    // this.setData({ adLoaded: true });
+  },
+  handleAdClose: function() {
+    this.setData({ adLoaded: true });
+  },
   onLoad: function() {
     if (wx.createInterstitialAd) {
       interstitialAd = wx.createInterstitialAd({
-        adUnitId: 'adunit-05279af7b4afcc08'
+        adUnitId: 'adunit-49ae1238117bf89e'
       })
       interstitialAd.onLoad(() => {})
       interstitialAd.onError((err) => {})
@@ -500,7 +276,18 @@ Page({
       });
     }
   },
-
+  showModal: function() {
+    this.setData({
+      showModal: true,
+      // cartItems: this.data.cartFoods
+    });
+  },
+  // Hide the modal window
+  hideModal: function() {
+    this.setData({
+      showModal: false
+    });
+  },
   addBookPrice: function(event){
     // console.log(event.detail);
     const add = parseInt(event.detail.value, 10);
@@ -625,7 +412,7 @@ Page({
     this.setData({
       searchInput: e.detail.value,
     });
-    const foodToSearch = this.data.allFoods.find(food => food.name === searchTerm  || food.character === searchTerm);
+    const foodToSearch = this.data.allFoods.find(food => food.name === searchTerm);
     if (foodToSearch) {
       // console.log(this.data.scrollToFood)
       this.setData({
@@ -634,7 +421,7 @@ Page({
     
     } else {
       // Find the first food where food.name includes the search input
-      const foodToScroll = this.data.allFoods.find(food => food.name.includes(searchTerm)  || food.character.includes(searchTerm));
+      const foodToScroll = this.data.allFoods.find(food => food.name.includes(searchTerm));
       if (foodToScroll) {
         this.setData({
           scrollToFood: foodToScroll.index,

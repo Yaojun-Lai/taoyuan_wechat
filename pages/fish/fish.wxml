@@ -1,0 +1,66 @@
+<view class='container2'>
+
+  
+  <image src="../../images/fish-background.jpeg" class="background-image" />
+<view class="search-bar">
+  
+    <input type="text" placeholder="搜索鱼名" bindinput="onSearchInput" bindconfirm="onSearchButton" 
+           confirm-type="search"/>
+           <button class="total-btn" bindtap="showModal">详情</button>
+</view>
+<view class="container">
+
+  
+
+  
+
+<scroll-view class="foods" scroll-y="true" lazy-load='true' scroll-into-view="{{scrollToFood}}">
+    <block wx:for="{{currentFoods}}" wx:key="name"> <!-- change key to a unique property -->
+  <view class="food-item" id="{{item.index}}">
+    <image src="{{item.avatar}}" class="food-avatar"></image>
+      <view class="food-info">
+        <text class="food-name">{{item.name}}</text>
+        <text class="food-desc1">天气：{{item.weather}}</text>
+        <text class="food-desc2">时刻：{{item.time}}</text>
+        <text class="food-desc2">地点：{{item.place}}</text>
+        
+      </view>
+
+    
+  </view>
+</block>
+
+  </scroll-view>
+</view>
+
+
+<view class="modal" hidden="{{!showModal}}">
+  <view class="modal-container">
+    <view class="modal-header"> 
+      <button class="close-btn" bindtap="hideModal">关闭</button>
+    </view>
+    <view class="scrollable-content">
+      <view class="scrollable-container">
+        <text class='textbold'>非常感谢“爱宠515151”大大的攻略！！
+        
+          查看时刻：点击娱乐设施“光阴日晷”</text>
+        <text class='modaltext'>
+
+        信息仅供参考，并不是官方数据。
+
+        同样的时刻概率会更高，并不是绝对的，一直出不来就不要尝试了，可以过段时间再试试看。
+      </text>
+      </view>
+    </view>
+  
+
+
+   
+    <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
+      <ad unit-id="adunit-e06b10152b7e8397" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
+    </view>
+
+  </view>
+  
+</view>
+</view>

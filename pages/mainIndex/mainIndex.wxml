@@ -2,8 +2,17 @@
   <image src="../../images/background.jpeg" class="background-image" />
   <view class='btn-container'>
     <navigator url="/pages/index/index" hover-class="none">
-      <button class='btn btn-cal'>订单成本</button>
+      <button class='btn btn-cal'>
+      订单成本</button>
     </navigator>
+    <!-- <navigator url="/pages/index/index" hover-class="none">
+      <div class='button-with-text'>
+          <button class='btn btn-cal'>
+              <image src="../../images/background.jpeg" class="button-image" />
+          </button>
+          <text class="button-text">订单成本</text>
+      </div>
+    </navigator> -->
   </view>
 
   <view class='btn-container'>
@@ -31,6 +40,11 @@
     </navigator>
   </view>
 
+  <view class='btn-container'>
+    <navigator url="/pages/fish/fish" hover-class="none">
+      <button class='btn btn-fish'>钓鱼</button>
+    </navigator>
+  </view>
 <!-- 
   <view class='btn-container'>
     <navigator url="/pages/clock/clock" hover-class="none">
