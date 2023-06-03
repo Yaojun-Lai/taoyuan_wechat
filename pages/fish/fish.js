@@ -14,6 +14,9 @@ Page({
   onShareAppMessage: function(){
 
   },
+  onShareTimeline: function(){
+
+  },
   handleAdLoad: function() {
     this.setData({ adLoaded: false });
   },

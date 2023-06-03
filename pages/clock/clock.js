@@ -46,6 +46,9 @@ Page({
   onShareAppMessage: function(){
 
   },
+  onShareTimeline: function(){
+
+  },
   stopCountdown() {
     if (this.data.countdownId) {
       clearInterval(this.data.countdownId);

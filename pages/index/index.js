@@ -1348,6 +1348,9 @@ Page({
   onShareAppMessage: function(){
 
   },
+  onShareTimeline: function(){
+
+  },
   onSearchButton: function() {
     if (this.data.searchInput == 'katherine'){
       this.setData({

@@ -7,6 +7,9 @@ Page({
     console.log(e.detail.path)
     console.log(e.detail.query)
   },
+  onShareTimeline: function(){
+
+  },
   onLoad: function() {
     if (wx.createInterstitialAd) {
       interstitialAd = wx.createInterstitialAd({

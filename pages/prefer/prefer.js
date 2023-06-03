@@ -8,6 +8,9 @@ Page({
   onShareAppMessage: function(){
 
   },
+  onShareTimeline: function(){
+
+  },
   onSearchInput: function (e) {
     const searchTerm = e.detail.value;
     // console.log(searchTerm)

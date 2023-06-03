@@ -56,7 +56,9 @@ Page({
     currentFoods: this.data.allFoods
   });
 },
-  
+onShareTimeline: function(){
+
+},
 
   loadFoods: function(type) {
     // Filter the foods of the selected type

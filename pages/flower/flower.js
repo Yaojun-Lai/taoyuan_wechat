@@ -433,6 +433,9 @@ Page({
   onShareAppMessage: function(){
 
   },
+  onShareTimeline: function(){
+
+  },
   onSearchButton: function() {
     
     const foodToSearch = this.data.allFoods.find(food => food.name === this.data.searchInput);

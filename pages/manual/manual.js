@@ -299,7 +299,9 @@ Page({
   });
 },
   
+onShareTimeline: function(){
 
+},
   loadFoods: function(type) {
     // Filter the foods of the selected type
     const foods = this.data.allFoods.filter(food => food.type === type);

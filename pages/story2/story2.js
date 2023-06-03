@@ -39,7 +39,9 @@ Page({
   onShareAppMessage: function(){
 
   },
+  onShareTimeline: function(){
 
+  },
   onLoad: function() {
     // if (wx.createInterstitialAd) {
     //   interstitialAd = wx.createInterstitialAd({
