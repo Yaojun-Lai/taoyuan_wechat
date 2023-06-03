@@ -73,7 +73,7 @@ Page({
     {
       "type": "农作物",
       "name": "南瓜",
-      "price": 9,
+      "price": 11,
       "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/7700fee03402f76f5ed3f01a4f440fa7a1457d1b/%E5%8D%97%E7%93%9C.JPG",
       "quantity": 0,
       "index": "food8"
@@ -81,7 +81,7 @@ Page({
     {
       "type": "农作物",
       "name": "棉花",
-      "price": 4,
+      "price": 10,
       "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%A3%89%E8%8A%B1.jpeg",
       "quantity": 0,
       "index": "food113"

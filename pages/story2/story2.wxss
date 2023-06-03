@@ -1,0 +1,370 @@
+.container {
+  /* left: 0;
+  right: 0; */
+  position: fixed;
+  top: 70px;
+  /* bottom: 110px; */
+  left: 0;
+  right: 0;
+  padding: 5rpx;
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 90px);
+  
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.food-list {
+  width: 100%;
+  height: 100%;
+}
+
+.food-item {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.food-avatar {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.food-info {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.food-name, .food-desc1, .food-desc2 {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.food-name {
+  font-weight: bold;
+}
+
+.food-desc1, .food-desc2 {
+  color: rgb(49, 48, 48);
+}
+
+/* .content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden; 
+} */
+
+
+.search-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+
+}
+
+.search-bar input {
+  flex: 1;
+  height: 20px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  flex-shrink: 0;
+  width: 25%;
+  height: 40px;
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  /* background-color: #000; */
+  /* background-color: #dd7973; */
+  background-color: #E82C0C;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.sidebar {
+  flex: 1;
+  /* border-right: 1px solid #000; */
+  padding: 8px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #f0f0f0; /* Light gray background */
+  height: 100%; /* Set height to 100% */
+}
+
+
+.sidebar .foodType {
+  padding-top: 10px;
+  padding-bottom: 10px; /* use padding instead of margin */
+  line-height: 30px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+
+
+.sidebar .foodType-selected {
+  background-color: #d0d0d0; /* darker background color when selected */
+}
+
+
+.foods {
+  flex: 3;
+  padding: 10px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: rgb(236, 232, 232, 0.35) ; /* White background */
+  height: 100%; /* Set height to 100% */
+}
+
+.food-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  
+  padding: 10px;
+  height: 75px;
+}
+
+.food-item .avatar {
+  flex: 0 0 60px;
+  min-width: 60px;
+}
+
+.food-item .info {
+  flex: 1; /* Adjust this to give it a fixed proportion of the space */
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.food-item .controls {
+  display: flex;
+  flex: 0.8; /* Adjust this to leave space for the plus button */
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px; 
+}
+.cart-item .controls .minus,
+.food-item .controls .minus {
+  color: #CD5C5C;
+  font-size: 30px; 
+  padding: 3.5px;
+  margin-right: 5px; /* Adjust this to give more space between minus and input */
+}
+
+.food-item .controls .fixed-width-input {
+  text-align: center;
+  width: 100px; 
+  height: 30px;
+  padding: 0 10px; /* Adjust this to give more padding inside input field */
+}
+
+.cart-item .controls .plus,
+.food-item .plus {
+  flex: 0.2; 
+  text-align: right;
+  color: #CD5C5C;
+  font-size: 30px; 
+  padding: 3.5px; 
+  margin-left: 15px; /* Adjust this to give more space between plus and input */
+}
+
+
+
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+}
+
+.controls-row text {
+  margin: 0 10px;  /* adjust this to increase/decrease the space between the controls */
+}
+
+
+
+
+
+
+.total-price2 {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+.total-price {
+  flex: 2.3;
+  align-items: center;
+  font-size: 27px;
+  margin-right: 5px;
+}
+.total-price-margin2{
+  margin-left:5px;
+ 
+}
+.total-price2-text-margin {
+  margin-left: 25px;  /* adjust this to increase/decrease the space */
+}
+
+.clear-btn2 {
+  flex: 1;
+  background-color: #E82C0C;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+  text-align: center; /* Optional, if you want the text centered in its space */
+  margin-right: 10px;
+  /* padding: 10px 20px; */
+  border-radius: 10px;
+}
+
+.empty-space{
+  flex: 0.1;
+}
+.total-btn {
+  flex: 1.3;
+  background-color: #0056b3;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+  /* padding: 10px 20px; */
+  border-radius: 10px;
+  text-align: center; /* Optional, if you want the text centered in its space */
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: 1000; /* Add this line */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 90vh; /* Maximum height is 90% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  width: 90%; /* Set the width to 80% of the viewport width */
+  max-width: 500px;
+}
+
+
+
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Add a bottom border to each item */
+}
+
+.cart-item .avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.clear-btn,
+.close-btn {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+.clear-btn {
+  background-color: #E82C0C; /* Slightly darker red */
+}
+
+.close-btn {
+  background-color: #0056b3; /* Slightly darker blue */
+}
+.fixed-width-input {
+  width: 3px; /* Or however wide you want the input to be */
+  text-align: center;
+  background-color: red;
+}
+
+
+.cart-item .info {
+  flex-grow: 1;
+}
+
+.cart-item .controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
+}
+
+
+.price-per-person {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin-top: 20px;
+  font-size: 22px;
+}
+input.input-price {
+  /* flex: 1; */
+  width: 85px;
+
+  /* margin-left: 10px;  */
+}
+.input-price-2 {
+  /* flex: 1; */
+  width: 65px;
+
+  /* margin-left: 10px;  */
+}

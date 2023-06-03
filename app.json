@@ -8,7 +8,11 @@
     "pages/clock/clock",
     "pages/flower/flower",
     "pages/building/building",
-    "pages/fish/fish"
+    "pages/fish/fish",
+    "pages/storyMaterial/storyMaterial",
+    "pages/story1/story1",
+    "pages/story2/story2",
+    "pages/story3/story3"
   ],
   "window":{
     "backgroundTextStyle":"light",

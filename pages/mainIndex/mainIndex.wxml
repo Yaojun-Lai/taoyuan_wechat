@@ -1,59 +1,59 @@
 <view class='container'>
   <image src="../../images/background.jpeg" class="background-image" />
-  <view class='btn-container'>
+  <view class='picker-btn-container'>
     <navigator url="/pages/index/index" hover-class="none">
-      <button class='btn btn-cal'>
-      订单成本</button>
+      <button class='btn btn-cal'>订单成本</button>
     </navigator>
-    <!-- <navigator url="/pages/index/index" hover-class="none">
-      <div class='button-with-text'>
-          <button class='btn btn-cal'>
-              <image src="../../images/background.jpeg" class="button-image" />
-          </button>
-          <text class="button-text">订单成本</text>
-      </div>
-    </navigator> -->
+    
+    <picker mode="selector" range="{{pageArray}}" bindchange="handlePickerChange">
+      <view class='picker'>
+        <text>攻略：{{pageArray[pageIndex]}}</text>
+      </view>
+    </picker>
   </view>
 
-  <view class='btn-container'>
-    <navigator url="/pages/manual/manual" hover-class="none">
-      <button class='btn btn-manual'>食谱</button>
-    </navigator>
-  </view>
-
-  <view class='btn-container'>
-    <navigator url="/pages/prefer/prefer" hover-class="none">
-      <button class='btn btn-prefer'>村民喜好</button>
-    </navigator>
-  </view>
-
-  <view class='btn-container'>
-    <navigator url="/pages/flower/flower" hover-class="none">
-      <button class='btn btn-flower'>花谱</button>
-    </navigator>
-  </view>
-
-
-  <view class='btn-container'>
-    <navigator url="/pages/building/building" hover-class="none">
-      <button class='btn btn-build'>萝萝心愿建筑</button>
-    </navigator>
-  </view>
-
-  <view class='btn-container'>
-    <navigator url="/pages/fish/fish" hover-class="none">
-      <button class='btn btn-fish'>钓鱼</button>
-    </navigator>
-  </view>
-<!-- 
-  <view class='btn-container'>
-    <navigator url="/pages/clock/clock" hover-class="none">
-      <button class='btn btn-clock'>蒲公英计时(未上线)</button>
-    </navigator>
-  </view> -->
-
-
+  
   <view class='contact-button-container'>
+    <button class="total-btn" bindtap="showModal">说明/更新</button>
     <button open-type='contact' bindcontact='handleContact' class='btn btn-contact'>联系作者</button>
   </view>
+ 
+  <view class="modal" hidden="{{!showModal}}">
+  <view class="modal-container">
+    <view class="modal-header"> 
+      <button class="close-btn" bindtap="hideModal">关闭</button>
+    </view>
+    <view class="scrollable-content">
+      <view class="scrollable-container">
+        <view class="item">
+          <view class="item-detail">
+            <text>说明：
+            材料成本价格均以谷仓为准</text>
+          </view>
+        </view>
+          <view class="item">
+          <view class="item-detail">
+            <text>
+            更新：
+            2023.6.1
+            1. 增加故事材料攻略（结梦，南有乔木，愿）
+            2. 增加萝萝心愿建筑的价格
+
+          </text>
+            </view>
+        </view>
+        
+      </view>
+    </view>
+  
+
+
+   
+    <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
+      <ad unit-id="adunit-7f79deea69c51c5c" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
+    </view>
+
+  </view>
+  
+</view>
 </view>

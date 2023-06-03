@@ -19,6 +19,7 @@
       <view class="food-info">
         <text class="food-name">{{item.name}}</text>
         <text class="food-desc1">萝萝名称：{{item.character}}</text>
+        <text class="food-desc2">价格：{{item.price}}</text>
         <text class="food-desc2">舒适度：{{item.comfort}}</text>
         <text class="food-desc3">竣工材料：{{item.material}}</text>
       </view>
