@@ -5,11 +5,15 @@
       <button class='btn btn-cal'>订单成本</button>
     </navigator>
     
-    <picker mode="selector" range="{{pageArray}}" bindchange="handlePickerChange">
-      <view class='picker'>
-        <text>{{pageArray[pageIndex]}}</text>
-      </view>
-    </picker>
+    <view class='dropdown' bindtap="toggleDropdown">
+      <text>{{pageArray[pageIndex]}}</text>
+      <scroll-view class="dropdown-menu {{isDropdownOpen ? 'open' : ''}}" scroll-y="{{isDropdownOpen}}">
+        <view wx:for="{{pageArray}}" wx:key="{{index}}" bindtap="handlePickerChange" data-index="{{index}}" class="dropdown-item">{{item}}</view>
+      </scroll-view>
+    </view>
+
+
+
   </view>
 
   
@@ -36,7 +40,7 @@
             <text>
             更新：
             2023.6.1
-            1. 增加故事材料攻略（结梦，南有乔木，愿）
+            1. 增加故事材料攻略（结梦、南有乔木、愿）
             2. 增加萝萝心愿建筑的价格
 
           </text>

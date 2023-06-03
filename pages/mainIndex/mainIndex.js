@@ -1,9 +1,10 @@
 
 Page({
   data: {
+    isDropdownOpen: false,
     showModal: false,
     pageIndex: 0,
-    pageArray: ['--攻略--','食谱', '村民喜好', '花谱', '萝萝心愿建筑', '钓鱼', '故事材料'],
+    pageArray: ['---- 攻略 ----','食谱', '村民喜好', '花谱', '萝萝心愿建筑', '钓鱼', '故事材料'],
     pageMap: {
       '食谱': '/pages/manual/manual',
       '村民喜好': '/pages/prefer/prefer',
@@ -26,15 +27,24 @@ Page({
   },
 
   handlePickerChange(e) {
-      this.setData({
-        pageIndex: e.detail.value
-      })
-      if (this.data.pageIndex != 0){
-        let selectedPage = this.data.pageArray[this.data.pageIndex];
-        wx.navigateTo({url: this.data.pageMap[selectedPage]});
+    this.setData({
+      pageIndex: e.currentTarget.dataset.index
+    });
+    if (this.data.pageIndex != 0) {
+      let selectedPage = this.data.pageArray[this.data.pageIndex];
+      let selectedPageURL = this.data.pageMap[selectedPage];
+      if (selectedPageURL) {
+        wx.navigateTo({url: selectedPageURL});
+      } else {
+        console.error("Page does not exist: " + selectedPage);
       }
-    
+    }
   },
+  
+  toggleDropdown: function() {
+    this.setData({isDropdownOpen: !this.data.isDropdownOpen});
+  },
+  
   onShareAppMessage: function(){
 
   },

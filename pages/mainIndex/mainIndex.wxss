@@ -105,17 +105,14 @@
 
 
 
-.picker-btn-container {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
-  width: 100%;
- 
-}
+
 
 
 .btn-cal {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  right: 20%;
   background-color: rgba(54, 10, 214, 0.4); /* #4CAF50 at 50% opacity */
   margin-bottom: 20px;
   width: 100%; /* changed from 60% to 100% */
@@ -126,17 +123,7 @@
   font-size: 16px;
 }
 
-.picker {
-  width: auto;
-  color: white;
-  border-radius: 10px;
-  background-color: rgba(218,117,53, 0.6); /* light gray */
-  padding: 15px 40px;
-  text-align: center;
-  font-size: 16px;
-  
-  
-}
+
 
 
 .btn-confirm {
@@ -210,4 +197,51 @@
 .item-detail {
   font-size: 18px; /* Adjust as needed */
   margin-bottom: 10px; /* This will add some space between each list item */
+}
+
+.dropdown {
+  position: fixed;
+  top: 32%;
+  left: 25%;
+  right: 25%;
+  /* Other styles as needed */
+  background-color:  rgba(218,117,53, 0.6);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  padding: 20px;
+  display: none;
+  position: absolute;
+  left: 50%; /* Position the left edge of the menu in the center of the dropdown */
+  transform: translateX(-50%);
+  min-width: 200px; /* Change this value as needed */
+  max-height: 190px; /* Or any other value */
+  overflow-y: auto;
+  
+}
+
+.dropdown-item {
+  color: black;
+  border-radius: 1px;
+  padding: 15px;
+  min-width: max-content; /* This will make the width fit the content */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(253, 252, 252);
+  border-bottom: 1px solid rgb(163, 162, 162);
+  
+}
+
+
+
+
+.dropdown-menu.open {
+  display: block;
 }
