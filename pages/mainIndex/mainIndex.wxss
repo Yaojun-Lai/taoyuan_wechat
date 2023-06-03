@@ -111,6 +111,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+ 
 }
 
 
@@ -126,13 +127,14 @@
 }
 
 .picker {
-  width: auto; /* kept as 100% */
+  width: auto;
   color: white;
   border-radius: 10px;
   background-color: rgba(218,117,53, 0.6); /* light gray */
-  padding: 15px;
+  padding: 15px 40px;
   text-align: center;
   font-size: 16px;
+  
   
 }
 

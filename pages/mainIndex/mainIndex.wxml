@@ -7,7 +7,7 @@
     
     <picker mode="selector" range="{{pageArray}}" bindchange="handlePickerChange">
       <view class='picker'>
-        <text>攻略：{{pageArray[pageIndex]}}</text>
+        <text>{{pageArray[pageIndex]}}</text>
       </view>
     </picker>
   </view>
