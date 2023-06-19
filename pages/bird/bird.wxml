@@ -1,0 +1,104 @@
+<view class='container2'>
+
+  
+  <image src="../../images/build-background.jpeg" class="background-image" />
+<view class="search-bar">
+  
+    <input type="text" placeholder="搜索线索" bindinput="onSearchInput" bindconfirm="onSearchButton" 
+           confirm-type="search"/>
+           <button class="total-btn" bindtap="showModal">鸟食</button>
+</view>
+<view class="container">
+
+  
+
+  
+
+<scroll-view class="foods" scroll-y="true" lazy-load='true' scroll-into-view="{{scrollToFood}}">
+    <block wx:for="{{currentFoods}}" wx:key="index"> <!-- change key to a unique property -->
+  <view class="food-item" id="{{item.index}}">
+    <image src="{{item.avatar}}" class="food-avatar"></image>
+      <view class="food-info">
+        <text class="food-desc2">{{item.text}}</text>
+        <!-- <text class="food-desc1">属性：{{item.taste}}</text> -->
+        <text class="food-desc1">{{item.name}}</text>
+      </view>
+
+    
+  </view>
+</block>
+
+  </scroll-view>
+</view>
+
+
+<view class="modal" hidden="{{!showModal}}">
+  <view class="modal-container">
+    <view class="modal-header"> 
+      <button class="close-btn" bindtap="hideModal">关闭</button>
+    </view>
+    <view class="scrollable-content">
+      <view class="scrollable-container">
+        <view class="item">
+          <view class="item-title">
+            <text>游禽</text>
+          </view>
+          <view class="item-detail">
+            <text>黑天鹅：杂粮包
+            灰鹅：杂粮包
+            鸳鸯：贝鲜包+杂粮包+昆虫包
+            中华秋沙鸭：贝鲜包
+            </text>
+           
+          </view>
+        </view>
+        <view class="item">
+          <view class="item-title">
+            <text>涉禽</text>
+          </view>
+          <view class="item-detail">
+            <text>白鹭：贝鲜包
+            丹顶鹤：昆虫包+贝鲜包
+            朱鹮：昆虫包+贝鲜包
+            白琵鹭：昆虫包+贝鲜包
+            </text>
+          </view>
+        </view>
+        <view class="item">
+          <view class="item-title">
+            <text>飞禽</text>
+          </view>
+          <view class="item-detail">
+            <text>麻雀：杂粮包+昆虫包
+            虎皮鹦鹉：杂粮包
+            斑鸠：杂粮包+昆虫包
+            戴胜：昆虫包
+            </text>
+          </view>
+        </view>
+        <view class="item">
+          <view class="item-title">
+            <text>走禽</text>
+          </view>
+          <view class="item-detail">
+            <text>竹鹧鸪：昆虫包
+            绿原鸡：杂粮包+昆虫包
+            勺鸡：杂粮包+昆虫包
+            红腹锦鸡：杂粮包+昆虫包</text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+  
+
+
+   
+    <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
+      <ad unit-id="adunit-3423f001e316d963" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
+    </view>
+
+  </view>
+  
+</view>
+</view>

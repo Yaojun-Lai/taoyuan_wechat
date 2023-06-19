@@ -4,14 +4,16 @@ Page({
     isDropdownOpen: false,
     showModal: false,
     pageIndex: 0,
-    pageArray: ['---- 攻略 ----','食谱', '村民喜好', '花谱', '萝萝心愿建筑', '钓鱼', '故事材料'],
+    pageArray: ['---- 攻略 ----','倦鸟汀','千灯彩树', '村民喜好', '花谱', '钓鱼', '萝萝心愿建筑','故事材料','食谱'],
     pageMap: {
+      '倦鸟汀':'/pages/bird/bird',
       '食谱': '/pages/manual/manual',
       '村民喜好': '/pages/prefer/prefer',
       '花谱':'/pages/flower/flower',
       '萝萝心愿建筑':'/pages/building/building', 
       '钓鱼':'/pages/fish/fish', 
-      '故事材料':'/pages/storyMaterial/storyMaterial'
+      '故事材料':'/pages/storyMaterial/storyMaterial',
+      '千灯彩树':''
     }
   },
   showModal: function() {
@@ -32,11 +34,17 @@ Page({
     });
     if (this.data.pageIndex != 0) {
       let selectedPage = this.data.pageArray[this.data.pageIndex];
-      let selectedPageURL = this.data.pageMap[selectedPage];
-      if (selectedPageURL) {
-        wx.navigateTo({url: selectedPageURL});
-      } else {
-        console.error("Page does not exist: " + selectedPage);
+      if (selectedPage == '千灯彩树'){
+        wx.navigateToMiniProgram({
+          appId: 'wxd45c635d754dbf59',
+          path: `pages/detail/detail?url=https://docs.qq.com/doc/DRGplUW5YSW1lQUZy`
+        })
+      }
+      else{
+        let selectedPageURL = this.data.pageMap[selectedPage];
+        if (selectedPageURL) {
+          wx.navigateTo({url: selectedPageURL});
+        }
       }
     }
   },

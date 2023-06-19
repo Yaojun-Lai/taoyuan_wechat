@@ -1,7 +1,7 @@
 
 <view class="search-bar">
     <!-- <button bindtap="JumpToMain">主页</button> -->
-    <input type="text" placeholder="搜索材料" bindinput="onSearchInput" bindconfirm="onSearchButton" 
+    <input type="text" placeholder=" 搜索材料" bindinput="onSearchInput" bindconfirm="onSearchButton" 
            confirm-type="search"/>
     
 </view>
@@ -62,7 +62,10 @@
         <view class="cart-item">
           <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
           <view class="info info-row">
+          <view class="info-row-info">
             <text>{{item.name}}</text>
+            <text>¥{{item.price}}</text>
+          </view>
             <view class="controls controls-row">
               <text class="minus" bindtap="decreaseOrder" data-name="{{item.name}}">-</text>
               <text>{{item.quantity}}</text>

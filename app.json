@@ -12,7 +12,8 @@
     "pages/storyMaterial/storyMaterial",
     "pages/story1/story1",
     "pages/story2/story2",
-    "pages/story3/story3"
+    "pages/story3/story3",
+    "pages/bird/bird"
   ],
   "window":{
     "backgroundTextStyle":"light",

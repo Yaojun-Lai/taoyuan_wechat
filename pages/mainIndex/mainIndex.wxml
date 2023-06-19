@@ -8,12 +8,9 @@
     <view class='dropdown' bindtap="toggleDropdown">
       <text>{{pageArray[pageIndex]}}</text>
       <scroll-view class="dropdown-menu {{isDropdownOpen ? 'open' : ''}}" scroll-y="{{isDropdownOpen}}">
-        <view wx:for="{{pageArray}}" wx:key="{{index}}" bindtap="handlePickerChange" data-index="{{index}}" class="dropdown-item">{{item}}</view>
+        <view wx:for="{{pageArray}}" wx:key="index" bindtap="handlePickerChange" data-index="{{index}}" class="dropdown-item">{{item}}</view>
       </scroll-view>
     </view>
-
-
-
   </view>
 
   
@@ -39,6 +36,12 @@
           <view class="item-detail">
             <text>
             更新：
+            2023.6.19
+            1. 增加倦鸟汀攻略
+
+            2023.6.6
+            1. 增加千灯彩树攻略
+            
             2023.6.1
             1. 增加故事材料攻略（结梦、南有乔木、愿）
             2. 增加萝萝心愿建筑的价格
