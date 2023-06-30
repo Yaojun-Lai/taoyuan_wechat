@@ -25,8 +25,8 @@
 }
 
 .food-avatar {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 60px;
   flex-shrink: 0;
 }
 

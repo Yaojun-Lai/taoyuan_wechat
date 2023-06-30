@@ -29,13 +29,18 @@
         <view class="item">
           <view class="item-detail">
             <text>说明：
-            材料成本价格均以谷仓为准</text>
+            材料成本价格均以谷仓为准
+            </text>
           </view>
         </view>
           <view class="item">
           <view class="item-detail">
             <text>
             更新：
+            2023.6.21
+            1. 增加红薯、烤地瓜、烤土豆、地瓜粉、地瓜饼、烤豆腐、马蹄糕、烤鸡翅（42级-45级材料）
+            2. 增加莼菜、莼菜豆腐汤、莼菜银鱼羹（节气材料）
+
             2023.6.19
             1. 增加倦鸟汀攻略
 

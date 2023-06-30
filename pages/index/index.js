@@ -1,10 +1,11 @@
 let interstitialAd = null;
 Page({
   data: {
-    indexType: {'food0': '农作物', 'food1': '农作物', 'food2': '农作物', 'food3': '农作物', 'food4': '农作物', 'food5': '农作物', 'food6': '农作物', 'food7': '农作物', 'food8': '农作物', 'food113': '农作物','food9': '肉类', 'food10': '肉类', 'food11': '肉类', 'food12': '肉类', 'food13': '制糖', 'food14': '制糖', 'food15': '制糖', 'food16': '饼坊', 'food17': '饼坊', 'food18': '饼坊', 'food19': '饼坊', 'food20': '饼坊', 'food21': '石磨', 'food22': '石磨', 'food23': '石磨', 'food24': '豆坊', 'food25': '豆坊', 'food26': '豆坊', 'food27': '豆腐加工', 'food28': '豆腐加工', 'food29': '豆腐加工', 'food30': '豆腐加工', 'food31': '豆腐加工', 'food32': '豆腐加工', 'food33': '玩具', 'food34': '玩具', 'food35': '玩具', 'food36': '玩具', 'food37': '木工', 'food38': '木工', 'food39': '木工', 'food40': '糕坊', 'food41': '糕坊', 'food42': '糕坊', 'food43': '糕坊', 'food44': '编织', 'food45': '编织', 'food46': '编织', 'food47': '编织', 'food48': '腌制', 'food49': '腌制', 'food50': '腌制', 'food51': '腌制', 'food52': '腌制', 'food53': '陶瓷', 'food54': '陶瓷', 'food55': '陶瓷', 'food56': '文具', 'food57': '文具', 'food58': '文具', 'food59': '晾堂', 'food60': '晾堂', 'food61': '晾堂', 'food62': '绣坊', 'food63': '绣坊', 'food64': '绣坊', 'food112': '绣坊', 'food65': '土料', 'food66': '土料', 'food67': '土料', 'food68': '纺织', 'food69': '纺织', 'food70': '纺织', 'food71': '开采', 'food72': '开采', 'food73': '开采', 'food74': '开采', 'food75': '菜谱', 'food76': '菜谱', 'food77': '菜谱', 'food78': '菜谱', 'food79': '菜谱', 'food80': '菜谱', 'food81': '菜谱', 'food82': '菜谱', 'food83': '菜谱', 'food84': '菜谱', 'food85': '菜谱', 'food86': '菜谱', 'food87': '菜谱', 'food88': '菜谱', 'food89': '菜谱', 'food90': '菜谱', 'food91': '菜谱', 'food92': '菜谱', 'food93': '菜谱', 'food94': '菜谱', 'food95': '菜谱', 'food96': '菜谱', 'food97': '菜谱', 'food98': '菜谱', 'food99': '菜谱', 'food100': '菜谱', 'food101': '菜谱', 'food102': '菜谱', 'food103': '菜谱', 'food104': '菜谱', 'food105': '菜谱', 'food106': '菜谱', 'food107': '菜谱', 'food108': '菜谱', 'food109': '菜谱', 'food110': '菜谱', 'food111': '菜谱'},
+    indexType: {'food0': '农作物', 'food1': '农作物', 'food2': '农作物', 'food3': '农作物', 'food4': '农作物', 'food5': '农作物', 'food6': '农作物', 'food7': '农作物', 'food8': '农作物', 'food113': '农作物','food117': '农作物','food9': '肉类', 'food10': '肉类', 'food11': '肉类', 'food12': '肉类', 'food13': '制糖', 'food14': '制糖', 'food15': '制糖', 'food16': '饼坊', 'food17': '饼坊', 'food18': '饼坊', 'food19': '饼坊', 'food20': '饼坊', 'food119': '饼坊','food21': '石磨', 'food22': '石磨', 'food23': '石磨', 'food114':'石磨', 'food24': '豆坊', 'food25': '豆坊', 'food26': '豆坊', 'food27': '豆腐加工', 'food28': '豆腐加工', 'food29': '豆腐加工', 'food30': '豆腐加工', 'food31': '豆腐加工', 'food32': '豆腐加工', 'food33': '玩具', 'food34': '玩具', 'food35': '玩具', 'food36': '玩具', 'food37': '木工', 'food38': '木工', 'food39': '木工', 'food40': '糕坊', 'food41': '糕坊', 'food42': '糕坊', 'food43': '糕坊', 
+    'food120': '糕坊', 'food44': '编织', 'food45': '编织', 'food46': '编织', 'food47': '编织', 'food48': '腌制', 'food49': '腌制', 'food50': '腌制', 'food51': '腌制', 'food52': '腌制', 'food53': '陶瓷', 'food54': '陶瓷', 'food55': '陶瓷', 'food56': '文具', 'food57': '文具', 'food58': '文具', 'food59': '晾堂', 'food60': '晾堂', 'food61': '晾堂', 'food62': '绣坊', 'food63': '绣坊', 'food64': '绣坊', 'food112': '绣坊', 'food65': '土料', 'food66': '土料', 'food67': '土料', 'food68': '纺织', 'food69': '纺织', 'food70': '纺织', 'food115': '烧烤','food116': '烧烤','food117': '烧烤', 'food118': '烧烤', 'food71': '开采', 'food72': '开采', 'food73': '开采', 'food74': '开采', 'food121': '节气','food75': '菜谱', 'food76': '菜谱', 'food77': '菜谱', 'food78': '菜谱', 'food79': '菜谱', 'food80': '菜谱', 'food81': '菜谱', 'food82': '菜谱', 'food83': '菜谱', 'food84': '菜谱', 'food85': '菜谱', 'food86': '菜谱', 'food87': '菜谱', 'food88': '菜谱', 'food89': '菜谱', 'food90': '菜谱', 'food91': '菜谱', 'food92': '菜谱', 'food93': '菜谱', 'food94': '菜谱', 'food95': '菜谱', 'food96': '菜谱', 'food97': '菜谱', 'food98': '菜谱', 'food99': '菜谱', 'food100': '菜谱', 'food101': '菜谱', 'food102': '菜谱', 'food103': '菜谱', 'food104': '菜谱', 'food105': '菜谱', 'food106': '菜谱', 'food107': '菜谱', 'food108': '菜谱', 'food109': '菜谱', 'food110': '菜谱', 'food111': '菜谱', 'food122': '菜谱', 'food123': '菜谱'},
     searchInput: '',
     selectedFoodType: '',
-    foodTypes: ['农作物', '肉类', '制糖', '饼坊', '石磨', '豆坊', '豆腐加工', '玩具', '木工', '糕坊', '编织', '腌制', '陶瓷', '文具', '晾堂', '绣坊', '土料', '纺织', '开采', '菜谱'],
+    foodTypes: ['农作物', '肉类', '制糖', '饼坊', '石磨', '豆坊', '豆腐加工', '玩具', '木工', '糕坊', '编织', '腌制', '陶瓷', '文具', '晾堂', '绣坊', '土料', '纺织', '烧烤','开采', '节气','菜谱'],
   
     allFoods: [{
       "type": "农作物",
@@ -85,6 +86,14 @@ Page({
       "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%A3%89%E8%8A%B1.jpeg",
       "quantity": 0,
       "index": "food113"
+    },
+    {
+      "type": "农作物",
+      "name": "红薯",
+      "price": 12,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E8%96%AF.JPG",
+      "quantity": 0,
+      "index": "food117"
     },
     {
       "type": "肉类",
@@ -183,6 +192,14 @@ Page({
       "index": "food20"
     },
     {
+      "type": "饼坊",
+      "name": "地瓜饼",
+      "price": 92,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%9C%B0%E7%93%9C%E9%A5%BC.jpg",
+      "quantity": 0,
+      "index": "food119"
+    },
+    {
       "type": "石磨",
       "name": "面粉",
       "price": 6,
@@ -205,6 +222,14 @@ Page({
       "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%9C%9F%E8%B1%86%E7%B2%89.png",
       "quantity": 0,
       "index": "food23"
+    },
+    {
+      "type": "石磨",
+      "name": "地瓜粉",
+      "price": 46,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%9C%B0%E7%93%9C%E7%B2%89.jpg",
+      "quantity": 0,
+      "index": "food114"
     },
     {
       "type": "豆坊",
@@ -365,6 +390,14 @@ Page({
       "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%97%E7%93%9C%E7%B3%95.jpeg",
       "quantity": 0,
       "index": "food43"
+    },
+    {
+      "type": "糕坊",
+      "name": "马蹄糕",
+      "price": 72,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%A9%AC%E8%B9%84%E7%B3%95.jpg",
+      "quantity": 0,
+      "index": "food120"
     },
     {
       "type": "编织",
@@ -591,6 +624,38 @@ Page({
       "index": "food70"
     },
     {
+      "type": "烧烤",
+      "name": "烤土豆",
+      "price": 45,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%83%A4%E5%9C%9F%E8%B1%86.jpg",
+      "quantity": 0,
+      "index": "food115"
+    },
+    {
+      "type": "烧烤",
+      "name": "烤地瓜",
+      "price": 48,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%83%A4%E5%9C%B0%E7%93%9C.jpg",
+      "quantity": 0,
+      "index": "food116"
+    },
+    {
+      "type": "烧烤",
+      "name": "烤豆腐",
+      "price": 46,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%83%A4%E8%B1%86%E8%85%90.jpg",
+      "quantity": 0,
+      "index": "food117"
+    },
+    {
+      "type": "烧烤",
+      "name": "烤鸡翅",
+      "price": 56,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%83%A4%E9%B8%A1%E7%BF%85.jpg",
+      "quantity": 0,
+      "index": "food118"
+    },
+    {
       "type": "开采",
       "name": "青竹",
       "price": 10,
@@ -621,6 +686,14 @@ Page({
       "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%9F%BF%E6%96%99.png",
       "quantity": 0,
       "index": "food74"
+    },
+    {
+      "type": "节气",
+      "name": "莼菜",
+      "price": 4,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8E%BC%E8%8F%9C.jpg",
+      "quantity": 0,
+      "index": "food121"
     },
     {
       "type": "菜谱",
@@ -917,6 +990,22 @@ Page({
       "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%97%E7%93%9C%E9%A6%92%E5%A4%B4.png",
       "quantity": 0,
       "index": "food111"
+    },
+    {
+      "type": "菜谱",
+      "name": "莼菜豆腐汤",
+      "price": 20,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8E%BC%E8%8F%9C%E8%B1%86%E8%85%90%E6%B1%A4.jpg",
+      "quantity": 0,
+      "index": "food122"
+    },
+    {
+      "type": "菜谱",
+      "name": "莼菜银鱼羹",
+      "price": 14,
+      "avatar": "https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8E%BC%E8%8F%9C%E9%93%B6%E9%B1%BC%E7%BE%B9.jpg",
+      "quantity": 0,
+      "index": "food123"
     }
     ],
     adLoaded: false,
