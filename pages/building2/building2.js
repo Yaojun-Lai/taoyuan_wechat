@@ -1,14 +1,169 @@
 let interstitialAd = null;
 Page({
   data: {
-    showModal: false,
+    
     searchInput: '',
     
   
-    allFoods: [{'index': 'fish0', 'name': '兔鱼', 'weather': '雨天', 'time': '子时一刻、子时四刻、子时八刻', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%85%94%E9%B1%BC.png'}, {'index': 'fish1', 'name': '锦鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、辰时五刻', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%94%A6%E9%B1%BC.png'}, {'index': 'fish2', 'name': '胭脂鱼', 'weather': '晴天', 'time': '午时一刻、申时一刻、戌时三刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%83%AD%E8%84%82%E9%B1%BC.png'}, {'index': 'fish3', 'name': '花瓣鱼', 'weather': '晴天', 'time': '辰时一刻、巳时三刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E7%93%A3%E9%B1%BC.png'}, {'index': 'fish4', 'name': '虎虎鱼', 'weather': '晴天', 'time': '辰时一刻、午时一刻、午时二刻、申时一刻、戌时一刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%99%8E%E8%99%8E%E9%B1%BC.png'}, {'index': 'fish5', 'name': '猫猫鱼', 'weather': '晴天', 'time': '午时二刻、未时一刻、亥时二刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%8C%AB%E7%8C%AB%E9%B1%BC.png'}, {'index': 'fish6', 'name': '月鲤', 'weather': '晴天', 'time': '午时一刻、未时一刻、戌时六刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%88%E9%B2%A4.png'}, {'index': 'fish7', 'name': '长者鱼', 'weather': '晴天', 'time': '辰时一刻、午时二刻、未时二刻、申时四刻、申时六刻、亥时一刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%95%BF%E8%80%85%E9%B1%BC.png'}, {'index': 'fish8', 'name': '六鳃鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、未时七刻、酉时四刻、戌时二刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%85%AD%E9%B3%83%E9%B1%BC.png'}, {'index': 'fish9', 'name': '枯叶鱼', 'weather': '晴天', 'time': '辰时一刻、辰时四刻、巳时二刻、亥时八刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9E%AF%E5%8F%B6%E9%B1%BC.png'}, {'index': 'fish10', 'name': '大耳鱼', 'weather': '雨天、晴天', 'time': '辰时八刻、巳时一刻、亥时一刻', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%A4%A7%E8%80%B3%E9%B1%BC.png'}, {'index': 'fish11', 'name': '金龙鱼', 'weather': '雨天、晴天', 'time': '巳时三刻、未时三刻、申时一刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%87%91%E9%BE%99%E9%B1%BC.png'}, {'index': 'fish12', 'name': '半月斗鱼', 'weather': '雨天、晴天', 'time': '辰时七刻、申时五刻、酉时四刻、亥时一刻、子时八刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%8A%E6%9C%88%E6%96%97%E9%B1%BC.png'}, {'index': 'fish13', 'name': '奇鱼', 'weather': '晴天', 'time': '辰时一刻、辰时四刻、辰时六刻、巳时五刻、子时五刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%A5%87%E9%B1%BC.png'}, {'index': 'fish14', 'name': '孔雀鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、辰时五刻、辰时八刻、巳时一刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%AD%94%E9%9B%80%E9%B1%BC.png'}, {'index': 'fish15', 'name': '叉尾斗鱼', 'weather': '雨天、晴天', 'time': '辰时二刻、午时一刻、午时四刻', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8F%89%E5%B0%BE%E6%96%97%E9%B1%BC.png'}, {'index': 'fish16', 'name': '萝卜鱼', 'weather': '雨天、晴天', 'time': '未时一刻、子时八刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%90%9D%E5%8D%9C%E9%B1%BC.png'}, {'index': 'fish17', 'name': '蝴蝶鲤', 'weather': '雨天、晴天', 'time': '未时一刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9D%B4%E8%9D%B6%E9%B2%A4.png'}, {'index': 'fish18', 'name': '珍珠鱼', 'weather': '雨天、晴天', 'time': '未时三刻、酉时四刻、亥时三刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%8F%8D%E7%8F%A0%E9%B1%BC.png'}, {'index': 'fish19', 'name': '仙女鱼', 'weather': '雨天、晴天', 'time': '亥时一刻、亥时八刻、子时八刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E4%BB%99%E5%A5%B3%E9%B1%BC.png'}, {'index': 'fish20', 'name': '龙须鱼', 'weather': '晴天', 'time': '戌时四刻、子时八刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BE%99%E9%A1%BB%E9%B1%BC.png'}, {'index': 'fish21', 'name': '绿孔雀鱼', 'weather': '雨天、晴天', 'time': '辰时六刻、巳时一刻、午时五刻、未时五刻、戌时二刻、申时七刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BB%BF%E5%AD%94%E9%9B%80%E9%B1%BC.png'}, {'index': 'fish22', 'name': '红白琉金鱼', 'weather': '雨天、晴天', 'time': '辰时五刻、巳时五刻、未时八刻、申时二刻、戌时三刻、子时六刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E7%99%BD%E7%90%89%E9%87%91%E9%B1%BC.png'}, {'index': 'fish23', 'name': '唐鱼', 'weather': '晴天', 'time': '子时五刻、申时二刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%94%90%E9%B1%BC.png'}, {'index': 'fish24', 'name': '黑龙睛鱼', 'weather': '晴天', 'time': '亥时三刻、亥时五刻', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BB%91%E9%BE%99%E6%99%B4.png'}, {'index': 'fish25', 'name': '兰寿鱼', 'weather': '晴天', 'time': '子时七刻、酉时二刻', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%85%B0%E5%AF%BF%E9%B1%BC.png'}, {'index': 'fish26', 'name': '墨燕鱼', 'weather': '晴天', 'time': '子时三刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%A2%A8%E7%87%95%E9%B1%BC.png'}, {'index': 'fish27', 'name': '彩圆儿', 'weather': '雨天、晴天', 'time': '巳时二刻、亥时四刻、子时八刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%BD%A9%E5%9C%86%E5%84%BF.png'}, {'index': 'fish28', 'name': '宽鳍鱼', 'weather': '晴天', 'time': '巳时七刻、亥时一刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%AE%BD%E9%B3%8D%E9%B1%BC.png'}, {'index': 'fish29', 'name': '短鲷', 'weather': '晴天', 'time': '巳时七刻、戌时五刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%9F%AD%E9%B2%B7.png'}, {'index': 'fish30', 'name': '鹦鹉鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、巳时七刻、戌时四刻、亥时四刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B9%A6%E9%B9%89%E9%B1%BC.png'}, {'index': 'fish31', 'name': '金燕鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、辰时五刻、巳时八刻、亥时七刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%87%91%E7%87%95%E9%B1%BC.png'}, {'index': 'fish32', 'name': '华鲤', 'weather': '雨天', 'time': '戌时五刻、亥时七刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%8E%E9%B2%A4.png'}, {'index': 'fish33', 'name': '吸鳅', 'weather': '雨天', 'time': '戌时五刻、申时三刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%90%B8%E9%B3%85.png'}, {'index': 'fish34', 'name': '五花草金鱼', 'weather': '雨天', 'time': '申时一刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E4%BA%94%E8%8A%B1%E8%8D%89%E9%87%91%E9%B1%BC.png'},{'index': 'fish38', 'name': '朱砂水泡', 'weather': '晴天', 'time': '未时八刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%B1%E7%A0%82%E6%B0%B4%E6%B3%A1.png'}, {'index': 'fish35', 'name': '红文金鱼', 'weather': '未知', 'time': '未知', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E6%96%87%E9%87%91%E9%B1%BC.png'}, {'index': 'fish36', 'name': '稻田鱼', 'weather': '未知', 'time': '未知', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%A8%BB%E7%94%B0%E9%B1%BC.png'}, {'index': 'fish37', 'name': '红帽金鱼', 'weather': '未知', 'time': '未知', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E5%B8%BD%E9%87%91%E9%B1%BC.png'}]
+    allFoods: [{'index': 'build0',
+    'name': '谷仓',
+    'level': '1级',
+    'avatar': '',
+    'comfort': '90',
+    'price': '100'},
+   {'index': 'build1',
+    'name': '豆坊',
+    'level': '2级',
+    'avatar': '',
+    'comfort': '190',
+    'price': '200'},
+   {'index': 'build2',
+    'name': '石磨',
+    'level': '2级',
+    'avatar': '',
+    'comfort': '190',
+    'price': '200'},
+   {'index': 'build3',
+    'name': '铡刀',
+    'level': '5级',
+    'avatar': '',
+    'comfort': '390',
+    'price': '400'},
+   {'index': 'build4',
+    'name': '鸡舍',
+    'level': '5级',
+    'avatar': '',
+    'comfort': '390',
+    'price': '400'},
+   {'index': 'build5',
+    'name': '制糖',
+    'level': '6级',
+    'avatar': '',
+    'comfort': '390',
+    'price': '800'},
+   {'index': 'build6',
+    'name': '饼坊',
+    'level': '7级',
+    'avatar': '',
+    'comfort': '480',
+    'price': '1500'},
+   {'index': 'build7',
+    'name': '腌制',
+    'level': '9级',
+    'avatar': '',
+    'comfort': '490',
+    'price': '2000'},
+   {'index': 'build8',
+    'name': '萝卜学社',
+    'level': '10级',
+    'avatar': '',
+    'comfort': '600',
+    'price': '1000'},
+   {'index': 'build9',
+    'name': '豆腐加工',
+    'level': '11级',
+    'avatar': '',
+    'comfort': '650',
+    'price': '2600'},
+   {'index': 'build10',
+    'name': '木工',
+    'level': '12级',
+    'avatar': '',
+    'comfort': '780',
+    'price': '3300'},
+   {'index': 'build11',
+    'name': '糕坊',
+    'level': '14级',
+    'avatar': '',
+    'comfort': '1010',
+    'price': '5500'},
+   {'index': 'build12',
+    'name': '编织',
+    'level': '16级',
+    'avatar': '',
+    'comfort': '1260',
+    'price': '8800'},
+   {'index': 'build13',
+    'name': '玩具',
+    'level': '18级',
+    'avatar': '',
+    'comfort': '1810',
+    'price': '13200'},
+   {'index': 'build14',
+    'name': '土料',
+    'level': '20级',
+    'avatar': '',
+    'comfort': '2220',
+    'price': '17600'},
+   {'index': 'build15',
+    'name': '陶瓷',
+    'level': '22级',
+    'avatar': '',
+    'comfort': '2560',
+    'price': '23100'},
+   {'index': 'build16',
+    'name': '文具',
+    'level': '24级',
+    'avatar': '',
+    'comfort': '3310',
+    'price': '29700'},
+   {'index': 'build17',
+    'name': '羊圈',
+    'level': '26级',
+    'avatar': '',
+    'comfort': '3830',
+    'price': '36300'},
+   {'index': 'build18',
+    'name': '晾晒',
+    'level': '28级',
+    'avatar': '',
+    'comfort': '4950',
+    'price': '49500'},
+   {'index': 'build19',
+    'name': '纺织',
+    'level': '30级',
+    'avatar': '',
+    'comfort': '5270',
+    'price': '62700'},
+   {'index': 'build20',
+    'name': '水晒坊',
+    'level': '30级',
+    'avatar': '',
+    'comfort': '5270',
+    'price': '10000'},
+   {'index': 'build21',
+    'name': '绣坊',
+    'level': '32级',
+    'avatar': '',
+    'comfort': '5840',
+    'price': '72600'},
+   {'index': 'build22',
+    'name': '水磨坊',
+    'level': '32级',
+    'avatar': '',
+    'comfort': '6480',
+    'price': '79200'},
+   {'index': 'build23',
+    'name': '养颜坊',
+    'level': '36级',
+    'avatar': '',
+    'comfort': '7410',
+    'price': '132000'},
+   {'index': 'build24',
+    'name': '养生坊',
+    'level': '39级',
+    'avatar': '',
+    'comfort': '8500',
+    'price': '198000'},
+   {'index': 'build25',
+    'name': '烧烤',
+    'level': '42级',
+    'avatar': '',
+    'comfort': '9310',
+    'price': '264000'}]
   
   ,
-    adLoaded: false,
+  
     currentFoods: []
   },
   onShareAppMessage: function(){
@@ -17,20 +172,10 @@ Page({
   onShareTimeline: function(){
 
   },
-  handleAdLoad: function() {
-    this.setData({ adLoaded: false });
-  },
-  handleAdError: function() {
-    // console.log('yes')
-    // this.setData({ adLoaded: true });
-  },
-  handleAdClose: function() {
-    this.setData({ adLoaded: true });
-  },
   onLoad: function() {
     if (wx.createInterstitialAd) {
       interstitialAd = wx.createInterstitialAd({
-        adUnitId: 'adunit-49ae1238117bf89e'
+        adUnitId: 'adunit-7b48654a19c4f5b0'
       })
       interstitialAd.onLoad(() => {})
       interstitialAd.onError((err) => {})
@@ -147,9 +292,9 @@ Page({
     }
   },
   
-  JumpToTime: function(){
+  JumpToManual: function(){
     wx.navigateTo({
-      url: '/pages/time/time',
+      url: '/pages/manual/manual',
     })
   },
   
@@ -279,18 +424,7 @@ Page({
       });
     }
   },
-  showModal: function() {
-    this.setData({
-      showModal: true,
-      // cartItems: this.data.cartFoods
-    });
-  },
-  // Hide the modal window
-  hideModal: function() {
-    this.setData({
-      showModal: false
-    });
-  },
+
   addBookPrice: function(event){
     // console.log(event.detail);
     const add = parseInt(event.detail.value, 10);
@@ -415,7 +549,7 @@ Page({
     this.setData({
       searchInput: e.detail.value,
     });
-    const foodToSearch = this.data.allFoods.find(food => food.name === searchTerm);
+    const foodToSearch = this.data.allFoods.find(food => food.name === searchTerm  || food.character === searchTerm);
     if (foodToSearch) {
       // console.log(this.data.scrollToFood)
       this.setData({
@@ -424,7 +558,7 @@ Page({
     
     } else {
       // Find the first food where food.name includes the search input
-      const foodToScroll = this.data.allFoods.find(food => food.name.includes(searchTerm));
+      const foodToScroll = this.data.allFoods.find(food => food.name.includes(searchTerm)  || food.character.includes(searchTerm));
       if (foodToScroll) {
         this.setData({
           scrollToFood: foodToScroll.index,

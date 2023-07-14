@@ -1,14 +1,9 @@
 
 <view class="search-bar">
-  
-
-    
+    <!-- <button bindtap="JumpToMain">主页</button> -->
     <input type="text" placeholder=" 搜索材料" bindinput="onSearchInput" bindconfirm="onSearchButton" 
            confirm-type="search"/>
-           <!-- <button bindtap="JumpToMain">摸鱼版</button> -->
-    <!-- <navigator url="/pages/indexplain/indexplain" open-type="navigate">
-    <button type="button">摸鱼版</button>
-  </navigator> -->
+    
 </view>
 <view class="container">
 
@@ -29,7 +24,7 @@
 <scroll-view class="foods" scroll-y="true" lazy-load='true' scroll-into-view="{{scrollToFood}}">
     <block wx:for="{{currentFoods}}" wx:key="name"> <!-- change key to a unique property -->
   <view class="food-item" id="{{item.index}}">
-    <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
+    <!-- <image class="avatar" src="{{item.avatar}}" mode="aspectFit" /> -->
     <view class="info">
       <text>{{item.name}}</text>
       <text>¥{{item.price}}</text>
@@ -65,7 +60,7 @@
     <view class="scrollable-container">
       <block wx:for="{{cartFoods}}" wx:key="name">
         <view class="cart-item">
-          <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
+          <!-- <image class="avatar" src="{{item.avatar}}" mode="aspectFit" /> -->
           <view class="info info-row">
           <view class="info-row-info">
             <text>{{item.name}}</text>
@@ -107,7 +102,7 @@
     </view>
 
     <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
-      <ad unit-id="adunit-0f098ebe2f7a075d" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
+      <ad unit-id="adunit-57c31a9838bb79cd" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
     </view>
 
   </view>

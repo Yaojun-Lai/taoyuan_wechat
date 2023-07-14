@@ -5,16 +5,84 @@ Page({
     searchInput: '',
     
   
-    allFoods: [{'index': 'fish0', 'name': '兔鱼', 'weather': '雨天', 'time': '子时一刻、子时四刻、子时八刻', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%85%94%E9%B1%BC.png'}, {'index': 'fish1', 'name': '锦鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、辰时五刻', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%94%A6%E9%B1%BC.png'}, {'index': 'fish2', 'name': '胭脂鱼', 'weather': '晴天', 'time': '午时一刻、申时一刻、戌时三刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%83%AD%E8%84%82%E9%B1%BC.png'}, {'index': 'fish3', 'name': '花瓣鱼', 'weather': '晴天', 'time': '辰时一刻、巳时三刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E7%93%A3%E9%B1%BC.png'}, {'index': 'fish4', 'name': '虎虎鱼', 'weather': '晴天', 'time': '辰时一刻、午时一刻、午时二刻、申时一刻、戌时一刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%99%8E%E8%99%8E%E9%B1%BC.png'}, {'index': 'fish5', 'name': '猫猫鱼', 'weather': '晴天', 'time': '午时二刻、未时一刻、亥时二刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%8C%AB%E7%8C%AB%E9%B1%BC.png'}, {'index': 'fish6', 'name': '月鲤', 'weather': '晴天', 'time': '午时一刻、未时一刻、戌时六刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%88%E9%B2%A4.png'}, {'index': 'fish7', 'name': '长者鱼', 'weather': '晴天', 'time': '辰时一刻、午时二刻、未时二刻、申时四刻、申时六刻、亥时一刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%95%BF%E8%80%85%E9%B1%BC.png'}, {'index': 'fish8', 'name': '六鳃鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、未时七刻、酉时四刻、戌时二刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%85%AD%E9%B3%83%E9%B1%BC.png'}, {'index': 'fish9', 'name': '枯叶鱼', 'weather': '晴天', 'time': '辰时一刻、辰时四刻、巳时二刻、亥时八刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9E%AF%E5%8F%B6%E9%B1%BC.png'}, {'index': 'fish10', 'name': '大耳鱼', 'weather': '雨天、晴天', 'time': '辰时八刻、巳时一刻、亥时一刻', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%A4%A7%E8%80%B3%E9%B1%BC.png'}, {'index': 'fish11', 'name': '金龙鱼', 'weather': '雨天、晴天', 'time': '巳时三刻、未时三刻、申时一刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%87%91%E9%BE%99%E9%B1%BC.png'}, {'index': 'fish12', 'name': '半月斗鱼', 'weather': '雨天、晴天', 'time': '辰时七刻、申时五刻、酉时四刻、亥时一刻、子时八刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%8A%E6%9C%88%E6%96%97%E9%B1%BC.png'}, {'index': 'fish13', 'name': '奇鱼', 'weather': '晴天', 'time': '辰时一刻、辰时四刻、辰时六刻、巳时五刻、子时五刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%A5%87%E9%B1%BC.png'}, {'index': 'fish14', 'name': '孔雀鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、辰时五刻、辰时八刻、巳时一刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%AD%94%E9%9B%80%E9%B1%BC.png'}, {'index': 'fish15', 'name': '叉尾斗鱼', 'weather': '雨天、晴天', 'time': '辰时二刻、午时一刻、午时四刻', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8F%89%E5%B0%BE%E6%96%97%E9%B1%BC.png'}, {'index': 'fish16', 'name': '萝卜鱼', 'weather': '雨天、晴天', 'time': '未时一刻、子时八刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%90%9D%E5%8D%9C%E9%B1%BC.png'}, {'index': 'fish17', 'name': '蝴蝶鲤', 'weather': '雨天、晴天', 'time': '未时一刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9D%B4%E8%9D%B6%E9%B2%A4.png'}, {'index': 'fish18', 'name': '珍珠鱼', 'weather': '雨天、晴天', 'time': '未时三刻、酉时四刻、亥时三刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%8F%8D%E7%8F%A0%E9%B1%BC.png'}, {'index': 'fish19', 'name': '仙女鱼', 'weather': '雨天、晴天', 'time': '亥时一刻、亥时八刻、子时八刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E4%BB%99%E5%A5%B3%E9%B1%BC.png'}, {'index': 'fish20', 'name': '龙须鱼', 'weather': '晴天', 'time': '戌时四刻、子时八刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BE%99%E9%A1%BB%E9%B1%BC.png'}, {'index': 'fish21', 'name': '绿孔雀鱼', 'weather': '雨天、晴天', 'time': '辰时六刻、巳时一刻、午时五刻、未时五刻、戌时二刻、申时七刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BB%BF%E5%AD%94%E9%9B%80%E9%B1%BC.png'}, {'index': 'fish22', 'name': '红白琉金鱼', 'weather': '雨天、晴天', 'time': '辰时五刻、巳时五刻、未时八刻、申时二刻、戌时三刻、子时六刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E7%99%BD%E7%90%89%E9%87%91%E9%B1%BC.png'}, {'index': 'fish23', 'name': '唐鱼', 'weather': '晴天', 'time': '子时五刻、申时二刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%94%90%E9%B1%BC.png'}, {'index': 'fish24', 'name': '黑龙睛鱼', 'weather': '晴天', 'time': '亥时三刻、亥时五刻', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BB%91%E9%BE%99%E6%99%B4.png'}, {'index': 'fish25', 'name': '兰寿鱼', 'weather': '晴天', 'time': '子时七刻、酉时二刻', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%85%B0%E5%AF%BF%E9%B1%BC.png'}, {'index': 'fish26', 'name': '墨燕鱼', 'weather': '晴天', 'time': '子时三刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%A2%A8%E7%87%95%E9%B1%BC.png'}, {'index': 'fish27', 'name': '彩圆儿', 'weather': '雨天、晴天', 'time': '巳时二刻、亥时四刻、子时八刻', 'place': '全鱼点', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%BD%A9%E5%9C%86%E5%84%BF.png'}, {'index': 'fish28', 'name': '宽鳍鱼', 'weather': '晴天', 'time': '巳时七刻、亥时一刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%AE%BD%E9%B3%8D%E9%B1%BC.png'}, {'index': 'fish29', 'name': '短鲷', 'weather': '晴天', 'time': '巳时七刻、戌时五刻', 'place': '南有乔木·南市', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%9F%AD%E9%B2%B7.png'}, {'index': 'fish30', 'name': '鹦鹉鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、巳时七刻、戌时四刻、亥时四刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B9%A6%E9%B9%89%E9%B1%BC.png'}, {'index': 'fish31', 'name': '金燕鱼', 'weather': '雨天、晴天', 'time': '辰时一刻、辰时五刻、巳时八刻、亥时七刻', 'place': '田园瀑布', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%87%91%E7%87%95%E9%B1%BC.png'}, {'index': 'fish32', 'name': '华鲤', 'weather': '雨天', 'time': '戌时五刻、亥时七刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%8E%E9%B2%A4.png'}, {'index': 'fish33', 'name': '吸鳅', 'weather': '雨天', 'time': '戌时五刻、申时三刻', 'place': '愿·寺庙', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%90%B8%E9%B3%85.png'}, {'index': 'fish34', 'name': '五花草金鱼', 'weather': '雨天', 'time': '申时一刻', 'place': '结梦·花明村', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E4%BA%94%E8%8A%B1%E8%8D%89%E9%87%91%E9%B1%BC.png'},{'index': 'fish38', 'name': '朱砂水泡', 'weather': '晴天', 'time': '未时八刻', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%B1%E7%A0%82%E6%B0%B4%E6%B3%A1.png'}, {'index': 'fish35', 'name': '红文金鱼', 'weather': '未知', 'time': '未知', 'place': '田园溪流', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E6%96%87%E9%87%91%E9%B1%BC.png'}, {'index': 'fish36', 'name': '稻田鱼', 'weather': '未知', 'time': '未知', 'place': '愿·鲁班小院', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%A8%BB%E7%94%B0%E9%B1%BC.png'}, {'index': 'fish37', 'name': '红帽金鱼', 'weather': '未知', 'time': '未知', 'place': '仙女湖畔', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E5%B8%BD%E9%87%91%E9%B1%BC.png'}]
+    allFoods: [{'index': 'time0', 'name': '辰时一刻', 'time': '0秒-25秒'},
+    {'index': 'time1', 'name': '辰时二刻', 'time': '25秒-50秒'},
+    {'index': 'time2', 'name': '辰时三刻', 'time': '50秒-1分15秒'},
+    {'index': 'time3', 'name': '辰时四刻', 'time': '1分15秒-1分40秒'},
+    {'index': 'time4', 'name': '辰时五刻', 'time': '1分40秒-2分5秒'},
+    {'index': 'time5', 'name': '辰时六刻', 'time': '2分5秒-2分30秒'},
+    {'index': 'time6', 'name': '辰时七刻', 'time': '2分30秒-2分55秒'},
+    {'index': 'time7', 'name': '辰时八刻', 'time': '2分55秒-3分20秒'},
+    {'index': 'time8', 'name': '巳时一刻', 'time': '3分20秒-3分45秒'},
+    {'index': 'time9', 'name': '巳时二刻', 'time': '3分45秒-4分10秒'},
+    {'index': 'time10', 'name': '巳时三刻', 'time': '4分10秒-4分35秒'},
+    {'index': 'time11', 'name': '巳时四刻', 'time': '4分35秒-5分'},
+    {'index': 'time12', 'name': '巳时五刻', 'time': '5分-5分25秒'},
+    {'index': 'time13', 'name': '巳时六刻', 'time': '5分25秒-5分50秒'},
+    {'index': 'time14', 'name': '巳时七刻', 'time': '5分50秒-6分15秒'},
+    {'index': 'time15', 'name': '巳时八刻', 'time': '6分15秒-6分40秒'},
+    {'index': 'time16', 'name': '午时一刻', 'time': '6分40秒-7分5秒'},
+    {'index': 'time17', 'name': '午时二刻', 'time': '7分5秒-7分30秒'},
+    {'index': 'time18', 'name': '午时三刻', 'time': '7分30秒-7分55秒'},
+    {'index': 'time19', 'name': '午时四刻', 'time': '7分55秒-8分20秒'},
+    {'index': 'time20', 'name': '午时五刻', 'time': '8分20秒-8分45秒'},
+    {'index': 'time21', 'name': '午时六刻', 'time': '8分45秒-9分10秒'},
+    {'index': 'time22', 'name': '午时七刻', 'time': '9分10秒-9分35秒'},
+    {'index': 'time23', 'name': '午时八刻', 'time': '9分35秒-10分'},
+    {'index': 'time24', 'name': '未时一刻', 'time': '10分-10分25秒'},
+    {'index': 'time25', 'name': '未时二刻', 'time': '10分25秒-10分50秒'},
+    {'index': 'time26', 'name': '未时三刻', 'time': '10分50秒-11分15秒'},
+    {'index': 'time27', 'name': '未时四刻', 'time': '11分15秒-11分40秒'},
+    {'index': 'time28', 'name': '未时五刻', 'time': '11分40秒-12分5秒'},
+    {'index': 'time29', 'name': '未时六刻', 'time': '12分5秒-12分30秒'},
+    {'index': 'time30', 'name': '未时七刻', 'time': '12分30秒-12分55秒'},
+    {'index': 'time31', 'name': '未时八刻', 'time': '12分55秒-13分20秒'},
+    {'index': 'time32', 'name': '申时一刻', 'time': '13分20秒-13分45秒'},
+    {'index': 'time33', 'name': '申时二刻', 'time': '13分45秒-14分10秒'},
+    {'index': 'time34', 'name': '申时三刻', 'time': '14分10秒-14分35秒'},
+    {'index': 'time35', 'name': '申时四刻', 'time': '14分35秒-15分'},
+    {'index': 'time36', 'name': '申时五刻', 'time': '15分-15分25秒'},
+    {'index': 'time37', 'name': '申时六刻', 'time': '15分25秒-15分50秒'},
+    {'index': 'time38', 'name': '申时七刻', 'time': '15分50秒-16分15秒'},
+    {'index': 'time39', 'name': '申时八刻', 'time': '16分15秒-16分40秒'},
+    {'index': 'time40', 'name': '酉时一刻', 'time': '16分40秒-17分5秒'},
+    {'index': 'time41', 'name': '酉时二刻', 'time': '17分5秒-17分30秒'},
+    {'index': 'time42', 'name': '酉时三刻', 'time': '17分30秒-17分55秒'},
+    {'index': 'time43', 'name': '酉时四刻', 'time': '17分55秒-18分20秒'},
+    {'index': 'time44', 'name': '酉时五刻', 'time': '18分20秒-18分45秒'},
+    {'index': 'time45', 'name': '酉时六刻', 'time': '18分45秒-19分10秒'},
+    {'index': 'time46', 'name': '酉时七刻', 'time': '19分10秒-19分35秒'},
+    {'index': 'time47', 'name': '酉时八刻', 'time': '19分35秒-20分'},
+    {'index': 'time48', 'name': '戌时一刻', 'time': '20分-20分25秒'},
+    {'index': 'time49', 'name': '戌时二刻', 'time': '20分25秒-20分50秒'},
+    {'index': 'time50', 'name': '戌时三刻', 'time': '20分50秒-21分15秒'},
+    {'index': 'time51', 'name': '戌时四刻', 'time': '21分15秒-21分40秒'},
+    {'index': 'time52', 'name': '戌时五刻', 'time': '21分40秒-22分5秒'},
+    {'index': 'time53', 'name': '戌时六刻', 'time': '22分5秒-22分30秒'},
+    {'index': 'time54', 'name': '戌时七刻', 'time': '22分30秒-22分55秒'},
+    {'index': 'time55', 'name': '戌时八刻', 'time': '22分55秒-23分20秒'},
+    {'index': 'time56', 'name': '亥时一刻', 'time': '23分20秒-23分45秒'},
+    {'index': 'time57', 'name': '亥时二刻', 'time': '23分45秒-24分10秒'},
+    {'index': 'time58', 'name': '亥时三刻', 'time': '24分10秒-24分35秒'},
+    {'index': 'time59', 'name': '亥时四刻', 'time': '24分35秒-25分'},
+    {'index': 'time60', 'name': '亥时五刻', 'time': '25分-25分25秒'},
+    {'index': 'time61', 'name': '亥时六刻', 'time': '25分25秒-25分50秒'},
+    {'index': 'time62', 'name': '亥时七刻', 'time': '25分50秒-26分15秒'},
+    {'index': 'time63', 'name': '亥时八刻', 'time': '26分15秒-26分40秒'},
+    {'index': 'time64', 'name': '子时一刻', 'time': '26分40秒-27分5秒'},
+    {'index': 'time65', 'name': '子时二刻', 'time': '27分5秒-27分30秒'},
+    {'index': 'time66', 'name': '子时三刻', 'time': '27分30秒-27分55秒'},
+    {'index': 'time67', 'name': '子时四刻', 'time': '27分55秒-28分20秒'},
+    {'index': 'time68', 'name': '子时五刻', 'time': '28分20秒-28分45秒'},
+    {'index': 'time69', 'name': '子时六刻', 'time': '28分45秒-29分10秒'},
+    {'index': 'time70', 'name': '子时七刻', 'time': '29分10秒-29分35秒'},
+    {'index': 'time71', 'name': '子时八刻', 'time': '29分35秒-30分睡觉'}]
   
   ,
     adLoaded: false,
     currentFoods: []
   },
   onShareAppMessage: function(){
-
-  },
-  onShareTimeline: function(){
 
   },
   handleAdLoad: function() {
@@ -30,7 +98,7 @@ Page({
   onLoad: function() {
     if (wx.createInterstitialAd) {
       interstitialAd = wx.createInterstitialAd({
-        adUnitId: 'adunit-49ae1238117bf89e'
+        adUnitId: 'adunit-a8ea2ee916cff958'
       })
       interstitialAd.onLoad(() => {})
       interstitialAd.onError((err) => {})
@@ -147,11 +215,7 @@ Page({
     }
   },
   
-  JumpToTime: function(){
-    wx.navigateTo({
-      url: '/pages/time/time',
-    })
-  },
+  
   
   
   // Compute the total price based on the items in the cart
@@ -434,6 +498,9 @@ Page({
 
   },
   onShareAppMessage: function(){
+
+  },
+  onShareTimeline: function(){
 
   },
   onSearchButton: function() {

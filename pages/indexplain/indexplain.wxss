@@ -48,17 +48,16 @@
 }
 
 .search-bar button {
-  /* flex-shrink: 0; */
-  /* width: 10px; */
-  flex: none;
+  flex-shrink: 0;
+  width: 25%;
   height: 40px;
   margin-left: 5px;
-  /* padding: 5px 10px; */
+  padding: 5px 10px;
   border: none;
   border-radius: 5px;
   /* background-color: #000; */
   /* background-color: #dd7973; */
-  background-color: #0056b3;
+  /* background-color: #E82C0C; */
   color: #fff;
   cursor: pointer;
 }
@@ -98,6 +97,7 @@
 }
 
 .food-item {
+  border-bottom: 1px solid #ddd;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -105,7 +105,7 @@
   margin-bottom: 5px;
   
   padding: 10px;
-  height: 70px;
+  height: 50px;
 }
 
 .food-item .avatar {
@@ -133,7 +133,7 @@
 }
 .cart-item .controls .minus,
 .food-item .controls .minus {
-  color: #CD5C5C;
+  /* color: #CD5C5C; */
   font-size: 30px; 
   padding: 3.5px;
   margin-right: 5px; /* Adjust this to give more space between minus and input */
@@ -150,7 +150,7 @@
 .food-item .plus {
   flex: 0.2; 
   text-align: right;
-  color: #CD5C5C;
+  /* color: #CD5C5C; */
   font-size: 30px; 
   padding: 3.5px; 
   margin-left: 15px; /* Adjust this to give more space between plus and input */
@@ -223,8 +223,8 @@
 
 .clear-btn2 {
   flex: 1;
-  background-color: #E82C0C;
-  color: #fff;
+  /* background-color: #E82C0C; */
+  /* color: #fff; */
   font-size: 24px;
   border: none;
   border-radius: 5px;
@@ -241,8 +241,8 @@
 }
 .total-btn {
   flex: 1.3;
-  background-color: #0056b3;
-  color: #fff;
+  /* background-color: #0056b3; */
+  /* color: #fff; */
   font-size: 24px;
   border: none;
   border-radius: 5px;
@@ -318,7 +318,7 @@
 
 .clear-btn,
 .close-btn {
-  color: white;
+  color: black;
   padding: 10px 10px;
   border-radius: 5px;
   font-size: 16px;
@@ -327,13 +327,7 @@
 
 
 
-.clear-btn {
-  background-color: #E82C0C; /* Slightly darker red */
-}
 
-.close-btn {
-  background-color: #0056b3; /* Slightly darker blue */
-}
 .fixed-width-input {
   width: 3px; /* Or however wide you want the input to be */
   text-align: center;

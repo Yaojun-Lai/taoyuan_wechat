@@ -1030,7 +1030,7 @@ Page({
   onLoad: function() {
     if (wx.createInterstitialAd) {
       interstitialAd = wx.createInterstitialAd({
-        adUnitId: 'adunit-5a1e88d8c2f8b9ce'
+        adUnitId: 'adunit-1b764addb53bd9f8'
       })
       interstitialAd.onLoad(() => {})
       interstitialAd.onError((err) => {})
@@ -1150,7 +1150,7 @@ Page({
   
   JumpToMain: function(){
     wx.navigateTo({
-      url: '/pages/indexplain/indexplain',
+      url: '/pages/mainIndex/mainIndex',
     })
   },
   

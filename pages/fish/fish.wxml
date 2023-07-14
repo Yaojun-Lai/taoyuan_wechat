@@ -44,7 +44,18 @@
         <text class='textbold'>非常感谢“爱宠515151”大大的攻略！！
         
           查看时刻：点击娱乐设施“光阴日晷”</text>
+          
         <text class='modaltext'>
+
+          查看时刻对应：
+        </text>
+        
+          <button bindtap="JumpToTime">时刻对应表</button>
+          <text class='modaltext'>
+
+        提醒：
+        
+        有些鱼只有白天或者夜晚才可以钓到，点击鱼志可以查看。
 
         信息仅供参考，并不是官方数据。
 

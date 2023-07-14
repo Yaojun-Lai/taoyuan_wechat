@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/mainIndex/mainIndex",
+    "pages/indexplain/indexplain",
     "pages/index/index",
     "pages/manual/manual",
     "pages/prefer/prefer",
@@ -13,7 +14,9 @@
     "pages/story1/story1",
     "pages/story2/story2",
     "pages/story3/story3",
-    "pages/bird/bird"
+    "pages/bird/bird",
+    "pages/building2/building2",
+    "pages/time/time"
   ],
   "window":{
     "backgroundTextStyle":"light",
