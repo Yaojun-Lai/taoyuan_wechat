@@ -1,33 +1,36 @@
 let interstitialAd = null;
+var indexData = require('../../data/index2.js');
 Page({
   data: {
-    showModal: false,
+    indexType: indexData.indexType,
     searchInput: '',
-    
+    selectedFoodType: '',
+    foodTypes: indexData.foodTypes,
   
-    allFoods: [{'index': 'food0', 'name': '一串黄', 'taste': '', 'recipe': '紫＋红', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E4%B8%80%E4%B8%B2%E9%BB%84.png'}, {'index': 'food1', 'name': '一串紫', 'taste': '', 'recipe': '初始品种', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E4%B8%80%E4%B8%B2%E7%B4%AB.png'}, {'index': 'food2', 'name': '一串红', 'taste': '', 'recipe': '初始品种', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E4%B8%80%E4%B8%B2%E7%BA%A2.png'}, {'index': 'food9', 'name': '绣球紫', 'taste': '酸', 'recipe': '白＋红', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BB%A3%E7%90%83%E7%B4%AB.png'}, {'index': 'food10', 'name': '绣球蓝', 'taste': '甘', 'recipe': '白＋白 紫＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BB%A3%E7%90%83%E8%93%9D.png'}, {'index': 'food11', 'name': '绣球粉', 'taste': '甘', 'recipe': '紫＋红 紫＋紫 红＋红', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BB%A3%E7%90%83%E7%B2%89.png'}, {'index': 'food12', 'name': '绣球绿', 'taste': '咸', 'recipe': '白＋红 红＋红 紫＋白 白＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BB%A3%E7%90%83%E7%BB%BF.png'}, {'index': 'food13', 'name': '绣球红', 'taste': '苦', 'recipe': '初始品种', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BB%A3%E7%90%83%E7%BA%A2.png'}, {'index': 'food14', 'name': '绣球白', 'taste': '咸', 'recipe': '初始品种', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BB%A3%E7%90%83%E7%99%BD.png'}, {'index': 'food3', 'name': '鸢尾粉白', 'taste': '甘', 'recipe': '橘黄＋白 紫＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A2%E5%B0%BE%E7%B2%89%E7%99%BD.png'}, {'index': 'food4', 'name': '鸢尾橘黄', 'taste': '', 'recipe': '粉白＋紫 粉白＋粉白 紫＋紫 紫＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A2%E5%B0%BE%E6%A9%98%E9%BB%84.png'}, {'index': 'food5', 'name': '鸢尾绿白', 'taste': '', 'recipe': '粉白＋粉白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A2%E5%B0%BE%E7%BB%BF%E7%99%BD.png'}, {'index': 'food6', 'name': '鸢尾蓝', 'taste': '咸', 'recipe': '白＋白 紫＋紫 紫＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A2%E5%B0%BE%E8%93%9D.png'}, {'index': 'food7', 'name': '鸢尾紫', 'taste': '酸', 'recipe': '桃花值达到20', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A2%E5%B0%BE%E7%B4%AB.png'}, {'index': 'food8', 'name': '鸢尾白', 'taste': '辛', 'recipe': '桃花值达到200 绿白+蓝', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A2%E5%B0%BE%E7%99%BD.png'},{'index': 'food15', 'name': '百合橘黄', 'taste': '苦', 'recipe': '红＋橘 红＋黄 橘＋粉 黄＋紫', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%99%BE%E5%90%88%E6%A9%98%E9%BB%84.png'}, {'index': 'food16', 'name': '百合粉', 'taste': '咸', 'recipe': '橘黄＋白 橘黄＋橘 红＋橋 蓝＋红 白＋紫', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%99%BE%E5%90%88%E7%B2%89.png'}, {'index': 'food17', 'name': '百合蓝', 'taste': '咸', 'recipe': '橘＋橘 白＋橘 粉＋白 白＋白 粉＋橘 紫＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%99%BE%E5%90%88%E8%93%9D.png'}, {'index': 'food18', 'name': '百合绿', 'taste': '辛', 'recipe': '红＋黄 红＋白 黄＋白 黄＋黄 白＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%99%BE%E5%90%88%E7%BB%BF.png'}, {'index': 'food19', 'name': '百合紫', 'taste': '辛', 'recipe': '橘黄＋红 橘黄＋粉 粉＋粉 蓝＋白 橘黄＋橘黄', 'avatar': ''}, {'index': 'food20', 'name': '百合橘', 'taste': '甘', 'recipe': '蓝＋黄 橘黄＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%99%BE%E5%90%88%E6%A9%98.png'}, {'index': 'food21', 'name': '百合橘粉', 'taste': '辛', 'recipe': '橘＋红 橘＋橘 橘＋粉 橘＋黄 橘黄＋橘黄', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%99%BE%E5%90%88%E6%A9%98%E7%B2%89.png'}, {'index': 'food22', 'name': '百合红', 'taste': '酸', 'recipe': '初始品种', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%99%BE%E5%90%88%E7%BA%A2.png'}, {'index': 'food23', 'name': '百合白', 'taste': '甘', 'recipe': '初始品种', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%99%BE%E5%90%88%E7%99%BD.png'}, {'index': 'food24', 'name': '百合黄', 'taste': '咸', 'recipe': '初始品种', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%99%BE%E5%90%88%E9%BB%84.png'}, {'index': 'food25', 'name': '花菱草浅粉', 'taste': '甘', 'recipe': '蓝＋粉 粉＋白 蓝＋红 白＋红 橘＋粉 橘＋红', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E6%B5%85%E7%B2%89.png'}, {'index': 'food26', 'name': '花菱草紫', 'taste': '辛', 'recipe': '浅粉＋浅粉 红＋红 粉＋粉', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E7%B4%AB.png'}, {'index': 'food27', 'name': '花菱草蓝', 'taste': '咸', 'recipe': '浅粉＋橘 浅粉＋浅粉 粉＋橘', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E8%93%9D.png'}, {'index': 'food28', 'name': '花菱草粉', 'taste': '辛', 'recipe': '白+紫 红＋白 白＋红 绿+紫', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E7%B2%89.png'}, {'index': 'food29', 'name': '花菱草橘', 'taste': '咸', 'recipe': '蓝＋红 红＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E6%A9%98.png'}, {'index': 'food30', 'name': '花菱草橘红', 'taste': '咸', 'recipe': '黄＋绿 黄＋粉 黄＋白 绿＋红 粉＋橘 红＋白', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E6%A9%98%E7%BA%A2.png'}, {'index': 'food31', 'name': '花菱草黄', 'taste': '咸', 'recipe': '橘＋橘 橘＋红 红＋红', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E9%BB%84.png'}, {'index': 'food32', 'name': '花菱草绿', 'taste': '咸', 'recipe': '橘红＋橘红 白＋白 白+橘红 粉＋白 粉＋粉', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E7%BB%BF.png'}, {'index': 'food33', 'name': '花菱草红', 'taste': '咸', 'recipe': '初始品种', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E7%BA%A2.png'}, {'index': 'food34', 'name': '花菱草白', 'taste': '咸', 'recipe': '初始品种', 'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8A%B1%E8%8F%B1%E8%8D%89%E7%99%BD.png'}]
-  
-  ,
+    allFoods:indexData.allFoods,
     adLoaded: false,
-    currentFoods: []
+    displayBookPrice: "",
+    displayPrice: "",
+    totalBookPrice: 0,
+    extraPrice: 0,
+    extraPricePlaceholder: '',
+    bookPricePlaceholder: '',
+    bookPrice: 0,
+    pricePerPerson: 0,
+    totalPrice: 0, // initialize total price to zero
+    showModal: false, // flag to show/hide the modal window
+    cartFoods: [], // initialize cart foods to an empty array
+    selectedTable: null, // initialize selected table to null
+    currentFoods: [], // This will store only the foods of the selected type
+    selectedType: 'Chinese', // default selected type
+    
   },
-  onShareAppMessage: function(){
+  
 
-  },
-  handleAdLoad: function() {
-    this.setData({ adLoaded: false });
-  },
-  handleAdError: function() {
-    // console.log('yes')
-    // this.setData({ adLoaded: true });
-  },
-  handleAdClose: function() {
-    this.setData({ adLoaded: true });
-  },
   onLoad: function() {
     if (wx.createInterstitialAd) {
       interstitialAd = wx.createInterstitialAd({
-        adUnitId: 'adunit-a8ea2ee916cff958'
+        adUnitId: 'adunit-5a1e88d8c2f8b9ce'
       })
       interstitialAd.onLoad(() => {})
       interstitialAd.onError((err) => {})
@@ -41,15 +44,12 @@ Page({
       // }
     }
   this.setData({
+    selectedFoodType: this.data.foodTypes[0],
     currentFoods: this.data.allFoods
   });
 },
   
-navigateToFlowerCal: function() {
-  wx.navigateTo({
-    url: '/pages/flowerCal/flowerCal'
-  });
-},
+
   loadFoods: function(type) {
     // Filter the foods of the selected type
     const foods = this.data.allFoods.filter(food => food.type === type);
@@ -148,9 +148,9 @@ navigateToFlowerCal: function() {
     }
   },
   
-  JumpToManual: function(){
+  JumpToMain: function(){
     wx.navigateTo({
-      url: '/pages/manual/manual',
+      url: '/pages/indexplain/indexplain',
     })
   },
   
@@ -179,7 +179,18 @@ navigateToFlowerCal: function() {
       })
     }
   },
-
+  handleAdLoad: function() {
+    this.setData({ adLoaded: false });
+  },
+  handleAdError: function() {
+    // console.log('yes')
+    // this.setData({ adLoaded: true });
+  },
+  handleAdClose: function() {
+    this.setData({ adLoaded: true });
+  },
+  
+  
   // Add a food item to the cart
   addToCart: function(food) {
     const cartFoods = this.data.cartFoods;
@@ -280,18 +291,7 @@ navigateToFlowerCal: function() {
       });
     }
   },
-  showModal: function() {
-    this.setData({
-      showModal: true,
-      // cartItems: this.data.cartFoods
-    });
-  },
-  // Hide the modal window
-  hideModal: function() {
-    this.setData({
-      showModal: false
-    });
-  },
+
   addBookPrice: function(event){
     // console.log(event.detail);
     const add = parseInt(event.detail.value, 10);
@@ -422,7 +422,8 @@ navigateToFlowerCal: function() {
       this.setData({
         scrollToFood: foodToSearch.index,
       });
-    
+      // console.log(this.data.scrollToFood)
+      // console.log(typeof(this.data.scrollToFood))
     } else {
       // Find the first food where food.name includes the search input
       const foodToScroll = this.data.allFoods.find(food => food.name.includes(searchTerm));
@@ -430,9 +431,8 @@ navigateToFlowerCal: function() {
         this.setData({
           scrollToFood: foodToScroll.index,
         });
-      } 
+      }
     }
-
   },
   onShareAppMessage: function(){
 
@@ -441,7 +441,24 @@ navigateToFlowerCal: function() {
 
   },
   onSearchButton: function() {
-    
+    if (this.data.searchInput == 'katherine'){
+      this.setData({
+        pricePerPerson: "Anson's babe",
+        bookPricePlaceholder: 520,
+        extraPricePlaceholder: 1314,
+        totalBookPrice: 'Love Ya',
+        totalPrice: '∞'
+      })
+      this.showModal();
+    }
+    if (this.data.searchInput == 'mom'){
+      this.setData({
+        pricePerPerson: "亲爱的妈咪",
+        totalBookPrice: '母亲节快乐😘',
+        totalPrice: '520'
+      })
+      this.showModal();
+    }
     const foodToSearch = this.data.allFoods.find(food => food.name === this.data.searchInput);
     if (foodToSearch) {
       console.log(this.data.scrollToFood)

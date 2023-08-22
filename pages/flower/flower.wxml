@@ -7,7 +7,11 @@
     <input type="text" placeholder="搜索花名" bindinput="onSearchInput" bindconfirm="onSearchButton" 
            confirm-type="search"/>
            <button class="total-btn" bindtap="showModal">详情</button>
+           <!-- <navigator url="/pages/flowerCal/flowerCal" hover-class="none"> -->
+      <button class='total-btn2' bindtap="navigateToFlowerCal">摸花</button>
+  
 </view>
+
 <view class="container">
 
   

@@ -1,6 +1,10 @@
 # WeChat Mini Program Frontend
 
-This repository contains the frontend code for a WeChat Mini Program that I developed independently.
+This repository contains the frontend code for a WeChat Mini Program designed to assist players of the game "桃源深处有人家".
+
+Official Game Website
+
+This mini program serves as a comprehensive collection of game strategies, tips, and guides to aid players in their gaming experience.
 
 ## Mini Program QR Code
 
