@@ -1,5 +1,5 @@
 <view class='container'>
-  <image src="../../images/storyMaterial-background.jpeg" class="background-image" />
+  <image src="../../images/story-background.jpeg" class="background-image" />
   <view class='btn-container'>
   <view class='seperate'>
     <navigator url="/pages/story1/story1" hover-class="none">
