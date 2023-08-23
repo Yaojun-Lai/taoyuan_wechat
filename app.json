@@ -6,9 +6,10 @@
     "pages/manual/manual",
     "pages/prefer/prefer",
     "pages/logs/logs",
-    
+    "pages/indexSimple/indexSimple",
     "pages/flower/flower",
     "pages/flowerCal/flowerCal",
+    "pages/flowerReverse/flowerReverse",
     "pages/building/building",
     "pages/fish/fish",
     "pages/storyMaterial/storyMaterial",

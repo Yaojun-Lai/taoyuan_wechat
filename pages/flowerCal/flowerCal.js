@@ -78,14 +78,14 @@ calculateNewTime(initialTime, delta) {
 },
 onShareAppMessage: function(){
 
-},
-onShareTimeline: function(){
+  },
+  onShareTimeline: function(){
 
-},
+  },
 onLoad: function() {
   if (wx.createInterstitialAd) {
     interstitialAd = wx.createInterstitialAd({
-      adUnitId: 'adunit-2df61e8c58e752eb'
+      adUnitId: 'adunit-2c8d42c1ce1d3750'
     })
     interstitialAd.onLoad(() => {})
     interstitialAd.onError((err) => {})

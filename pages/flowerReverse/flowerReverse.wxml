@@ -1,0 +1,50 @@
+<view class="container">
+    <image src="../../images/flower-background.jpeg" class="background-image" />
+    <text class="bold-text">提前5分钟左右去蹲点，以防计算误差哦</text> 
+
+    <!-- Flower Selection Picker -->
+    <view class="picker-wrapper">
+        <text class="view-label">花种:</text>
+        <picker bindchange="handlePickerChange" range="{{flowers}}" value="{{selectedIndex}}" class="picker">
+            {{selectedFlower}}
+        </picker>
+    </view>
+    <text>{{scoreLine}}
+    
+    </text>
+
+    <!-- Current Time Picker -->
+    <view class="picker-wrapper">
+        <text class="view-label">当前时间:</text>
+        <picker mode="multiSelector" bindchange="handleCurrentTimeChange" range="{{[hours, minutes, seconds]}}" value="{{currentTime}}" class="picker">
+            {{hours[currentTime[0]]}}:{{minutes[currentTime[1]]}}:{{seconds[currentTime[2]]}}
+        </picker>
+    </view>
+
+    <!-- Maturity Duration Picker -->
+    <view class="picker-wrapper">
+        <text class="view-label">距离成熟:</text>
+        <picker mode="multiSelector" range="{{[hours2, minutes, seconds]}}" value="{{inputDuration}}" bindchange="handleDurationChange" class="picker">
+
+    {{inputDuration[0]}}时{{inputDuration[1]}}分{{inputDuration[2]}}秒
+</picker>
+
+    </view>
+
+    <!-- Calculated Results -->
+    <view class="results-container">
+        <view class="result-view">
+            第一次摸花时间: {{firstCalculatedTime}}
+        </view>
+        <view class="result-view">
+            第二次摸花时间: {{secondCalculatedTime}}
+        </view>
+        <view class="result-view">
+        成熟时间: {{thirdCalculatedTime}}
+        </view>
+    </view>
+
+    <navigator url="/pages/flower/flower" hover-class="none">
+        <button class='btn btn-manual'>花谱攻略</button>
+    </navigator>
+</view>
