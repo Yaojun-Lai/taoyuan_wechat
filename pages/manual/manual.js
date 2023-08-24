@@ -5,270 +5,43 @@ Page({
     searchInput: '',
     
   
-    allFoods: [
-      {
-          'index': 'food0',
-          'name': '蛋炒饭',
-          'taste': '咸',
-          'recipe': '2水稻＋鸡蛋',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9B%8B%E7%82%92%E9%A5%AD.png'
-      },
-      {
-          'index': 'food1',
-          'name': '麻花',
-          'taste': '甘',
-          'recipe': '1糖＋2面粉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BA%BB%E8%8A%B1.png'
-      },
-      {
-          'index': 'food2',
-          'name': '清汤白菜',
-          'taste': '咸',
-          'recipe': '5白菜',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%B8%85%E6%B1%A4%E7%99%BD%E8%8F%9C.png'
-      },
-      {
-          'index': 'food3',
-          'name': '蛋黄酥',
-          'taste': '甘',
-          'recipe': '1糖＋1面粉＋2鸡蛋',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9B%8B%E9%BB%84%E9%85%A5.png'
-      },
-      {
-          'index': 'food4',
-          'name': '麻婆豆腐',
-          'taste': '辛',
-          'recipe': '2辣椒＋1豆腐',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90.png'
-      },
-      {
-          'index': 'food5',
-          'name': '酸菜豆腐',
-          'taste': '酸',
-          'recipe': '1酸菜＋1豆腐',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E8%B1%86%E8%85%90.png'
-      },
-      {
-          'index': 'food6',
-          'name': '鸡蛋面',
-          'taste': '咸',
-          'recipe': '2鸡蛋＋2面粉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A1%E8%9B%8B%E9%9D%A2.png'
-      },
-      {
-          'index': 'food7',
-          'name': '酸菜氽白肉',
-          'taste': '酸',
-          'recipe': '1酸菜＋1猪肉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E6%B1%86%E7%99%BD%E8%82%89.png'
-      },
-      {
-          'index': 'food8',
-          'name': '辣子鸡丁',
-          'taste': '辛',
-          'recipe': '2辣椒＋1鸡肉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%BE%A3%E5%AD%90%E9%B8%A1%E4%B8%81.png'
-      },
-      {
-          'index': 'food9',
-          'name': '酸菜鱼',
-          'taste': '酸',
-          'recipe': '1酸菜＋1黑鱼＋2辣椒',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E9%B1%BC.jpeg'
-      },
-      {
-          'index': 'food10',
-          'name': '虎皮肉',
-          'taste': '甘',
-          'recipe': '1猪肉＋1糖',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%99%8E%E7%9A%AE%E8%82%89.png'
-      },
-      {
-          'index': 'food11',
-          'name': '鸡肉豆腐',
-          'taste': '甘',
-          'recipe': '1鸡肉＋1豆腐',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B8%A1%E8%82%89%E8%B1%86%E8%85%90.png'
-      },
-      {
-          'index': 'food12',
-          'name': '鲫鱼豆腐汤',
-          'taste': '咸',
-          'recipe': '1鲫鱼＋1豆腐',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B2%AB%E9%B1%BC%E8%B1%86%E8%85%90%E6%B1%A4.png'
-      },
-      {
-        'index': 'food31',
-        'name': '剁椒鱼头',
-        'taste': '辛',
-        'recipe': '1胖头鱼＋3辣椒',
-        'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%89%81%E6%A4%92%E9%B1%BC%E5%A4%B4.png'
-    },
-    {
-      'index': 'food32',
-      'name': '酸辣土豆丝',
-      'taste': '辛',
-      'recipe': '2土豆＋3辣椒',
-      'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E5%9C%9F%E8%B1%86%E4%B8%9D.png'
-  },
-  {
-    'index': 'food33',
-    'name': '荠菜肉包',
-    'taste': '咸',
-    'recipe': '1面粉＋1猪肉＋2荠菜',
-    'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8D%A0%E8%8F%9C%E8%82%89%E5%8C%85.png'
-},
-{
-  'index': 'food34',
-  'name': '苦瓜炒蛋',
-  'taste': '苦',
-  'recipe': '2苦瓜＋3鸡蛋',
-  'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8B%A6%E7%93%9C%E7%82%92%E8%9B%8B.png'
-},
-
-
-
-      {
-          'index': 'food13',
-          'name': '苦瓜猪肉汤',
-          'taste': '苦',
-          'recipe': '2苦瓜＋1猪肉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8B%A6%E7%93%9C%E7%8C%AA%E8%82%89%E6%B1%A4.png'
-      },
-      {
-          'index': 'food14',
-          'name': '肉末烧饼',
-          'taste': '咸',
-          'recipe': '2面粉＋1猪肉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%82%89%E6%9C%AB%E7%83%A7%E9%A5%BC.png'
-      },
-      {
-          'index': 'food15',
-          'name': '苦瓜拌面',
-          'taste': '苦',
-          'recipe': '2苦瓜＋2面粉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8B%A6%E7%93%9C%E6%8B%8C%E9%9D%A2.png'
-      },
-      {
-          'index': 'food16',
-          'name': '荠菜馄饨',
-          'taste': '咸',
-          'recipe': '1面粉＋1猪肉＋2荠菜',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%8D%A0%E8%8F%9C%E9%A6%84%E7%82%96.png'
-      },
-      {
-          'index': 'food17',
-          'name': '香椿拌豆腐',
-          'taste': '咸',
-          'recipe': '2香椿＋1豆腐',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%A6%99%E6%A4%BF%E6%8B%8C%E8%B1%86%E8%85%90.png'
-      },
-      {
-          'index': 'food18',
-          'name': '黄焖鸡',
-          'taste': '辛',
-          'recipe': '1香菇＋1鸡肉＋2辣椒＋1土豆',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%BB%84%E7%84%96%E9%B8%A1.png'
-      },
-      {
-          'index': 'food19',
-          'name': '红烧鸭',
-          'taste': '辛',
-          'recipe': '1鸭肉＋3辣椒',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BA%A2%E7%83%A7%E9%B8%AD.png'
-      },
-      {
-          'index': 'food20',
-          'name': '松鼠鳜鱼',
-          'taste': '甘',
-          'recipe': '1鳜鱼＋1糖',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9D%BE%E9%BC%A0%E9%B3%9C%E9%B1%BC.png'
-      },
-      {
-          'index': 'food21',
-          'name': '香辣羊肉面',
-          'taste': '辛',
-          'recipe': '2面粉＋2辣椒＋1羊肉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%A6%99%E8%BE%A3%E7%BE%8A%E8%82%89%E9%9D%A2.png'
-      },
-      {
-          'index': 'food22',
-          'name': '酸菜羊肉',
-          'taste': '酸',
-          'recipe': '1酸莱＋1羊肉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%85%B8%E8%8F%9C%E7%BE%8A%E8%82%89.png'
-      },
-      {
-          'index': 'food23',
-          'name': '银鱼南瓜羹',
-          'taste': '甘',
-          'recipe': '3南瓜＋1银鱼',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%93%B6%E9%B1%BC%E5%8D%97%E7%93%9C%E7%BE%B9.png'
-      },
-      {
-          'index': 'food24',
-          'name': '木须肉',
-          'taste': '咸',
-          'recipe': '1木耳＋2鸡蛋＋2猪肉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E6%9C%A8%E9%A1%BB%E8%82%89.png'
-      },
-      {
-        'index': 'food35',
-        'name': '糖醋里脊',
-        'taste': '甘',
-        'recipe': '1猪肉＋1糖',
-        'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%B3%96%E9%86%8B%E9%87%8C%E8%84%8A.png'
-    },
-    {
-      'index': 'food36',
-      'name': '鱼香肉丝',
-      'taste': '辛',
-      'recipe': '1辣椒＋1猪肉＋2木耳',
-      'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E9%B1%BC%E9%A6%99%E8%82%89%E4%B8%9D.png'
-  },
-      {
-          'index': 'food25',
-          'name': '南瓜馒头',
-          'taste': '甘',
-          'recipe': '3南瓜＋1面粉＋1糖',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E5%8D%97%E7%93%9C%E9%A6%92%E5%A4%B4.png'
-      },
-      {
-          'index': 'food26',
-          'name': '羊肉泡馍',
-          'taste': '辛',
-          'recipe': '1羊肉＋2辣椒＋1面粉＋1粉丝',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%BE%8A%E8%82%89%E6%B3%A1%E9%A6%8D.png'
-      },
-      {
-          'index': 'food27',
-          'name': '粉丝蒸白菜',
-          'taste': '咸',
-          'recipe': '1粉丝＋3白菜',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%B2%89%E4%B8%9D%E8%92%B8%E7%99%BD%E8%8F%9C.png'
-      },
-      {
-          'index': 'food28',
-          'name': '蚂蚁上树',
-          'taste': '辛',
-          'recipe': '1糖＋2辣椒＋1粉丝＋1猪肉',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%9A%82%E8%9A%81%E4%B8%8A%E6%A0%91.png'
-      },
-      {
-          'index': 'food29',
-          'name': '狮子头',
-          'taste': '咸',
-          'recipe': '1面粉＋2猪肉＋1鸡蛋＋1糖',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E7%8B%AE%E5%AD%90%E5%A4%B4.png'
-      },
-      {
-          'index': 'food30',
-          'name': '赛螃蟹',
-          'taste': '咸',
-          'recipe': '2鸡蛋＋1青鱼',
-          'avatar': 'https://gitee.com/Yaojun-Lai/images_needed/raw/master/%E8%B5%9B%E8%9E%83%E8%9F%B9.png'
-      }
-  ]
+    allFoods: [{'index': 'food0', 'name': '蛋炒饭', 'taste': '咸', 'recipe': '2水稻＋鸡蛋', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/蛋炒饭.png'} ,
+    {'index': 'food1', 'name': '麻花', 'taste': '甘', 'recipe': '1糖＋2面粉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/麻花.png'} ,
+    {'index': 'food2', 'name': '清汤白菜', 'taste': '咸', 'recipe': '5白菜', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/清汤白菜.png'} ,
+    {'index': 'food3', 'name': '蛋黄酥', 'taste': '甘', 'recipe': '1糖＋1面粉＋2鸡蛋', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/蛋黄酥.png'} ,
+    {'index': 'food4', 'name': '麻婆豆腐', 'taste': '辛', 'recipe': '2辣椒＋1豆腐', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/麻婆豆腐.png'} ,
+    {'index': 'food5', 'name': '酸菜豆腐', 'taste': '酸', 'recipe': '1酸菜＋1豆腐', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/酸菜豆腐.png'} ,
+    {'index': 'food6', 'name': '鸡蛋面', 'taste': '咸', 'recipe': '2鸡蛋＋2面粉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/鸡蛋面.png'} ,
+    {'index': 'food7', 'name': '酸菜氽白肉', 'taste': '酸', 'recipe': '1酸菜＋1猪肉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/酸菜氽白肉.png'} ,
+    {'index': 'food8', 'name': '辣子鸡丁', 'taste': '辛', 'recipe': '2辣椒＋1鸡肉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/辣子鸡丁.png'} ,
+    {'index': 'food9', 'name': '酸菜鱼', 'taste': '酸', 'recipe': '1酸菜＋1黑鱼＋2辣椒', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/酸菜鱼.jpeg'} ,
+    {'index': 'food10', 'name': '虎皮肉', 'taste': '甘', 'recipe': '1猪肉＋1糖', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/虎皮肉.png'} ,
+    {'index': 'food11', 'name': '鸡肉豆腐', 'taste': '甘', 'recipe': '1鸡肉＋1豆腐', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/鸡肉豆腐.png'} ,
+    {'index': 'food12', 'name': '鲫鱼豆腐汤', 'taste': '咸', 'recipe': '1鲫鱼＋1豆腐', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/鲫鱼豆腐汤.png'} ,
+    {'index': 'food31', 'name': '剁椒鱼头', 'taste': '辛', 'recipe': '1胖头鱼＋3辣椒', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/剁椒鱼头.png'} ,
+    {'index': 'food32', 'name': '酸辣土豆丝', 'taste': '辛', 'recipe': '2土豆＋3辣椒', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/酸辣土豆丝.png'} ,
+    {'index': 'food33', 'name': '荠菜肉包', 'taste': '咸', 'recipe': '1面粉＋1猪肉＋2荠菜', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/荠菜肉包.png'} ,
+    {'index': 'food34', 'name': '苦瓜炒蛋', 'taste': '苦', 'recipe': '2苦瓜＋3鸡蛋', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/苦瓜炒蛋.png'} ,
+    {'index': 'food13', 'name': '苦瓜猪肉汤', 'taste': '苦', 'recipe': '2苦瓜＋1猪肉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/苦瓜猪肉汤.png'} ,
+    {'index': 'food14', 'name': '肉末烧饼', 'taste': '咸', 'recipe': '2面粉＋1猪肉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/肉末烧饼.png'} ,
+    {'index': 'food15', 'name': '苦瓜拌面', 'taste': '苦', 'recipe': '2苦瓜＋2面粉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/苦瓜拌面.png'} ,
+    {'index': 'food16', 'name': '荠菜馄饨', 'taste': '咸', 'recipe': '1面粉＋1猪肉＋2荠菜', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/荠菜馄饨.png'} ,
+    {'index': 'food17', 'name': '香椿拌豆腐', 'taste': '咸', 'recipe': '2香椿＋1豆腐', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/香椿拌豆腐.png'} ,
+    {'index': 'food18', 'name': '黄焖鸡', 'taste': '辛', 'recipe': '1香菇＋1鸡肉＋2辣椒＋1土豆', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/黄焖鸡.png'} ,
+    {'index': 'food19', 'name': '红烧鸭', 'taste': '辛', 'recipe': '1鸭肉＋3辣椒', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/红烧鸭.png'} ,
+    {'index': 'food20', 'name': '松鼠鳜鱼', 'taste': '甘', 'recipe': '1鳜鱼＋1糖', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/松鼠鳜鱼.png'} ,
+    {'index': 'food21', 'name': '香辣羊肉面', 'taste': '辛', 'recipe': '2面粉＋2辣椒＋1羊肉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/香辣羊肉面.png'} ,
+    {'index': 'food22', 'name': '酸菜羊肉', 'taste': '酸', 'recipe': '1酸莱＋1羊肉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/酸菜羊肉.png'} ,
+    {'index': 'food23', 'name': '银鱼南瓜羹', 'taste': '甘', 'recipe': '3南瓜＋1银鱼', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/银鱼南瓜羹.png'} ,
+    {'index': 'food24', 'name': '木须肉', 'taste': '咸', 'recipe': '1木耳＋2鸡蛋＋2猪肉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/木须肉.png'} ,
+    {'index': 'food35', 'name': '糖醋里脊', 'taste': '甘', 'recipe': '1猪肉＋1糖', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/糖醋里脊.png'} ,
+    {'index': 'food36', 'name': '鱼香肉丝', 'taste': '辛', 'recipe': '1辣椒＋1猪肉＋2木耳', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/鱼香肉丝.png'} ,
+    {'index': 'food25', 'name': '南瓜馒头', 'taste': '甘', 'recipe': '3南瓜＋1面粉＋1糖', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/南瓜馒头.png'} ,
+    {'index': 'food26', 'name': '羊肉泡馍', 'taste': '辛', 'recipe': '1羊肉＋2辣椒＋1面粉＋1粉丝', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/羊肉泡馍.png'} ,
+    {'index': 'food27', 'name': '粉丝蒸白菜', 'taste': '咸', 'recipe': '1粉丝＋3白菜', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/粉丝蒸白菜.png'} ,
+    {'index': 'food28', 'name': '蚂蚁上树', 'taste': '辛', 'recipe': '1糖＋2辣椒＋1粉丝＋1猪肉', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/蚂蚁上树.png'} ,
+    {'index': 'food29', 'name': '狮子头', 'taste': '咸', 'recipe': '1面粉＋2猪肉＋1鸡蛋＋1糖', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/狮子头.png'} ,
+    {'index': 'food30', 'name': '赛螃蟹', 'taste': '咸', 'recipe': '2鸡蛋＋1青鱼', 'avatar': 'cloud://taoyuan-cloud-4g8w43cza768e4d3.7461-taoyuan-cloud-4g8w43cza768e4d3-1320400107/images/赛螃蟹.png'} ]
   
   ,
   
