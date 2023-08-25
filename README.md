@@ -12,6 +12,6 @@ This mini program serves as a comprehensive collection of game strategies, tips,
 
 ## User Statistics
 
-Since its launch in May, the mini program has garnered a total of 56,600 users.
+Since its launch in May, the mini program has garnered a total of 58,700 users.
 
 ![User Growth Over the Past Three Months](./images/userstats.png)
