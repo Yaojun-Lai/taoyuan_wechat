@@ -1,6 +1,6 @@
 <view class='container'>
   <image src="../../images/background.jpeg" class="background-image" />
-  <view class='picker-btn-container'>
+  <!-- <view class='picker-btn-container'>
     <navigator url="/pages/index/index" hover-class="none">
       <button class='btn btn-cal'>订单成本</button>
     </navigator>
@@ -11,13 +11,53 @@
         <view wx:for="{{pageArray}}" wx:key="index" bindtap="handlePickerChange" data-index="{{index}}" class="dropdown-item">{{item}}</view>
       </scroll-view>
     </view>
-  </view>
+  </view> -->
 
-  
-  <view class='contact-button-container'>
+ 
+
+  <scroll-view scroll-y="true" class="scrollable-container">
+    <view class="icon-container">
+    <view wx:for="{{pageArray}}" wx:key="index" class="icon-box" bindtap="handleIconTap" data-url="{{item.url}}" data-subpages="{{item.subpages}}">
+  <div class="gray-box">
+    <image src="{{item.iconSrc}}" class="icon-image"></image>
+  </div>
+  <text class="icon-text">{{item.name}}</text>
+</view>
+</view>
+
+</scroll-view>
+
+
+
+
+<view class="subpage-modal" wx:if="{{isSubPageModalOpen}}">
+  <view class="subpage-modal-content">
+    <text class="bold-text">选择版本</text>
+    <view class="subpage-modal-options">
+      <view class="subpage-modal-option" wx:for="{{subPageOptions}}" wx:key="index" bindtap="selectSubPage" data-url="{{item.url}}">
+        {{item.name}}
+      </view>
+    </view>
+    <button class="close-btn1" bindtap="closeSubPageModal">关闭</button>
+    <!-- <view class="modal-close" bindtap="closeSubPageModal">关闭</view> -->
+  </view>
+</view>
+
+  <!-- <view class='contact-button-container'>
     <button class="total-btn" bindtap="showModal">说明/更新</button>
     <button open-type='contact' bindcontact='handleContact' class='btn btn-contact'>联系作者</button>
+  </view> -->
+  <!-- Existing code ... -->
+<view class='navbar'>
+  <!-- <navigator class='nav-item' url="/pages/index/index">
+    <text>订单成本</text>
+  </navigator> -->
+  <view class='nav-item' bindtap="showModal">
+    <text>说明/更新</text>
   </view>
+  <button open-type='contact' bindcontact='handleContact' class='btn btn-contact'>联系作者</button>
+</view>
+
  
   <view class="modal" hidden="{{!showModal}}">
   <view class="modal-container">
@@ -30,8 +70,10 @@
           <view class="item-detail">
             <text>说明：
             1. 订单成本的材料价格均以谷仓为准
-            2. 杂货版的价格是取杂货铺里的一段时间的均值，因此和每日的价格会有些不同
+            2. 杂货铺版的价格是取杂货铺里的一段时间的均值，因此和每日的价格会有些不同
 
+            小程序使用云存储服务，图片流量、接口调用量巨大。因为是为爱开发，并不盈利，但为维持小程序的正常运营，不得不计入广告，希望大家理解。
+            
             看到了一些uu的私信，非常感动，但由于时间已经过去了两天我这里回复不了了。很感谢大家的支持！！
             </text>
           </view>
@@ -40,6 +82,12 @@
           <view class="item-detail">
             <text>
             更新：
+            2023.8.30
+            1. 更新主页布局
+
+            2023.8.29
+            1. 修复图片不显示的问题，可以删除小程序再重新搜索一下
+
             2023.8.22
             1. 增加了摸花时间（输入种植时间，计算出摸花和成熟时间）
             2. 增加了摸花时间2（输入当前时间和距离成熟时间，计算出摸花和成熟时间）
@@ -91,9 +139,9 @@
 
 
    
-    <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
+    <!-- <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
       <ad unit-id="adunit-7f79deea69c51c5c" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
-    </view>
+    </view> -->
 
   </view>
   

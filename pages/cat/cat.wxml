@@ -1,0 +1,30 @@
+<view class="search-bar">
+
+    <!-- <input type="text" placeholder="搜索时刻" bindinput="onSearchInput" /> -->
+    <!-- <button bindtap="JumpToMain">钓鱼攻略</button> -->
+</view>
+<view class="container">
+  <scroll-view class="sidebar" scroll-y="true" lazy-load='true'>
+    <view 
+      class="person-item {{selectedPerson == item.name ? 'selected' : ''}}" 
+      wx:for="{{persons}}" 
+      wx:key="name" 
+      data-name="{{item.name}}" 
+      bindtap="onPersonTap"
+    > 
+    <!-- <image class="person-avatar" src="{{item.avatar}}" mode="aspectFit" /> -->
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <scroll-view class="foods" scroll-y="true" lazy-load='true'>
+    <view class="food-item" wx:for="{{foods}}" wx:key="food">
+      <!-- <image class="avatar" src="{{item.image}}" mode="aspectFit" /> -->
+      <text class="name">{{item.food}}
+        {{item.time}}
+        {{item.character}}
+        {{item.taste}}
+      </text>
+      
+    </view>
+  </scroll-view>
+</view>

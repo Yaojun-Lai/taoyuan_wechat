@@ -1,3 +1,109 @@
+.search-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  justify-content: flex-start;
+
+}
+
+.search-bar input {
+  flex: 2.5;
+  height: 20px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 12px;
+  /* margin-right: 5rpx; */
+}
+
+
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  /* background-color:blue; */
+  height: calc(100vh - 90px); /* Adjusted this line */
+}
+
+.sidebar {
+  text-align: center;
+  flex: 1;
+  padding: 5rpx;
+  overflow-y: auto;
+  height: calc(100vh - 55px);
+  background-color: #f0f0f0;
+}
+
+.sidebar .person-item {
+    /* padding: 10px; */
+    font-size: 32rpx;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    
+    padding: 10px;
+    height: 40px;
+  
+}
+
+.sidebar .person-item.selected {
+  background-color: #d0d0d0;
+}
+
+.foods {
+  background-color:white;
+  flex: 2;
+  padding: 5rpx;
+  overflow-y: auto;
+  height: calc(100vh - 55px);
+}
+
+.food-item {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  
+  padding: 10px;
+  height: 70px;
+}
+.person-avatar{
+  width: 50px;
+  height: 50px;
+  margin-right: 10rpx;
+}
+.food-item .avatar {
+  flex: 0 0 60px;
+  min-width: 60px;
+  margin-right: 5px;
+}
+
+.boldname{
+  font-weight: bold;
+}
+.food-item .name {
+  flex-grow: 1;
+  font-size: 32rpx;
+}
+
+
+
+
 .container {
   /* left: 0;
   right: 0; */
@@ -37,7 +143,7 @@
 
 .food-name, .food-desc1, .food-desc2 {
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .food-name {
@@ -45,7 +151,7 @@
 }
 
 .food-desc1, .food-desc2 {
-  color: #666;
+  color: rgb(54, 53, 53);
 }
 
 /* .content {
@@ -56,41 +162,23 @@
 } */
 
 
-.search-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px;
 
-}
 
 .search-bar input {
-  flex: 1;
+  flex: 2.5;
   height: 20px;
   padding: 10px;
   border: 1px solid #000;
   border-radius: 12px;
+  /* margin-right: 5rpx; */
+}
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.search-bar button {
-  flex-shrink: 0;
-  width: 25%;
-  height: 40px;
-  margin-left: 5px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 12px;
-  /* background-color: #000; */
-  /* background-color: #dd7973; */
-  background-color: #E82C0C;
-  color: #fff;
-  cursor: pointer;
-}
 
 
 .sidebar {
@@ -122,7 +210,7 @@
   flex: 3;
   padding: 10px;
   overflow-y: auto; /* Enable vertical scrolling */
-  background-color: #fff; /* White background */
+  background-color: rgb(236, 232, 232, 0.2); 
   height: 100%; /* Set height to 100% */
 }
 
@@ -134,7 +222,7 @@
   margin-bottom: 5px;
   
   padding: 10px;
-  height: 75px;
+  height: 70px;
 }
 
 .food-item .avatar {
@@ -244,18 +332,26 @@
 .empty-space{
   flex: 0.1;
 }
-.total-btn {
-  flex: 1.3;
-  background-color: #0056b3;
-  color: #fff;
-  font-size: 24px;
+
+
+.total-btn, .total-btn2 {
+  width: 25%;
+  height: 40px;
+  margin-left: 5px;  /* Space them apart */
+  padding: 5px 10px;
   border: none;
   border-radius: 12px;
-  padding: 10px 10px;
+  font-size: 20px;
+  color: #fff;
   cursor: pointer;
-  /* padding: 10px 20px; */
-  border-radius: 10px;
-  text-align: center; /* Optional, if you want the text centered in its space */
+}
+
+.total-btn {
+  background-color: #2571c2;
+}
+
+.total-btn2 {
+  background-color: #c72aa0;
 }
 
 .modal {
@@ -298,7 +394,15 @@
   height: 50px;
   margin-right: 10px;
 }
-
+.modal-container {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%; 
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
 .modal-header {
   display: flex;
   justify-content: center;
@@ -310,8 +414,18 @@
   color: white;
   padding: 10px 20px;
   border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top:10px;
+}
+
+.close-btn1 {
+  color: white;
+  border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
+  background-color: #ec634b; 
+  margin-top: 10px;
 }
 
 
@@ -321,7 +435,7 @@
 }
 
 .close-btn {
-  background-color: #0056b3; /* Slightly darker blue */
+  background-color: #ec634b; /* Slightly darker blue */
 }
 .fixed-width-input {
   width: 3px; /* Or however wide you want the input to be */
@@ -360,4 +474,74 @@ input.input-price {
   width: 65px;
 
   /* margin-left: 10px;  */
+}
+
+.item{
+  padding: 5px;
+  border-top: 1px solid #ddd;
+  
+}
+/* Add this to your existing CSS */
+.item-title {
+  font-size: 20px; /* Adjust as needed */
+  font-weight: bold; /* This will make the text bold */
+  /* border-top: 1px solid #ddd; */
+}
+
+.item-detail {
+  font-size: 18px; /* Adjust as needed */
+  margin-bottom: 10px; /* This will add some space between each list item */
+  
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  max-height: 60vh; /* Adjust this value as needed */
+}
+
+.scrollable-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 0px;
+  /* height: 50%; */
+}
+
+
+.subpage-modal {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000; /* Higher than your other modals */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subpage-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 90%;
+  max-width: 500px;
+}
+
+.subpage-modal-option {
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.bold-text{
+  font-size: 18px;
+  font-weight: bold;
 }

@@ -88,19 +88,20 @@
 
 
 .btn-contact {
-  width: 10%;
-  color: white;
-  background-color: rgb(224, 97, 97,0.65);
-  padding: 10px 10px; 
+  /* width: 10%; */
+  color: black;
+  background-color: rgb(255, 255, 255,0);
+  /* padding: 10px 10px;  */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 16px;
   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); */
   border: none;
   outline: none;
   cursor: pointer;
-  margin-top: 5px;
+  font-weight: normal;
+  /* margin-top: 5px; */
 }
 
 
@@ -160,7 +161,7 @@
 }
 .scrollable-content {
   overflow-y: auto;
-  max-height: 70vh; /* Adjust this value as needed */
+  max-height: 80vh; /* Adjust this value as needed */
 }
 .modal-container {
   background-color: #fff;
@@ -179,10 +180,23 @@
 
 .close-btn {
   color: white;
-  border-radius: 5px;
+  border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
   background-color: #ec634b; 
+}
+
+.close-btn1 {
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ec634b; 
+  margin-top: 10px;
+}
+.bold-text{
+  font-size: 18px;
+  font-weight: bold;
 }
 .item{
   padding: 5px;
@@ -198,7 +212,7 @@
 }
 
 .item-detail {
-  font-size: 18px; /* Adjust as needed */
+  font-size: 17.5px; /* Adjust as needed */
   margin-bottom: 10px; /* This will add some space between each list item */
 }
 
@@ -248,3 +262,127 @@
 .dropdown-menu.open {
   display: block;
 }
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.icon-box {
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the child horizontally */
+  justify-content: center; /* Centers the child vertically */
+  /* background-color: rgb(255, 255, 255,0.8); */
+  /* border: 1px solid rgb(235, 234, 234); */
+  
+}
+
+.gray-box {
+  /* background-color: gray; 
+  padding: 10px;  
+  display: inline-block; */
+}
+
+
+.icon-image {
+  margin-top: 5px;
+  padding: 10px;
+  width: 40px;  /* Smaller image */
+  height: 40px;  /* Smaller image */
+  margin: auto; /* Centering the image */
+  border-radius: 15px;
+  border: 1px solid rgb(235, 234, 234);
+  background-color: rgb(255, 255, 255,0.8);
+}
+
+
+.icon-text {
+  padding: 5px;
+  font-size: 14px;
+  color:black;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255,0.8);
+  /* margin-top: 10px; */
+}
+
+.navbar {
+  border: 1px solid rgb(235, 234, 234);
+  background-color: rgb(255, 255, 255,0.8);
+  color: black;  /* White text */
+  display: flex;  /* Flexbox for layout */
+  justify-content: space-between;  /* Separate the items */
+  align-items: center;  /* Center items vertically */
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);  Slight shadow for depth */
+  position: fixed;  /* Fixed position */
+  bottom: 0;  /* Align to bottom of page */
+  left: 0;  /* Align to left of page */
+  width: 100%;  /* Full width */
+  z-index: 1000;  /* Stack above other elements */
+  padding: 15px 0px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.nav-item {
+  width: 50%;  /* Half of the navbar width */
+  text-align: center;  /* Center text within the nav item */
+  padding: 0.5em 0;  /* Vertical padding */
+  cursor: pointer;  /* Indicate clickability */
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  border-radius: 12px;  /* Rounded corners for aesthetics */
+}
+
+.nav-item:hover {
+  background-color: rgb(143, 142, 142);  /* Slightly lighter background on hover */
+}
+
+
+
+
+/* Add a height and set overflow to scroll */
+.scrollable-container {
+  height: 100vh; /* or whatever height you find suitable */
+  overflow-y: auto; /* this is optional */
+}
+
+.subpage-modal {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000; /* Higher than your other modals */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subpage-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 90%;
+  max-width: 500px;
+}
+
+.subpage-modal-option {
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+

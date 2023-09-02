@@ -49,7 +49,7 @@
 
 .sidebar {
   
-  flex: 1.5;
+  flex: 1;
   padding: 5rpx;
   overflow-y: auto;
   height: calc(100vh - 55px);
@@ -58,12 +58,13 @@
 
 .sidebar .person-item {
     /* padding: 10px; */
+    
     font-size: 32rpx;
     text-align: center;
     display: flex;
     flex-direction: row;
     background-color: #f0f0f0;
-    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
     margin-bottom: 5px;
     
@@ -94,6 +95,8 @@
   
   padding: 10px;
   height: 70px;
+  border: 1px solid rgb(218, 216, 216);
+  border-radius: 12px;
 }
 .person-avatar{
   width: 50px;

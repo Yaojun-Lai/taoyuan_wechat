@@ -82,7 +82,7 @@
   height: 20px;
   padding: 10px;
   border: 1px solid #000;
-  border-radius: 5px;
+  border-radius: 12px;
   /* margin-right: 5rpx; */
 }
 .background-image {
@@ -98,7 +98,7 @@
   margin-left: 5px;
   padding: 5px 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   font-size: 20px; 
   /* background-color: #000; */
   /* background-color: #dd7973; */
@@ -247,7 +247,7 @@
   color: #fff;
   font-size: 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   padding: 10px 10px;
   cursor: pointer;
   text-align: center; /* Optional, if you want the text centered in its space */
@@ -265,7 +265,7 @@
   color: #fff;
   font-size: 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   padding: 10px 10px;
   cursor: pointer;
   /* padding: 10px 20px; */
@@ -331,8 +331,8 @@
 .clear-btn,
 .close-btn {
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  /* padding: 10px 10px; */
+  border-radius: 12px;
   font-size: 20px;
   cursor: pointer;
 }

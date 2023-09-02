@@ -1,6 +1,8 @@
 <view class="container">
     <image src="../../images/flower-background.jpeg" class="background-image" />
-    <text class="bold-text">提前5分钟左右去蹲点，以防计算误差哦</text> 
+    <text class="bold-text">提前5分钟左右去蹲点，以防计算误差哦
+    
+    </text> 
 
     <!-- Flower Selection Picker -->
     <view class="picker-wrapper">

@@ -1,26 +1,2 @@
-<view class='container'>
-  <image src="../../images/story-background.jpeg" class="background-image" />
-  <view class='btn-container'>
-  <view class='seperate'>
-    <navigator url="/pages/story1/story1" hover-class="none">
-      <button class='btn btn-cal'>
-      结梦</button>
-    </navigator>
-  </view>
-  <view class='seperate'>
-    <navigator url="/pages/story2/story2" hover-class="none">
-      <button class='btn btn-manual'>南有乔木</button>
-    </navigator>
-  </view>
-  <view class='seperate'>
-    <navigator url="/pages/story3/story3" hover-class="none">
-      <button class='btn btn-prefer'>愿</button>
-    </navigator>
-  </view>
-  </view>
-
-  
-
-
-  
-</view>
+<!--pages/storyMaterial/storyMaterial.wxml-->
+<text>pages/storyMaterial/storyMaterial.wxml</text>
