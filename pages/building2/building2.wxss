@@ -2,11 +2,11 @@
   /* left: 0;
   right: 0; */
   position: fixed;
-  top: 70px;
+  top: 80px;
   /* bottom: 110px; */
   left: 0;
   right: 0;
-  padding: 5rpx;
+  padding: 0;
   display: flex;
   flex-direction: row;
   height: calc(100vh - 90px);
@@ -45,11 +45,12 @@
 }
 
 .food-name {
+  font-size: 18px;
   font-weight: bold;
 }
 
 .food-desc1, .food-desc2, .food-desc3 {
-  color: rgba(0, 0, 0, 0.788);
+  color: black;
 }
 
 /* .content {
@@ -69,8 +70,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
-  background-color: rgb(236, 232, 232, 0.5); 
+  padding: 0px 5px;
+  background-color: rgb(236, 232, 232, 0.6); 
 
 }
 
@@ -114,7 +115,7 @@
   flex: 3;
   padding: 10px;
   overflow-y: auto; /* Enable vertical scrolling */
-  background-color: rgb(236, 232, 232,0.5); 
+  background-color: rgb(236, 232, 232,0.6); 
   height: 100%; /* Set height to 100% */
 }
 

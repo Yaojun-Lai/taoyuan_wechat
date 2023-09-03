@@ -18,11 +18,10 @@
   </scroll-view>
   <scroll-view class="foods" scroll-y="true" lazy-load='true'>
     <view class="food-item" wx:for="{{foods}}" wx:key="food">
-      <!-- <image class="avatar" src="{{item.image}}" mode="aspectFit" /> -->
-      <text class="name">{{item.food}}
-        {{item.time}}
-        {{item.character}}
-        {{item.taste}}
+      <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
+      <text class="name"><text class="bold-name">{{item.name}}</text>
+        性格：{{item.character}}
+        口味：{{item.taste}}
       </text>
       
     </view>

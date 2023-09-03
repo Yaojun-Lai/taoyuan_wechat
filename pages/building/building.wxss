@@ -1,15 +1,16 @@
+
 .container {
   /* left: 0;
   right: 0; */
   position: fixed;
-  top: 70px;
+  top: 80px;
   /* bottom: 110px; */
   left: 0;
   right: 0;
-  padding: 5rpx;
+  padding: 0;
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 80px);
   
 }
 
@@ -39,17 +40,18 @@
 }
 
 .food-name, .food-desc1, .food-desc2, .food-desc3 {
-
+  
   display: block;
   margin-bottom: 5px;
 }
 
 .food-name {
+  font-size: 18px;
   font-weight: bold;
 }
 
 .food-desc1, .food-desc2, .food-desc3 {
-  color: rgba(0, 0, 0, 0.788);
+  color: black;
 }
 
 /* .content {
@@ -69,8 +71,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
-  background-color: rgb(236, 232, 232, 0.5); 
+  padding: 0px 5px;
+  /* background-color: blue; */
+  background-color: rgb(236, 232, 232, 0.4); 
 
 }
 
@@ -90,7 +93,7 @@
   /* border-right: 1px solid #000; */
   padding: 8px;
   overflow-y: auto; /* Enable vertical scrolling */
-  background-color: #f0f0f0; /* Light gray background */
+  /* background-color: #f0f0f0; */
   height: 100%; /* Set height to 100% */
 }
 
@@ -99,14 +102,14 @@
   padding-top: 10px;
   padding-bottom: 10px; /* use padding instead of margin */
   line-height: 30px;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   text-align: center;
 }
 
 
 
 .sidebar .foodType-selected {
-  background-color: #d0d0d0; /* darker background color when selected */
+  /* background-color: #d0d0d0; */
 }
 
 
@@ -114,7 +117,8 @@
   flex: 3;
   padding: 10px;
   overflow-y: auto; /* Enable vertical scrolling */
-  background-color: rgb(236, 232, 232,0.5); 
+  /* background-color: red; */
+  background-color: rgb(236, 232, 232,0.4); 
   height: 100%; /* Set height to 100% */
 }
 
@@ -275,7 +279,7 @@
 }
 
 .modal-content {
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 20px;
   border-radius: 10px;
   max-height: 90vh; /* Maximum height is 90% of the viewport height */

@@ -34,17 +34,11 @@
   height: calc(100vh - 90px); /* Adjusted this line */
 }
 
-.sidebar {
-  text-align: center;
-  flex: 1;
-  padding: 5rpx;
-  overflow-y: auto;
-  height: calc(100vh - 55px);
-  background-color: #f0f0f0;
-}
+
 
 .sidebar .person-item {
     /* padding: 10px; */
+    border-radius: 10px;
     font-size: 32rpx;
     text-align: center;
     display: flex;
@@ -72,9 +66,10 @@
 }
 
 .food-item {
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: rgba(255,255,255, 0.8);
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
@@ -95,10 +90,12 @@
 
 .boldname{
   font-weight: bold;
+  font-size: 17px;
 }
 .food-item .name {
   flex-grow: 1;
-  font-size: 32rpx;
+  font-size: 16px;
+  
 }
 
 
@@ -138,7 +135,7 @@
 
 .food-info {
   flex-grow: 1;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .food-name, .food-desc1, .food-desc2 {
@@ -184,9 +181,9 @@
 .sidebar {
   flex: 1;
   /* border-right: 1px solid #000; */
-  padding: 8px;
+  padding: 5px;
   overflow-y: auto; /* Enable vertical scrolling */
-  background-color: #f0f0f0; /* Light gray background */
+  background-color: rgba(255,255,255, 0.1); /* Light gray background */
   height: 100%; /* Set height to 100% */
 }
 
@@ -226,8 +223,8 @@
 }
 
 .food-item .avatar {
-  flex: 0 0 60px;
-  min-width: 60px;
+  flex: 0 0 55px;
+  min-width: 55px;
 }
 
 .food-item .info {
@@ -347,11 +344,11 @@
 }
 
 .total-btn {
-  background-color: #2571c2;
+  background-color: #5783db;
 }
 
 .total-btn2 {
-  background-color: #c72aa0;
+  background-color: #e2736d;
 }
 
 .modal {

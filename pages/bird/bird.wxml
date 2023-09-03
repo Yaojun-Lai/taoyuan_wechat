@@ -21,7 +21,7 @@
       <view class="food-info">
         <text class="food-desc2">{{item.text}}</text>
         <!-- <text class="food-desc1">属性：{{item.taste}}</text> -->
-        <text class="food-desc1">{{item.name}}</text>
+        <text class="food-desc1">答案：{{item.name}}</text>
       </view>
 
     

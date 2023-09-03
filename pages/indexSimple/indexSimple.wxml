@@ -1,6 +1,6 @@
-
 <view class="container">
   <view class="results-section">
+    <button bindtap="clearAll">清空</button>
     <text>总价格: {{totalPrice}}</text>
     <text>总经验: {{totalExp}}</text>
     <text>倍数: {{multiplier}}</text>
@@ -8,24 +8,22 @@
   <view class="input-section">
     <view class="input-row">
       <label for="price">价格:</label>
-      <input id="price" bindinput="updateValue" data-type="price" placeholder="0" />
+      <input id="price" value="{{price}}" bindinput="updateValue" data-type="price" placeholder="0" />
     </view>
     
     <view class="input-row">
       <label for="priceAdd">价格加成:</label>
-      <input id="priceAdd" bindinput="updateValue" data-type="priceAdd" placeholder="0" />
+      <input id="priceAdd" value="{{priceAdd}}" bindinput="updateValue" data-type="priceAdd" placeholder="0" />
     </view>
     
     <view class="input-row">
       <label for="exp">经验:</label>
-      <input id="exp" bindinput="updateValue" data-type="exp" placeholder="0" />
+      <input id="exp" value="{{exp}}" bindinput="updateValue" data-type="exp" placeholder="0" />
     </view>
     
     <view class="input-row">
       <label for="expAdd">经验加成:</label>
-      <input id="expAdd" bindinput="updateValue" data-type="expAdd" placeholder="0" />
+      <input id="expAdd" value="{{expAdd}}" bindinput="updateValue" data-type="expAdd" placeholder="0" />
     </view>
   </view>
-  
-  
 </view>

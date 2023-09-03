@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgb(231, 245, 240); /* Setting a pure background color */
+  background-color: rgb(220, 247, 239); 
 }
 
 .input-section, .results-section {
@@ -15,6 +15,12 @@
   margin-bottom: 20rpx;
 }
 
+.results-section button {
+  
+  color: white;
+  background-color: #4d90d8;
+  margin-bottom: 5px;
+}
 .input-row {
   display: flex;
   align-items: center;
@@ -34,4 +40,55 @@ input {
 
 .results-section text {
   font-size: 46rpx; /* Making the results larger */
+}
+
+.container {
+  font-size: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* Align items to the start (left) */
+  height: 100vh;
+  /* background-color: rgb(231, 245, 240);  */
+  
+}
+
+.input-section, .results-section {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10rpx; */
+  margin-bottom: 20rpx;
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid rgb(175, 174, 174);
+  padding:10px;
+  margin-left: 10px;
+  margin-right:10px;
+}
+
+.results-section button {
+  color: white;
+  background-color: #4d90d8;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+}
+
+label {
+  width: 200rpx;
+}
+
+input {
+  flex-grow: 1;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 10rpx 10rpx;
+  border-radius: 8px;
+}
+
+.results-section text {
+  font-size: 46rpx;  /* Making the results larger */
 }

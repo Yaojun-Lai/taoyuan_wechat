@@ -10,7 +10,10 @@
   padding: 5px;
 
 }
-
+.bold-name{
+  font-weight: bold;
+  font-size: 18px;
+}
 .search-bar input {
   flex: 2.5;
   height: 20px;

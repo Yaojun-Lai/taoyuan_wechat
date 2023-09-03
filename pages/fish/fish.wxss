@@ -41,6 +41,7 @@
 }
 
 .food-name {
+  font-size: 17.5px;
   font-weight: bold;
 }
 
@@ -53,7 +54,7 @@
 }
 
 .food-desc1, .food-desc2 {
-  color: rgb(54, 53, 53);
+  color: rgb(0, 0, 0);
 }
 
 /* .content {
@@ -339,6 +340,7 @@
 
 
 
+
 .clear-btn {
   background-color: #E82C0C; /* Slightly darker red */
 }
@@ -413,4 +415,14 @@ input.input-price {
   overflow-y: auto;
   margin-bottom: 0px;
   /* height: 50%; */
+}
+.button1 {
+  background-color: #e2736d !important;
+  margin-left: 2px !important;
+  /* margin-right: 10px !important; */
+}
+
+.button2 {
+  background-color: #5783db !important;
+  margin-left: 2px !important;
 }

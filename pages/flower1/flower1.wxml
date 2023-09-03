@@ -1,3 +1,4 @@
+<view><image src="../../images/flower-background.jpeg" class="background-image" />
 <view class="search-bar">
 
     <!-- <input type="text" placeholder="搜索花花" bindinput="onSearchInput" /> -->
@@ -7,6 +8,7 @@
   
 </view>
 <view class="container">
+
   <scroll-view class="sidebar" scroll-y="true" lazy-load='true'>
     <view 
       class="person-item {{selectedPerson == item.name ? 'selected' : ''}}" 
@@ -22,10 +24,12 @@
   <scroll-view class="foods" scroll-y="true" lazy-load='true'>
     <view class="food-item" wx:for="{{foods}}" wx:key="food">
       <image class="avatar" src="{{item.avatar}}" mode="aspectFit" />
-      <text class="name"><text class="boldname"> {{item.name}}</text>
+      <view class="food-info">
+        <text class="boldname"> {{item.name}}</text>
+      <text class="name">
         {{item.recipe}}
       </text>
-      
+    </view>
     </view>
   </scroll-view>
 </view>
@@ -112,4 +116,5 @@
     <button class="close-btn1" bindtap="closeSubPageModal">关闭</button>
     <!-- <view class="modal-close" bindtap="closeSubPageModal">关闭</view> -->
   </view>
+</view>
 </view>
