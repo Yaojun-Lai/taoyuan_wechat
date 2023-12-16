@@ -1,44 +1,69 @@
 <view class="container">
-  <image src="../../images/flower-background.jpeg" class="background-image" />
-  <text class="bold-text">提前5分钟左右去蹲点，以防计算误差哦
+  <!-- <image src="../../images/flowerCal-background.jpg" class="background-image" /> -->
+  <!-- Top Row -->
+  <text class="note">默认种植后直接摸花为第一次摸花</text>
   
-  </text> 
 
-<view class="picker-wrapper">
-  
-    <text class="view-label">花种:</text>
-    <picker bindchange="handlePickerChange" range="{{flowers}}" value="{{selectedIndex}}" class="picker">
-        {{selectedFlower}}
-    </picker>
-</view>
-<text>{{scoreLine}}
+  <view class="row">
+    <!-- Flower Type Box -->
+    <view class="box flower-type">
+      <view class="box-title">花种</view>
+      <!-- Flower Type Picker -->
+      <picker bindchange="handlePickerChange" range="{{flowers}}" value="{{selectedIndex}}" class="picker">
+        <view class="picker-display">{{selectedFlower}}</view>
+      </picker>
+    </view>
 
-</text>
+    <!-- Planting Time Box -->
+    <view class="box planting-time">
+      <view class="box-title-second">种植时间</view>
+      <!-- Planting Time Picker -->
+      <picker mode="time" bindchange="handleTimePickerChange" value="{{inputTime}}" class="picker">
+        <view class="picker-display-second">{{inputTime}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- Bottom Row -->
+  <view class="row">
+    <!-- Touch Second Time Box -->
+    <view class="box touch-second-time">
+      <view class="box-title-third">
+      <text>第二次</text>
+      <text>是否摸花</text>
+    </view>
+
+      <!-- Touch Second Time Checkbox -->
+      <checkbox-group class="checkbox-group" bindchange="checkboxChange">
+        <label class="checkbox-label">
+            <checkbox value="isSecondTime" checked="{{isSecondTime}}" />
+        </label>
+    </checkbox-group>
+
+    </view>
+
+    <!-- Times Box -->
+    <view class="box times">
+    <view class="aa">
+      <!-- <view class="box-title">摸花时间</view> -->
+      <!-- Display Times -->
+      <view class="box-text">第二次摸花时间</view>
+      <view class="time-display">{{firstCalculatedTime}}</view>
+    </view>
+    <view class="aa">
+      <view class="box-text">第三次摸花时间</view>
+      <view class="time-display">{{isSecondTime ? thirdCalculatedTime : secondCalculatedTime}}</view>
+    </view>
+  </view>
     
-  
-<view class="picker-wrapper">
-    <text class="view-label">种植时间:</text>
-    <picker mode="time" bindchange="handleTimePickerChange" class="picker">
-        {{inputTime}}
-    </picker>
-</view>
+  </view>
 
-<view class="results-container">
-    <view class="result-view">
-        第一次摸花时间: {{firstCalculatedTime}}
-    </view>
-    <view class="result-view">
-        第二次摸花时间: {{secondCalculatedTime}}
-    </view>
-    <view class="result-view">
-        成熟时间: {{thirdCalculatedTime}}
-    </view>
-</view>
-
-
- 
-
-<navigator url="/pages/flower1/flower1" hover-class="none">
-      <button class='btn btn-manual'>花谱攻略</button>
+  <!-- Link Box -->
+  <view class="link-box">
+    <navigator url="/pages/flower1/flower1" hover-class="none">
+      <button class="btn">花谱攻略</button>
     </navigator>
+  </view>
+
+  
 </view>

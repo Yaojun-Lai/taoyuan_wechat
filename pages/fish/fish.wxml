@@ -65,9 +65,9 @@
 
 
    
-    <!-- <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
+    <view class='ad1' hidden="{{adLoaded}}" style='padding-top: 17rpx;'>
       <ad unit-id="adunit-e06b10152b7e8397" bindload="handleAdLoad" binderror="handleAdError" bindclose="handleAdClose"></ad>
-    </view> -->
+    </view>
 
   </view>
   

@@ -1,18 +1,35 @@
 .search-bar {
   position: fixed;
-  top: 0;
+  /* top: 0; */
   left: 0;
   right: 0;
-  height: 70px;
+  bottom:0;
+  /* height: 70px; */
+  /* width:auto; */
+  margin-bottom: 5px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
-
+  /* padding: 5px; */
+  margin-left: 10px;
+  margin-right:10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .bold-name{
   font-weight: bold;
   font-size: 18px;
+}
+.bold-name2{
+  font-weight: bold;
+  
 }
 .search-bar input {
   flex: 2.5;
@@ -41,7 +58,8 @@
 
 .container {
   position: fixed;
-  bottom: 0;
+  /* bottom: 0; */
+  top: 0;
   left: 0;
   right: 0;
   display: flex;
@@ -56,12 +74,12 @@
   padding: 5rpx;
   overflow-y: auto;
   height: calc(100vh - 55px);
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
 }
 
 .sidebar .person-item {
     /* padding: 10px; */
-    
+    border-radius: 12px;
     font-size: 32rpx;
     text-align: center;
     display: flex;
@@ -81,7 +99,7 @@
 }
 
 .foods {
-  background-color:white;
+  /* background-color:white; */
   flex: 2;
   padding: 5rpx;
   overflow-y: auto;
@@ -91,7 +109,7 @@
 .food-item {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
